@@ -1,0 +1,17 @@
+
+
+
+body{
+    background-color: #373737;
+}
+
+
+fieldset{
+    background-color: #ffffff;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 7px;
+    border: none;
+    font-family: sans-serif;
+}
