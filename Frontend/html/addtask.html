@@ -8,60 +8,63 @@
     <title>Add Task</title>
 </head>
 <body>
-
-
-
-    <fieldset>
-      <h2>Add new Task</h2>
-
-      <td nowrap="nowrap">
-        <input
-          type="radio"
-          name="TaskType"
-          value="New Task"
-          onclick="document.EmpBean.EmpJobSelect.disabled=true;"
-        />New Task<br />
-        <input
-          type="radio"
-          name="TaskType"
-          value="Task in Progress"
-          onclick="document.EmpBean.EmpJobSelect.disabled=true;"
-        />Task in Progress<br />
-        <input
-          type="radio"
-          name="TaskType"
-          value="Task completed"
-          onclick="document.EmpBean.EmpJobSelect.disabled=true;"
-        />Task completed<br />
-
-        <br />
-      </td>
-
-      <form action="/action_page.php">
-        <label for="fname">Task title :</label><br />
-        <input type="text" id="fname" value="Homework" /><br /><br />
-      </form>
-
-      <form action="/action_page.php">
-        <label for="fname">Task :</label><br />
-        <textarea name="Text1" cols="40" rows="5"></textarea><br /><br />
-      </form>
-      <form action="/action_page.php">
-        <label for="duedate">Due Date:</label>
-        <input type="date" id="duedate" name="duedate" /><br /><br />
-      </form>
-
-      <form action="/action_page.php">
-        <input type="submit" value="Add" /><br /><br />
-      </form>
-      <p>Here you can add a new task!</p>
-    </fieldset>
-    
   
+  <button class="open-button" onclick="openForm()">Open Form</button>
 
-
-
-    <script src="dialoge.js"></script>
-
+    <div id="myForm" class="container" >
+        <form action="action_page.php">
+          <div class="row">
+            <input type="button" value="Close" onclick="closeForm()">
+          </div>       
+          <div class="row">
+            <div class="col-25">
+              <label for="Task Type">Task Type</label>
+            </div>
+            <div class="col-75">
+              <form action="/action_page.php">
+                <input type="radio" id="html" name="task_type" value="New Task">
+                <label for="New Task">New Task</label><br>
+                <input type="radio" id="css" name="task_type" value="Task in Progress">
+                <label for="Task in Progress">Task in Progress</label><br>
+                <input type="radio" id="javascript" name="task_type" value="Task completed">
+                <label for="Task completed">Task completed</label>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="title">Task Title</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="title" name="tile" placeholder="For example Homework">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="task">Task</label>
+            </div>
+            <div class="col-75">
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            </div>
+          </div>
+          <div class="date">
+            <div class="col-25">
+              <label for="Time">Time</label>
+            </div>
+            <div class="col-75">
+              <form action="/action_page.php">
+                <label for="duedate">Due Date:</label>
+                <input type="date" id="duedate" name="duedate" /><br /><br />
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <input type="submit" value="Add">
+          </div>
+        </form>
+      </div>
+  
   </body>
+  <script src="../js/addtask.js"></script>
 </html>
+
