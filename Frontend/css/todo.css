@@ -1,10 +1,5 @@
-.heading {
+header {
     text-align: center;
-    border: 2px solid rgba(0, 0, 0, 0.151);
-    border-radius: 10px;
-    box-shadow: 1px 3px 3px 1px rgba(146, 126, 126, 0.178);
-    margin-right: 35%;
-    margin-left: 35%;
 }
 
 #container {
@@ -20,6 +15,15 @@
     width: 100%;
     background-color: rgba(201, 177, 177, 0.247);
     padding-bottom: 10vw;
+}
+
+.heading {
+    text-align: center;
+    border: 2px solid rgba(0, 0, 0, 0.151);
+    border-radius: 10px;
+    box-shadow: 1px 3px 3px 1px rgba(146, 126, 126, 0.178);
+    margin-right: 35%;
+    margin-left: 35%;
 }
 
 .heading-todo {
