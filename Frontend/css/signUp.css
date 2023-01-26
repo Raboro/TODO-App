@@ -1,0 +1,93 @@
+body {
+    background-color: #373737;
+}
+
+form {
+    background-color: #ffffff;
+    width: fit-content;
+    border-radius: 7px;
+    border: none;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.inputContainerForLogin {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr);
+    grid-template-areas:
+        "login"
+        "firstName"
+        "lastName"
+        "mail"
+        "password"
+        "passwordRepeat"
+        "buttonSignUp"
+    ;
+}
+
+input{
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+    border-color: #808080;  
+    margin: 0.5em;
+}
+
+.loginHeading {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: xx-large;
+    grid-area: login;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.inputFirstName {
+    grid-area: firstName;
+}
+
+.inputLastName{
+    grid-area: lastName;
+}
+
+.inputEmail {
+    grid-area: mail;
+}
+
+.inputPassword {
+    grid-area: password;
+}
+
+.inputPasswordRepetition {
+    grid-area: passwordRepeat;
+}
+
+.buttonSignUp {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 10em;
+    margin-right: 10em;
+    border-radius: 1em;
+    font-size: normal;
+    grid-area: buttonSignUp;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+}

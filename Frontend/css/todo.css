@@ -1,14 +1,48 @@
+* {
+    font-family: sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
 #container {
     display: flex;
+    margin-left: 15vw;
+    margin-right: 15vw;
 }
 
 .category {
-    font-family: 'Times New Roman', Times, serif;
-    border: 3px solid rgba(146, 126, 126, 0.322);
-    border-radius: 3%;
-    box-shadow: 1px 10px 10px 1px rgba(146, 126, 126, 0.178);
-    margin: 1vw;
+    border: 3px solid rgba(255, 255, 255, 0.281);
+    border-radius: 30px;
+    box-shadow: 1px 10px 10px 1px rgba(131, 131, 131, 0.295);
+    margin: 2vw;
     width: 100%;
-    background-color: rgba(201, 177, 177, 0.247);
-    padding-bottom: 10vw;
+    background-color: rgba(206, 205, 205, 0.24);
+    padding-bottom: 40vw;
+}
+
+.heading {
+    text-align: center;
+    border: 2px solid rgba(0, 0, 0, 0.151);
+    border-radius: 10px;
+    box-shadow: 1px 3px 3px 1px rgba(146, 126, 126, 0.178);
+    margin-right: 25%;
+    margin-left: 25%;
+    margin-top: 2vw;
+}
+
+.heading-todo {
+    background-color: rgba(128, 128, 128, 0.199);
+    color: gray;
+}
+
+.heading-in-progress {
+    background-color: rgba(121, 177, 230, 0.329);
+    color: rgb(121, 177, 230);
+}
+
+.heading-done {
+    background-color: rgba(126, 228, 126, 0.274);
+    color: rgba(63, 150, 63, 0.699);
 }
