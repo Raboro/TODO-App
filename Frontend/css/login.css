@@ -1,54 +1,53 @@
-header{
-    margin-top: 3em;
-    margin-bottom: 6em;
-
-}
-
-body{
+body {
     background-color: #373737;
 }
 
-h1{
+h1 {
     text-align: center;
+    font-family: sans-serif;
 }
 
-.login{
+.login {
     text-align: center;
+    font-family: sans-serif;
 }
 
-fieldset{
+fieldset {
     background-color: #ffffff;
+    top: 50%;
+    transform: translateY(100%);
     width: fit-content;
     margin: 0 auto;
     text-align: center;
     border-radius: 7px;
     border: none;
+    font-family: sans-serif;
 }
 
-input{
+input {
     margin-left: 1em;
     margin-right: 1em;
     float: right;
 }
 
-label{
+label {
     margin-left: 1em;
     margin-right: 1em;
 }
 
-footer{
+footer {
     position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 99%;
     font-size: small;
 }
 
-.labelTextfeld{
+.labelTextfeld {
     margin-top: 1em;
     margin-bottom: 1.5em;
 }
 
-.bAnmelden{
+.bAnmelden {
     font-size: 100%;
+    font-family: sans-serif;
 }
-
