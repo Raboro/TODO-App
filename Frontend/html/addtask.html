@@ -1,48 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add Task</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>Add new Task</h2>
     <fieldset>
-
-
       <td nowrap="nowrap">
-         <input type="radio" name="TaskType" value="New Task" onclick="document.EmpBean.EmpJobSelect.disabled=true;">New Task<BR/>
-         <input type="radio" name="TaskType" value="Task in Progress" onclick="document.EmpBean.EmpJobSelect.disabled=true;">Task in Progress<BR/>
-         <input type="radio" name="TaskType" value="Task completed" onclick="document.EmpBean.EmpJobSelect.disabled=true;">Task completed<BR/>
-        
-      <BR/>
+        <input
+          type="radio"
+          name="TaskType"
+          value="New Task"
+          onclick="document.EmpBean.EmpJobSelect.disabled=true;"
+        />New Task<br />
+        <input
+          type="radio"
+          name="TaskType"
+          value="Task in Progress"
+          onclick="document.EmpBean.EmpJobSelect.disabled=true;"
+        />Task in Progress<br />
+        <input
+          type="radio"
+          name="TaskType"
+          value="Task completed"
+          onclick="document.EmpBean.EmpJobSelect.disabled=true;"
+        />Task completed<br />
+
+        <br />
       </td>
 
-
-    <form action="/action_page.php">
-        <label for="fname">Task title :</label><br>
-        <input type="text" id="fname" value="Homework"><br><br>
-      </form>
-    
-    <form action="/action_page.php">
-      <label for="fname">Task :</label><br>
-      <textarea name="Text1" cols="40" rows="5"></textarea><br><br>
-    </form> 
-    <form action="/action_page.php">
-        <label for="birthday">Due Date:</label>
-        <input type="date" id="birthday" name="birthday"
-        ><br><br>
-      </form>
-      
       <form action="/action_page.php">
-
-        <input type="submit" value="Add"><br><br>
+        <label for="fname">Task title :</label><br />
+        <input type="text" id="fname" value="Homework" /><br /><br />
       </form>
 
+      <form action="/action_page.php">
+        <label for="fname">Task :</label><br />
+        <textarea name="Text1" cols="40" rows="5"></textarea><br /><br />
+      </form>
+      <form action="/action_page.php">
+        <label for="birthday">Due Date:</label>
+        <input type="date" id="birthday" name="birthday" /><br /><br />
+      </form>
+
+      <form action="/action_page.php">
+        <input type="submit" value="Add" /><br /><br />
+      </form>
     </fieldset>
     <p>Here you can add a new task!</p>
-    
-
-    </body>
-    </html>
+  </body>
+</html>
