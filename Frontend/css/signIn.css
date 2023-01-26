@@ -2,15 +2,15 @@ body {
     background-color: #373737;
 }
 
-h1 {
+.loginHeading {
     text-align: center;
     font-family: sans-serif;
-}
-
-.login {
-    text-align: center;
-    font-family: sans-serif;
+    font-size: xx-large;
     grid-area: login;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 form {
@@ -20,31 +20,6 @@ form {
     border: none;
     font-family: sans-serif;
     text-align: center;
-}
-
-input {
-    margin-left: 1em;
-    margin-right: 1em;
-    float: left;
-}
-
-
-label {
-    text-align: left;
-    margin-left: 1em;
-    margin-right: 1em;
-    float: left;
-}
-
-.labelTextfeld {
-    text-align: left;
-    margin-top: 1em;
-    margin-bottom: 1.5em;
-}
-
-.bAnmelden {
-    font-size: 100%;
-    font-family: sans-serif;
 }
 
 .inputContainerForLogin {
@@ -63,28 +38,38 @@ label {
     ;
 }
 
-.email {
+.inputEmail {
     grid-area: mail;
     padding-bottom: 0.5em;
     display: flex;
     flex-direction: column;
+    border-radius: 1em;
+    border-color: #808080;  
+    margin: 0.5em;
 }
 
-.password {
+.inputPassword {
     grid-area: password;
     padding-bottom: 0.5em;
     display: flex;
     flex-direction: column;
+    border-radius: 1em;
+    border-color: #808080;
+    margin: 0.5em;
 }
 
-.blogin {
-    margin: 5em;
-    size: small;
+.buttonLogin {
+    margin-top: 0.5em;
+    margin-left: 10em;
+    margin-right: 10em;
+    border-radius: 1em;
+    font-size: normal;
     grid-area: bLogin;
 }
 
-.newHere {
+.openSignUp {
     grid-area: newHere;
+    font-size: small;
 }
 
 .overlay {
