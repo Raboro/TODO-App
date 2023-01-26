@@ -10,18 +10,17 @@ h1 {
 .login {
     text-align: center;
     font-family: sans-serif;
+    grid-area: login;
 }
 
-fieldset {
+form {
     background-color: #ffffff;
-    top: 50%;
-    transform: translateY(100%);
     width: fit-content;
-    margin: 0 auto;
-    text-align: center;
     border-radius: 7px;
     border: none;
     font-family: sans-serif;
+    margin: auto auto;
+    text-align: center;
 }
 
 input {
@@ -29,6 +28,7 @@ input {
     margin-right: 1em;
     float: right;
 }
+
 
 label {
     margin-left: 1em;
@@ -43,6 +43,7 @@ footer {
 }
 
 .labelTextfeld {
+    text-align: left;
     margin-top: 1em;
     margin-bottom: 1.5em;
 }
@@ -50,4 +51,52 @@ footer {
 .bAnmelden {
     font-size: 100%;
     font-family: sans-serif;
+}
+
+.inputContainerForLogin {
+    height: 500px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto, 1fr);
+    grid-template-areas:
+        "login login"
+        "mail password"
+        "mail password"
+        "bLogin newHere"
+    ;
+}
+
+.email {
+    grid-area: mail;
+    display: flex;
+    flex-direction: column;
+}
+
+.password {
+    grid-area: password;
+    display: flex;
+    flex-direction: column;
+}
+
+.blogin {
+    grid-area: bLogin;
+    width: 60px;
+    height: 40px;
+}
+
+.newHere {
+    grid-area: newHere;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
 }

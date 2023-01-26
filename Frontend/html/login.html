@@ -10,36 +10,28 @@
 </head>
 
 <body>
-
-    <main>
-
+    <div class="overlay">
         <form>
-            <fieldset>
+            <div class="inputContainerForLogin">
                 <div class="login">
                     <h3>Login to TableTask</h3>
                 </div>
 
-                <div class="labelTextfeld">
-                    <label for="email">e-mail adress</l abel>
-                        <input type="email" name="email" id="email" value="" required></input>
+                <div class="email">
+                    <label for="email">e-mail adress</label>
+                    <input type="email" name="email" id="email" value="" required></input>
                 </div>
 
-                <div class="labelTextfeld">
+                <div class="password">
                     <label for="password">password</label>
                     <input type="password" name="password" id="password" value="" required></input>
                 </div>
 
                 <button class="bLogin">Login</button>
-                <p class = "newHere">New here? <a href="registration.html">Sign up!</a></p>
-            </fieldset>
+                <p class="newHere">New here? <a href="registration.html">Sign up!</a></p>
+            </div>
         </form>
-
-        <div class="error"></div> <!--Platzhalter fuer Fehlermeldungen-->
-    </main>
-
-    <footer>
-        <p>Copyright (C) 2023 </p>
-    </footer>
+    </div>
 </body>
 
 </html>
