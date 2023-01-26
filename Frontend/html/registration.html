@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Table-Taks - Registration</title>
-</head>
-<body>
 
-    
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/login.css">
+
+  <title>Table-Taks - Registration</title>
+</head>
+
+<body>
+  <header>
+    <h1>Table-Task</h1>
+  </header>
+
+  <main>
+    <form>
+      <fieldset>
+        <div class="login">
+          <h2>SignUp</h2>
+        </div>
+
+        <div class="labelTextfeld">
+          <label for="firstName">first name</label>
+          <input type="text" name="firstName" id="firstName" value="" required></input>
+        </div>
+
+        <div class="labelTextfeld">
+          <label for="lastName">last name</label>
+          <input type="text" name="lastName" id="lastName" value="" required></input>
+        </div>
+
+        <div class="labelTextfeld">
+          <label for="email">email</label>
+          <input type="email" name="email" id="email" value="" required></input>
+        </div>
+
+        <div class="labelTextfeld">
+          <label for="password">password</label>
+          <input type="password" name="password" id="password" value="" required></input>
+        </div>
+
+        <button class="bLogin">sign up</button>
+      </fieldset>
+    </form>
+
+    <div class="error"></div> <!--Platzhalter fuer Fehlermeldungen-->
+
+  </main>
+
+  <footer>
+    <p>Copyright (C) 2023 </p>
+  </footer>
 </body>
+
 </html>
