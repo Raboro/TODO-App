@@ -21,3 +21,18 @@
     background-color: rgba(201, 177, 177, 0.247);
     padding-bottom: 10vw;
 }
+
+.heading-todo {
+    background-color: rgba(128, 128, 128, 0.199);
+    color: gray;
+}
+
+.heading-in-progress {
+    background-color: rgba(121, 177, 230, 0.329);
+    color: rgb(121, 177, 230);
+}
+
+.heading-done {
+    background-color: rgba(126, 228, 126, 0.274);
+    color: rgba(63, 150, 63, 0.699);
+}
