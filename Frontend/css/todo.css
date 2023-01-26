@@ -6,8 +6,9 @@ header {
     text-align: center;
 }
 
-#container {
+.container {
     display: flex;
+    flex-direction: row;
     margin-left: 15vw;
     margin-right: 15vw;
 }
@@ -20,16 +21,17 @@ header {
     width: 100%;
     background-color: rgba(206, 205, 205, 0.24);
     padding-bottom: 40vw;
+    display: flex;
+    flex-direction: column;
 }
 
 .heading {
+    margin-left: 20%;
+    margin-right: 20%;
     text-align: center;
     border: 2px solid rgba(0, 0, 0, 0.151);
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 1px 3px 3px 1px rgba(146, 126, 126, 0.178);
-    margin-right: 25%;
-    margin-left: 25%;
-    margin-top: 2vw;
 }
 
 .heading-todo {
