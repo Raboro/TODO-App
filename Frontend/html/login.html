@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <title>TODO-Login</title>
 </head>
+
 <body>
-    
+    <header>
+        <h1>Table-Task</h1>
+    </header>
+
+    <main>
+
+        <form>
+            <fieldset>
+                <div class="login">
+                    <h3>Login</h3>
+                </div>
+
+                <div class="labelTextfeld">
+                    <label for="EMail">E-Mail Adresse</l abel>
+                        <input type="email" name="EMail" id="EMail" value="" required></input>
+                </div>
+
+                <div class="labelTextfeld">
+                    <label for="Passwort">Passwort</label>
+                    <input type="password" name="Passwort" id="Passwort" value="" required></input>
+                </div>
+
+                <button class="bAnmelden">Anmelden</button>
+            </fieldset>
+        </form>
+
+        <div class="error"></div> <!--Platzhalter fuer Fehlermeldungen-->
+    </main>
+
+    <footer>
+        <p>Copyright (C) 2023 </p>
+    </footer>
 </body>
+
 </html>
