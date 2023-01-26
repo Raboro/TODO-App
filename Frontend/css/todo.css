@@ -14,14 +14,12 @@ header {
 
 .category {
     border: 3px solid rgba(255, 255, 255, 0.281);
-    border-radius: 3%;
+    border-radius: 30px;
     box-shadow: 1px 10px 10px 1px rgba(131, 131, 131, 0.295);
-    margin: 1vw;
+    margin: 2vw;
     width: 100%;
     background-color: rgba(206, 205, 205, 0.24);
     padding-bottom: 40vw;
-    margin-left: 2vw;
-    margin-right: 2vw;
 }
 
 .heading {
