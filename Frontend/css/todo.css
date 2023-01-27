@@ -26,8 +26,8 @@ header {
 }
 
 .heading {
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 33%;
+    margin-right: 33%;
     text-align: center;
     border: 2px solid rgba(0, 0, 0, 0.151);
     border-radius: 5px;
@@ -40,6 +40,8 @@ header {
 }
 
 .headingInProgress {
+    margin-left: 25%;
+    margin-right: 25%;
     background-color: rgba(121, 177, 230, 0.329);
     color: rgb(121, 177, 230);
 }
@@ -47,4 +49,18 @@ header {
 .headingDone {
     background-color: rgba(126, 228, 126, 0.274);
     color: rgba(63, 150, 63, 0.699);
+}
+
+@media only screen and (max-width : 1500px) {
+    .headingInProgress {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .kanbanContainer {
+        flex-wrap: wrap;
+
+    }
 }
