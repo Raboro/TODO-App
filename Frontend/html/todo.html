@@ -31,13 +31,13 @@
     </div>
   </div>
 
-  <div id="addTaskContainer" class="container">
+  <div id="addTaskContainer">
     <form action="action_page.php">
-      <div class="row">
-        <div class="col-25">
+      <div class="addTaskRow">
+        <div class="addTaskColumnLeft">
           <label for="Task Type">Task Type</label>
         </div>
-        <div class="col-75 chooseCategory">
+        <div class="addTaskColumnRight chooseCategory">
           <form action="/action_page.php">
             <input type="radio" id="html" name="task_type" value="New Task">
             <label for="New Task">New Task</label><br>
@@ -48,34 +48,37 @@
           </form>
         </div>
       </div>
-      <div class="row">
-        <div class="col-25">
+
+      <div class="addTaskRow">
+        <div class="addTaskColumnLeft">
           <label for="title">Task Title</label>
         </div>
-        <div class="col-75">
+        <div class="addTaskColumnRight">
           <input type="text" id="title" name="tile" placeholder="E.g. Homework">
         </div>
       </div>
-      <div class="row">
-        <div class="col-25">
+
+      <div class="addTaskRow">
+        <div class="addTaskColumnLeft">
           <label for="task">Task</label>
         </div>
-        <div class="col-75">
+        <div class="addTaskColumnRight">
           <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
         </div>
       </div>
       <div class="date">
-        <div class="col-25">
+        <div class="addTaskColumnLeft">
           <label for="Time">Time</label>
         </div>
-        <div class="col-75">
+        <div class="addTaskColumnRight">
           <form action="/action_page.php">
             <label for="duedate">Due Date:</label>
             <input type="date" id="duedate" name="duedate" /><br /><br />
           </form>
         </div>
       </div>
-      <div class="row">
+
+      <div class="addTaskRow">
         <input type="submit" value="Add">
         <input type="button" value="Close" onclick="closeAddTaskContainer()">
       </div>

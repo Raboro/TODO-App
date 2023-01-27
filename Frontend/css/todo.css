@@ -84,7 +84,7 @@ header {
     }
 }
 
-.container {
+#addTaskContainer {
     box-shadow: 1px 10px 10px 1px rgba(131, 131, 131, 0.295);
     position: absolute;
     margin-top: -70vh;
@@ -138,19 +138,19 @@ input[type=button] {
     float: right;
 }
 
-.col-25 {
+.addTaskColumnLeft {
     float: left;
     width: 25%;
     margin-top: 6px;
 }
 
-.col-75 {
+.addTaskColumnRight {
     float: left;
     width: 75%;
     margin-top: 6px;
 }
 
-.row:after {
+.addTaskRow:after {
     content: "";
     display: table;
     clear: both;
