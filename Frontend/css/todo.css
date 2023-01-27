@@ -85,6 +85,7 @@ header {
 }
 
 .container {
+    box-shadow: 1px 10px 10px 1px rgba(131, 131, 131, 0.295);
     position: absolute;
     margin-top: -70vh;
     margin-left: 23%;
