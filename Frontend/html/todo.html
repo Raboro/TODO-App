@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/Frontend/css/todo.css" />
+  <script src="../js/todo.js"></script>
   <title>Kanban-Main-Page</title>
 </head>
 
@@ -16,16 +17,16 @@
   <div class="kanbanContainer">
     <div class="category">
       <h3 class="heading headingTodo">TODO</h3>
+      <button class="addButton" onclick="openAddTaskContainer()">+</button>
+    </div>
+
+    <div class="category">
+      <h3 class="heading headingInProgress" onclick="openAddTaskContainer()">IN PROGRESS</h3>
       <button class="addButton">+</button>
     </div>
 
     <div class="category">
-      <h3 class="heading headingInProgress">IN PROGRESS</h3>
-      <button class="addButton">+</button>
-    </div>
-
-    <div class="category">
-      <h3 class="heading headingDone">DONE</h3>
+      <h3 class="heading headingDone" onclick="openAddTaskContainer()">DONE</h3>
       <button class="addButton">+</button>
     </div>
   </div>
