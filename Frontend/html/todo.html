@@ -39,11 +39,11 @@
         </div>
         <div class="addTaskColumnRight chooseCategory">
           <form action="../js/todo.js">
-            <input type="radio"" name=" task_type" value="New Task">
+            <input type="radio"" name=" newTask" value="New Task">
             <label>New Task</label><br>
-            <input type="radio"" name=" task_type" value="Task in Progress">
+            <input type="radio"" name=" taskInProgress" value="Task in Progress">
             <label>Task in Progress</label><br>
-            <input type="radio" name="task_type" value="Task completed">
+            <input type="radio" name="taskCompleted" value="Task completed">
             <label>Task completed</label>
           </form>
         </div>
@@ -54,7 +54,7 @@
           <label>Task Title</label>
         </div>
         <div class="addTaskColumnRight">
-          <input type="text" name="tile" placeholder="E.g. Homework">
+          <input type="text" name="taskTitle" placeholder="E.g. Homework">
         </div>
       </div>
 
@@ -63,7 +63,7 @@
           <label>Task</label>
         </div>
         <div class="addTaskColumnRight">
-          <textarea id="descriptionTextArea" name="subject" placeholder="Write something..."></textarea>
+          <textarea id="descriptionTextArea" name="taskDescription" placeholder="Write something..."></textarea>
         </div>
       </div>
       <div class="date">
@@ -73,14 +73,14 @@
         <div class="addTaskColumnRight">
           <form action="../js/todo.js">
             <label>Due Date:</label>
-            <input type="date" name="duedate" /><br /><br />
+            <input type="date" name="dueDate" /><br /><br />
           </form>
         </div>
       </div>
 
       <div class="addTaskRow">
-        <input type="submit" value="Add">
-        <input type="button" value="Close" onclick="closeAddTaskContainer()">
+        <input type="submit" value="Add" name="submitTask">
+        <input type="button" value="Close" onclick="closeAddTaskContainer()" name="closeAddTask">
       </div>
     </form>
   </div>
