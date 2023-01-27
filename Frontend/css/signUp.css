@@ -29,13 +29,13 @@ form {
     ;
 }
 
-input{
+input {
     padding-left: 0.5em;
     padding-right: 0.5em;
     display: flex;
     flex-direction: column;
     border-radius: 1em;
-    border-color: #808080;  
+    border-color: #808080;
     margin: 0.5em;
 }
 
@@ -54,7 +54,7 @@ input{
     grid-area: firstName;
 }
 
-.inputLastName{
+.inputLastName {
     grid-area: lastName;
 }
 
