@@ -2,15 +2,17 @@ body {
     background-color: #373737;
 }
 
-.loginHeading {
-    text-align: center;
-    font-family: sans-serif;
-    font-size: xx-large;
-    grid-area: login;
-    margin-left: 1.5em;
-    margin-right: 1.5em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+.overlay {
+    position: absolute;
+    font-size: 100%;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
 }
 
 form {
@@ -25,61 +27,88 @@ form {
 .inputContainerForLogin {
     width: fit-content;
     height: fit-content;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(1fr);
-    grid-template-areas:
-        "login"
-        "mail"
-        "password"
-        "bLogin"
-        "newHere"
-    ;
+    font-size: 2rem;
+}
+
+.loginHeading {
+    display: block;
+    align-self: center;
+    font-family: sans-serif;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .inputEmail {
-    grid-area: mail;
-    padding-bottom: 0.5em;
-    display: flex;
-    flex-direction: column;
-    border-radius: 1em;
+    display: block;
+    width: 21rem;
+    font-size: 1.25rem;
+    padding-bottom: 0.25rem;
+    padding-top: 0.25rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    border-radius: 1rem;
     border-color: #808080;  
-    margin: 0.5em;
+    margin: auto;
 }
 
 .inputPassword {
-    grid-area: password;
-    padding-bottom: 0.5em;
-    display: flex;
-    flex-direction: column;
-    border-radius: 1em;
+    display: block;
+    width: 21rem;
+    font-size: 1.25rem;
+    padding-bottom: 0.25rem;
+    padding-top: 0.25rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    border-radius: 1rem;
     border-color: #808080;
-    margin: 0.5em;
+    margin-top: 1vh;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .buttonLogin {
-    margin-top: 0.5em;
-    margin-left: 10em;
-    margin-right: 10em;
-    border-radius: 1em;
-    font-size: normal;
-    grid-area: bLogin;
+    display: block;
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    border-radius: 1rem;    
 }
 
 .openSignUp {
-    grid-area: newHere;
-    font-size: small;
+    font-size: 0.75rem;
 }
+html{
+    font-size: 32;
+}
+@media screen and (max-width: 600px) {
 
-.overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
+    .inputContainerForLogin{
+        width: fit-content;
+        font-size: 1rem;
+        
+    }
+    .loginHeading{
+        font-size: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .inputEmail{
+        width: 15rem;
+        font-size: 0.75rem;
+    }
+    .inputPassword{
+        width: 15rem;
+        font-size: 0.75rem;
+    }
+    .buttonLogin{
+        font-size: 0.75rem;
+        margin: auto;
+    }
+    .openSignUp{
+        font-size: 0.5rem;
+    }
 
 }
