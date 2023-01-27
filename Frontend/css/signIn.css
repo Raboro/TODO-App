@@ -49,7 +49,7 @@ form {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     border-radius: 1rem;
-    border-color: #000000;
+    border: 2px solid black;
     margin-top: 1vh;
     margin-left: auto;
     margin-right: auto;
@@ -64,7 +64,7 @@ form {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     border-radius: 1rem;
-    border-color: #000000;
+    border: 2px solid black;
     margin-top: 1vh;
     margin-left: auto;
     margin-right: auto;
@@ -76,40 +76,44 @@ form {
     margin-top: 0.5rem;
     margin-left: 10rem;
     margin-right: 10rem;
-    border-radius: 1rem;    
+    border-radius: 1rem;
+    border: 2px solid black;
 }
 
 .openSignUp {
     font-size: 0.75rem;
 }
-html{
-    font-size: 32;
-}
+
 @media screen and (max-width: 600px) {
 
-    .inputContainerForLogin{
+    .inputContainerForLogin {
         width: fit-content;
         font-size: 1rem;
-        
+
     }
-    .loginHeading{
+
+    .loginHeading {
         font-size: 1rem;
         margin-left: auto;
         margin-right: auto;
     }
-    .inputEmail{
+
+    .inputEmail {
         width: 15rem;
         font-size: 0.75rem;
     }
-    .inputPassword{
+
+    .inputPassword {
         width: 15rem;
         font-size: 0.75rem;
     }
-    .buttonLogin{
+
+    .buttonLogin {
         font-size: 0.75rem;
         margin: auto;
     }
-    .openSignUp{
+
+    .openSignUp {
         font-size: 0.5rem;
     }
 

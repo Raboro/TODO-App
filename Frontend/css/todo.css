@@ -29,7 +29,6 @@ header {
     margin-left: 33%;
     margin-right: 33%;
     text-align: center;
-    border: 2px solid rgba(0, 0, 0, 0.151);
     border-radius: 5px;
     box-shadow: 1px 3px 3px 1px rgba(146, 126, 126, 0.178);
 }
