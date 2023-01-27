@@ -9,8 +9,7 @@ header {
 .kanbanContainer {
     display: flex;
     flex-direction: row;
-    margin-left: 15vw;
-    margin-right: 15vw;
+    margin: auto 15vw;
 }
 
 .category {
