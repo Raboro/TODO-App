@@ -87,7 +87,7 @@ header {
 #addTaskContainer {
     box-shadow: 1px 10px 10px 1px rgba(131, 131, 131, 0.295);
     position: absolute;
-    margin-top: -70vh;
+    margin-top: -60vh;
     margin-left: 23%;
     font-family: sans-serif;
     display: none;
@@ -111,6 +111,10 @@ textarea {
     border-radius: 4px;
     box-sizing: border-box;
     resize: none;
+}
+
+#descriptionTextArea {
+    height: 10vh;
 }
 
 label {
