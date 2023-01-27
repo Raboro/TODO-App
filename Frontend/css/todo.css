@@ -97,6 +97,10 @@ header {
     padding: 20px;
 }
 
+.chooseCategory {
+    display: flex;
+}
+
 input[type=text],
 select,
 textarea {
