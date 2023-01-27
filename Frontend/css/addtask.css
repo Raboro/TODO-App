@@ -51,20 +51,17 @@ input[type=button] {
   margin-top: 6px;
 }
 
-
 .col-75 {
   float: left;
   width: 75%;
   margin-top: 6px;
 }
 
-
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-
 
 @media screen and (max-width: 600px) {
 
