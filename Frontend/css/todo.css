@@ -6,7 +6,7 @@ header {
     text-align: center;
 }
 
-.container {
+.kanbanContainer {
     display: flex;
     flex-direction: row;
     margin-left: 15vw;
@@ -34,17 +34,17 @@ header {
     box-shadow: 1px 3px 3px 1px rgba(146, 126, 126, 0.178);
 }
 
-.heading-todo {
+.headingTodo {
     background-color: rgba(128, 128, 128, 0.199);
     color: gray;
 }
 
-.heading-in-progress {
+.headingInProgress {
     background-color: rgba(121, 177, 230, 0.329);
     color: rgb(121, 177, 230);
 }
 
-.heading-done {
+.headingDone {
     background-color: rgba(126, 228, 126, 0.274);
     color: rgba(63, 150, 63, 0.699);
 }
