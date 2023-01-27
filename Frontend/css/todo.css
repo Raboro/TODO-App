@@ -124,7 +124,8 @@ input[type=submit] {
 }
 
 input[type=button] {
-    background-color: #cc0000;
+    margin-right: 0.3vw;
+    background-color: #7a7a7a93;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -154,9 +155,8 @@ input[type=button] {
 @media screen and (max-width: 600px) {
 
     .col-25,
-    .col-75,
-    input[type=submit] {
-        width: 100%;
+    .col-75 {
+        width: 50%;
         margin-top: 0;
     }
 }
