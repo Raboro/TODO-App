@@ -49,13 +49,13 @@ form {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     border-radius: 1rem;
-    border-color: #808080;
+    border-color: #000000;
     margin-top: 1vh;
     margin-left: auto;
     margin-right: auto;
 }
 
-.inputPassword {
+.inputEmail {
     display: block;
     width: 21rem;
     font-size: 1.25rem;
@@ -64,7 +64,7 @@ form {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     border-radius: 1rem;
-    border-color: #808080;
+    border-color: #000000;
     margin-top: 1vh;
     margin-left: auto;
     margin-right: auto;
