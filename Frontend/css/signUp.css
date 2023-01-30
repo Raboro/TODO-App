@@ -2,6 +2,18 @@ body {
     background-color: #373737;
 }
 
+.overlay {
+    position: absolute;
+    font-size: 100%;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
 form {
     background-color: #ffffff;
     width: fit-content;
@@ -14,80 +26,49 @@ form {
 .inputContainerForLogin {
     width: fit-content;
     height: fit-content;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(1fr);
-    grid-template-areas:
-        "login"
-        "firstName"
-        "lastName"
-        "mail"
-        "password"
-        "passwordRepeat"
-        "buttonSignUp"
-    ;
-}
-
-input {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    display: flex;
-    flex-direction: column;
-    border-radius: 1em;
-    border-color: #808080;
-    margin: 0.5em;
 }
 
 .loginHeading {
-    text-align: center;
+    display: block;
+    font-size: 2rem;
     font-family: sans-serif;
-    font-size: xx-large;
-    grid-area: login;
-    margin-left: 1.5em;
-    margin-right: 1.5em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
 
-.inputFirstName {
-    grid-area: firstName;
-}
-
-.inputLastName {
-    grid-area: lastName;
-}
-
-.inputEmail {
-    grid-area: mail;
-}
-
-.inputPassword {
-    grid-area: password;
-}
-
-.inputPasswordRepetition {
-    grid-area: passwordRepeat;
+input {
+    display: block;
+    width: 350px;
+    font-size: 1.25rem;
+    padding: 4px 12px 4px 12px;
+    border-radius: 16px;
+    border: 2px solid black;
+    margin-top: 1vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
 }
 
 .buttonSignUp {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-left: 10em;
-    margin-right: 10em;
-    border-radius: 1em;
-    font-size: normal;
-    grid-area: buttonSignUp;
+    display: block;
+    font-size: 1.25rem;
+    margin: auto;
+    margin-top: 1.5vh;
+    margin-bottom: 1vh;
+    border-radius: 16px;
+    border: 2px solid black;
 }
 
-.overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
+@media screen and (max-width: 400px) {
+    .loginHeading {
+        font-size: 1.5rem;
+    }
 
+    input {
+        width: 250px;
+        font-size: 1rem;
+    }
+
+    .buttonSignUp {
+        font-size: 1rem;
+    }
 }
