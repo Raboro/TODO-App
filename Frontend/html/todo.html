@@ -3,96 +3,102 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../css/todo.css" />
+  <link rel="stylesheet" href="../css/todo.css"/>
   <link rel="stylesheet" href="../css/task.css"/>
   <script src="../js/todo.js"></script>
   <title>Kanban-Main-Page</title>
 </head>
 
 <body>
-  <header>
+<header>
     <h1>KANBAN</h1>
-  </header>
-  <div class="kanbanContainer">
+</header>
+<div class="kanbanContainer">
     <div class="category">
       <h3 class="heading headingTodo">TODO</h3>
       <button class="addButton" onclick="openAddTaskContainer()">+</button>
-
-        <div class="task">
-          <h3 class="taskTitle">Title</h3>
-          <p class="inputTask">Lorem ipsum dolor sit amet, consetetur sadipscing elisa, sed diam nonary Nimrod tempore
-            invidunt ut labore et doolie magna aliquant erat, sed diam volute.</p>
-          <div class="editTaskButtons">
-            <button class="buttonTask">edit</button>
-            <button class="buttonTask">delete</button>
-          </div>
+      <div class="task">
+        <h3 class="taskTitle">Title</h3>
+        <p class="inputTask">Lorem ipsum dolor sit amet, consetetur sadipscing elisa, sed diam nonary Nimrod tempore
+          invidunt ut labore et doolie magna aliquant erat, sed diam volute.</p>
+        <div class="editTaskButtons">
+          <button class="buttonTask">edit</button>
+          <button class="buttonTask">delete</button>
         </div>
+      </div>
 
     </div>
 
     <div class="category">
-      <h3 class="heading headingInProgress">IN PROGRESS</h3>
-      <button class="addButton" onclick="openAddTaskContainer()">+</button>
+        <h3 class="heading headingInProgress">IN PROGRESS</h3>
+        <button class="addButton" onclick="openAddTaskContainer()">+</button>
     </div>
 
     <div class="category">
-      <h3 class="heading headingDone">DONE</h3>
-      <button class="addButton" onclick="openAddTaskContainer()">+</button>
+        <h3 class="heading headingDone">DONE</h3>
+        <button class="addButton" onclick="openAddTaskContainer()">+</button>
     </div>
-  </div>
+</div>
 
-  <div id="addTaskContainer">
+<div id="addTaskContainer">
     <form action="http://localhost:8080/api/testname" method="post">
-      <div class="addTaskRow">
-        <div class="addTaskColumnLeft">
-          <label>Task Type</label>
-        </div>
-        <div class="addTaskColumnRight chooseCategory">
-          <input type="radio" name="addTask" value="New Task">
-          <label>New Task</label>
-          <input type="radio" name=" addTask" value="Task in Progress">
-          <label>Task in Progress</label>
-          <input type="radio" name="addTask" value="Task completed">
-          <label>Task completed</label>
-        </div>
-      </div>
+        <div class="addTaskRow">
+            <div class="addTaskColumnLeft">
+                <label>Task Type</label>
+            </div>
+            <div class="addTaskColumnRight chooseCategory">
+                <div class="radioBox">
+                    <input type="radio" name="addTask" value="New Task">
+                    <label>New Task</label>
+                </div>
+                <div class="radioBox">
+                    <input type="radio" name="addTask" value="Task in Progress">
+                    <label>Task in Progress</label>
+                </div>
+                <div class="radioBox">
+                    <input type="radio" name="addTask" value="Task completed">
+                    <label>Task completed</label>
+                </div>
 
-      <div class="addTaskRow">
-        <div class="addTaskColumnLeft">
-          <label>Task Title</label>
+            </div>
         </div>
-        <div class="addTaskColumnRight">
-          <input type="text" name="taskTitle" placeholder="E.g. Homework" required>
-        </div>
-      </div>
 
-      <div class="addTaskRow">
-        <div class="addTaskColumnLeft">
-          <label>Task</label>
+        <div class="addTaskRow">
+            <div class="addTaskColumnLeft">
+                <label>Task Title</label>
+            </div>
+            <div class="addTaskColumnRight">
+                <input type="text" name="taskTitle" placeholder="E.g. Homework" required>
+            </div>
         </div>
-        <div class="addTaskColumnRight">
+
+        <div class="addTaskRow">
+            <div class="addTaskColumnLeft">
+                <label>Task</label>
+            </div>
+            <div class="addTaskColumnRight">
           <textarea id="descriptionTextarea" name="taskDescription" placeholder="Write something..."
-            required></textarea>
+                    required></textarea>
+            </div>
         </div>
-      </div>
-      <div class="date">
-        <div class="addTaskColumnLeft">
-          <label>Time</label>
+        <div class="date">
+            <div class="addTaskColumnLeft">
+                <label>Time</label>
+            </div>
+            <div class="addTaskColumnRight">
+                <label>Due Date:</label>
+                <input type="date" name="dueDate" required/>
+            </div>
         </div>
-        <div class="addTaskColumnRight">
-          <label>Due Date:</label>
-          <input type="date" name="dueDate" required />
-        </div>
-      </div>
 
-      <div class="addTaskRow">
-        <input type="submit" value="Add" name="submitTask">
-        <input type="button" value="Close" onclick="closeAddTaskContainer()" name="closeAddTask">
-      </div>
+        <div class="addTaskRow">
+            <input type="submit" value="Add" name="submitTask">
+            <input type="button" value="Close" onclick="closeAddTaskContainer()" name="closeAddTask">
+        </div>
     </form>
-  </div>
+</div>
 
 </body>
 
