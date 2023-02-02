@@ -19,9 +19,10 @@ header {
     margin: 2vw;
     width: 100%;
     background-color: rgba(206, 205, 205, 0.24);
-    padding-bottom: 70vh;
     display: flex;
+    padding-bottom: 2vh;
     flex-direction: column;
+    height: fit-content;
 }
 
 .heading {
@@ -51,7 +52,8 @@ header {
 }
 
 .addButton {
-    margin: auto 15%;
+    margin-left: 10%;
+    width: 80%;
     border-radius: 5px;
     border: none;
     background-color: rgba(128, 128, 128, 0.144);
@@ -78,17 +80,14 @@ header {
     .kanbanContainer {
         flex-wrap: wrap;
     }
-
-    .addButton {
-        margin: auto 20%;
-    }
 }
 
 #addTaskContainer {
     box-shadow: 1px 10px 10px 1px rgba(131, 131, 131, 0.295);
     position: absolute;
-    margin-top: -60vh;
-    margin-left: 23%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-family: sans-serif;
     display: none;
     width: 50%;
