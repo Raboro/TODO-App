@@ -81,6 +81,12 @@ header {
         flex-wrap: wrap;
     }
 }
+@media only screen and (max-width: 700px) {
+    .chooseCategory {
+    display: flex;
+    flex-direction:column;
+    }
+}
 
 #addTaskContainer {
     box-shadow: 1px 10px 10px 1px rgba(131, 131, 131, 0.295);
@@ -117,7 +123,6 @@ textarea {
 
 label {
     padding: 12px 12px 12px 0;
-    display: inline-block;
 }
 
 input[type=submit] {
@@ -150,6 +155,7 @@ input[type=button] {
     float: left;
     width: 75%;
     margin-top: 6px;
+    margin-bottom: 6px;
 }
 
 .addTaskRow:after {
