@@ -1,8 +1,8 @@
 CREATE TABLE User(
-    Vorname            VARCHAR(32)          NOT NULL,
-    Nachname               VARCHAR(32)          NOT NULL,
-    EMail              VARCHAR(64)          NOT NULL,
-    Passwort           VARCHAR(128)         NOT NULL,
+    FirstName          VARCHAR(32)          NOT NULL,
+    LastName           VARCHAR(32)          NOT NULL,
+    Email              VARCHAR(64)          NOT NULL,
+    Password           VARCHAR(128)         NOT NULL,
 
     PRIMARY KEY (EMail)
 );
