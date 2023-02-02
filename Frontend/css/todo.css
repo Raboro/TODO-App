@@ -9,14 +9,14 @@ header {
 .kanbanContainer {
     display: flex;
     flex-direction: row;
-    margin: auto 5vw;
+    width: 100%;
 }
 
 .category {
     border: 3px solid rgba(255, 255, 255, 0.281);
-    border-radius: 30px;
+    border-radius: 20px;
     box-shadow: 1px 10px 10px 1px rgba(131, 131, 131, 0.295);
-    margin: 2vw;
+    margin: 1.5vw;
     width: 100%;
     background-color: rgba(206, 205, 205, 0.24);
     display: flex;
@@ -29,8 +29,9 @@ header {
 .heading {
     width: 30%;
     padding-top: 1%;
-    margin-left: 33%;
-    margin-right: 33%;
+    margin:auto;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
     text-align: center;
     border-radius: 5px;
     box-shadow: 1px 3px 3px 1px rgba(146, 126, 126, 0.178);
@@ -42,8 +43,6 @@ header {
 }
 
 .headingInProgress {
-    margin-left: 25%;
-    margin-right: 25%;
     background-color: rgba(121, 177, 230, 0.329);
     color: rgb(121, 177, 230);
 }
@@ -54,7 +53,7 @@ header {
 }
 
 .addButton {
-    width: 80%;
+    width: 90%;
     border-radius: 5px;
     border: none;
     background-color: rgba(128, 128, 128, 0.144);
@@ -166,39 +165,4 @@ input[type=button] {
         width: 50%;
         margin-top: 0;
     }
-}
-
-.overlay {
-    display: flex;
-}
-
-.task {
-    margin: auto;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(206, 205, 205, 0.24);
-    width: 21vw;
-    border-radius: 0.75vw;
-    margin-top: 2vh;
-    padding: -100vh
-}
-
-.taskTitle {
-    margin-bottom: -2vh;
-}
-
-.editTaskButtons {
-    margin: auto;
-    margin-top: 0.1vh;
-    margin-bottom: 0.5vh;
-}
-
-.editTaskButtons {
-    border-radius: 0.75vw;
-}
-
-.inputTask {
-    font-size: 15px;
-    padding: 1vw;
 }
