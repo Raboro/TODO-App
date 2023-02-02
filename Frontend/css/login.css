@@ -48,11 +48,17 @@ input {
     margin-right: 1vw;
 }
 
+input:focus{
+    background-color: #373737;
+    color: white;
+}
+
 button {
     display: block;
     font-size: 1.25rem;
     margin: auto;
     margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
     border-radius: 16px;
     border: 2px solid black;
 }
@@ -62,8 +68,13 @@ button:hover{
     color: white;
 }
 
+
 .openSignUp {
     font-size: 0.75rem;
+}
+
+a:hover{
+    color: blue;
 }
 
 @media screen and (max-width: 400px) {

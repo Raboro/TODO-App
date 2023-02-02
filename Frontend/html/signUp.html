@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/signInUp.css">
+  <link rel="stylesheet" href="../css/login.css">
 
-  <title>Kanban Sign up</title>
+  <title>Kanban - Sign up</title>
 </head>
 
 <body>
@@ -16,11 +16,11 @@
       <div class="inputContainerForLogin">
           <h3 class="loginHeading">SignUp to Kanban</h3>
 
-          <input type="text" name="firstName" class="inputFirstName" id="firstName" value="" placeholder="first name" required autocomplete="name"></input>
-          <input type="text" name="lastName" class="inputLastName" id="lastName" value="" placeholder="last name" required autocomplete="family-name"></input>
-          <input type="email" name="email" class="inputEmail" id="email" value="" placeholder="email adress" required autocomplete="email"></input>
-          <input type="password" name="password" class="inputPassword" id="password" value="" placeholder="password" required></input>
-          <input type="password" name="inputPasswordRepetition" class="passwordRepetion" id="passwordRepetition" value="" placeholder="repeat password" required></input>
+          <input type="text" name="firstName" id="firstName" placeholder="first name" maxlength="32" required autocomplete="name"></input>
+          <input type="text" name="lastName" id="lastName" placeholder="last name" maxlength="32" required autocomplete="family-name"></input>
+          <input type="email" name="email" id="email" placeholder="email adress" maxlength="64" required autocomplete="email"></input>
+          <input type="password" name="password" id="password" placeholder="password" maxlength="128" required></input>
+          <input type="password" name="inputPasswordRepetition" id="passwordRepetition" placeholder="repeat password" maxlength="128" required></input>
         <button>Sign up</button>
       </div>
     </form>
