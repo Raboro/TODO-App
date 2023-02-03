@@ -4,7 +4,7 @@
     flex-direction: column;
     background-color: #505050;
     width: 90%;
-    border-radius: 0.75vw;
+    border-radius: 7px;
     margin-top: 1vh;
     color: #ffffffcc;
 }
@@ -14,7 +14,13 @@
     margin-bottom: -2vh;
 }
 
-.editTaskButtons {
+.inputTask {
+    font-size: 15px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.buttonContainer {
     margin-top: -1vh;
     width: 100%;
 }
@@ -22,18 +28,7 @@
 .buttonTask{
     float: right;
     background-color: #505050;
-}
-
-.edit{
     margin: 0.25vh;
-    padding: 3px;
-    border: none;
-    border-radius: 15px;
-}
-
-.delete{
-    margin: 0.25vh;
-    padding: 0;
     border: none;
     border-radius: 15px;
 }
@@ -42,8 +37,10 @@
     transform: translateY(2px);
 }
 
-.inputTask {
-    font-size: 15px;
-    padding-left: 1vw;
-    padding-right: 1vw;
+.edit{
+    padding: 3px;
+}
+
+.delete{
+    padding: 0px;
 }
