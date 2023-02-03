@@ -29,9 +29,7 @@ header {
 .heading {
     width: 30%;
     padding-top: 1%;
-    margin:auto;
-    margin-top: 1vh;
-    margin-bottom: 2vh;
+    margin: 1vh auto 2vh;
     text-align: center;
     border-radius: 5px;
     box-shadow: 1px 3px 3px 1px rgba(146, 126, 126, 0.178);
