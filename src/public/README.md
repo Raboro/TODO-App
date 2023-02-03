@@ -1,0 +1,1 @@
+Contains all public files, which are send to the client. HTML, CSS and JavaScript.

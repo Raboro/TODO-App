@@ -1,0 +1,1 @@
+Represent data of the database.

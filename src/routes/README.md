@@ -1,0 +1,1 @@
+Contains routes with the endpoints of the resources.
