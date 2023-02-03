@@ -2,10 +2,11 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    background-color: rgba(206, 205, 205, 0.24);
+    background-color: #505050;
     width: 90%;
     border-radius: 0.75vw;
     margin-top: 1vh;
+    color: #ffffffcc;
 }
 
 .taskTitle {
@@ -20,6 +21,7 @@
 
 .buttonTask{
     float: right;
+    background-color: #505050;
 }
 
 .edit{
