@@ -1,0 +1,93 @@
+
+@media only screen and (max-width: 700px) {
+    .chooseCategory {
+    display: flex;
+    flex-direction:column;
+    }
+}
+
+#addTaskContainer {
+    box-shadow: 1px 10px 10px 1px rgba(131, 131, 131, 0.295);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+    display: none;
+    width: 50%;
+    border: 3px solid #868686;
+    border-radius: 15px;
+    background-color: #f2f2f2;
+    padding: 1%;
+}
+
+.chooseCategory {
+    display: flex;
+}
+
+input[type=text],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+#descriptionTextarea {
+    height: 10vh;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+
+}
+
+input[type=submit] {
+    background-color: #0066ff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=button] {
+    margin-right: 0.3vw;
+    background-color: #9e9c9c5b;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+.addTaskColumnLeft {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.addTaskColumnRight {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.addTaskRow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+
+    .col-25,
+    .col-75 {
+        width: 50%;
+        margin-top: 0;
+    }
+}
