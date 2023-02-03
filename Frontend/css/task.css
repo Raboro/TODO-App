@@ -19,8 +19,25 @@
 }
 
 .buttonTask{
-    border-radius: 0.75vw;
     float: right;
+}
+
+.edit{
+    margin: 0.25vh;
+    padding: 3px;
+    border: none;
+    border-radius: 15px;
+}
+
+.delete{
+    margin: 0.25vh;
+    padding: 0;
+    border: none;
+    border-radius: 15px;
+}
+
+.buttonTask:hover{
+    transform: translateY(2px);
 }
 
 .inputTask {
