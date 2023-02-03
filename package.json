@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "todo-app",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -8,7 +8,7 @@
     "dev": "npx nodemon src/app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Manuel Franz, Janik Piehler, Lukas Schulz, Marius Wörfel",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
