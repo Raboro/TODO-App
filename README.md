@@ -11,3 +11,28 @@
 3. Add a ```.env``` file, which contains all "secret data" about the server connection etc.
 4. After collecting the sourcecode load all dependencies with:
 > $ npm install
+
+---
+
+## Project structure
+
+>├── node_modules/ <br>
+├── src/ <br>
+│   ├── config/ <br>
+│   ├── controllers/ <br>
+│   ├── data/ <br>
+│   ├── middleware/ <br>
+│   ├── models/ <br>
+│   ├── models/ <br>
+│   ├── public/ <br>
+│   ├── routes/ <br>
+│   ├── services/ <br>
+│   ├── sql/ <br>
+│   ├── utils/ <br>
+│   ├── validators/ <br>
+│   └── app.js <br>
+├── .env <br>
+├── .gitignore <br>
+├── package.json <br> 
+├── package-lock.json <br>
+└── README.md 
