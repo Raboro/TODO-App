@@ -25,7 +25,7 @@
     width: 100%;
 }
 
-.buttonTask{
+.buttonTask {
     float: right;
     background-color: #505050;
     margin: 0.25vh;
@@ -33,14 +33,14 @@
     border-radius: 15px;
 }
 
-.buttonTask:hover{
+.buttonTask:hover {
     transform: translateY(-2px);
 }
 
-.edit{
+.edit {
     padding: 3px;
 }
 
-.delete{
+.delete {
     padding: 0;
 }
