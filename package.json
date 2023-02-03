@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
-    "dev": "npx nodemon app.js"
+    "dev": "npx nodemon src/app.js"
   },
   "keywords": [],
   "author": "",

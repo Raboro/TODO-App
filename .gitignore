@@ -1,4 +1,4 @@
 /.idea/
 /.vscode/
-/src/node_modules/
-/src/.env
+/node_modules/
+.env
