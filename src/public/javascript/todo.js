@@ -29,6 +29,10 @@ function addTask() {
 
 function fetchDataOfAddTaskForm() {
     const category = fetchCategory();
+    const taskTitle = getValueOfInput("taskTitle");
+    const taskDescription = getValueOfInput("taskDescription");
+    const taskDate = getValueOfInput("taskDate");
+    return {category, taskTitle, taskDescription, taskDate};
 }
 
 function fetchCategory() {
@@ -41,3 +45,5 @@ function fetchCategory() {
 }
 
 const isChecked = (radioButton) => radioButton != null && radioButton.checked;
+
+const getValueOfInput = (id) => document.getElementById(id).value;
