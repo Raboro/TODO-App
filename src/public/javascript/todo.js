@@ -33,13 +33,15 @@ function fetchDataOfAddTaskForm() {
 
 function fetchCategory() {
     const radioButtons = document.getElementsByClassName("chooseCategory").item(0).childNodes;
+    return fetchCategoryOfButtons(radioButtons);
+}
+
+function fetchCategoryOfButtons(radioButtons) {
     for (let i = 0; i < radioButtons.length; i++) {
         const radioButton = radioButtons.item(i).childNodes.item(1);
-        if (isChecked(radioButton)) {
+        if (isChecked(radioButton))
             return radioButton.value.toUpperCase();
-        }
     }
-    return DEFAULT_CATEGORY;
 }
 
 const isChecked = (radioButton) => radioButton != null && radioButton.checked;
