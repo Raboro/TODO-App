@@ -30,18 +30,18 @@ function addTask() {
         return;
     }
     const taskHtml = document.getElementById("taskTemplate").content.cloneNode(true).childNodes.item(1);
-    taskHtml.querySelector(".taskTitle").textContent = task.taskTitle;
-    taskHtml.querySelector(".taskDate").textContent = task.taskDate;
-    taskHtml.querySelector(".taskDescription").textContent = task.taskDescription;
+    taskHtml.querySelector(".taskTitle").textContent = task.title;
+    taskHtml.querySelector(".taskDate").textContent = task.date;
+    taskHtml.querySelector(".taskDescription").textContent = task.description;
     document.getElementsByClassName("kanbanContainer").item(0).childNodes.item(1).appendChild(taskHtml);
 }
 
 function fetchDataOfAddTaskForm() {
     return {
       category: fetchCategory(),
-      taskTitle: getValueOfInput("taskTitle"),
-      taskDescription: getValueOfInput("taskDescription"),
-      taskDate: getValueOfInput("taskDate")
+      title: getValueOfInput("taskTitle"),
+      description: getValueOfInput("taskDescription"),
+      date: getValueOfInput("taskDate")
     };
 }
 
