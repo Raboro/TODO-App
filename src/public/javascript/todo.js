@@ -27,7 +27,13 @@ function addTask() {
     const task = fetchDataOfAddTaskForm();
     if (!isTaskValid(task)) {
         alert("Your Task is not valid");
+        return;
     }
+    const taskHtml = document.getElementById("taskTemplate").content.cloneNode(true).childNodes.item(1);
+    taskHtml.querySelector(".taskTitle").textContent = task.taskTitle;
+    taskHtml.querySelector(".taskDate").textContent = task.taskDate;
+    taskHtml.querySelector(".taskDescription").textContent = task.taskDescription;
+    document.getElementsByClassName("kanbanContainer").item(0).childNodes.item(1).appendChild(taskHtml);
 }
 
 function fetchDataOfAddTaskForm() {
