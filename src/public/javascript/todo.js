@@ -25,6 +25,9 @@ function closeAddTaskContainer() {
 
 function addTask() {
     const task = fetchDataOfAddTaskForm();
+    if (!isTaskValid(task)) {
+        alert("Your Task is not valid");
+    }
 }
 
 function fetchDataOfAddTaskForm() {
