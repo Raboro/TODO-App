@@ -22,5 +22,24 @@ function closeAddTaskContainer() {
 }
 
 function addTask() {
-    //TODO add Task logic
+    fetchDataOfAddTaskForm();
+}
+
+function fetchDataOfAddTaskForm() {
+    const category = fetchCategory();
+}
+
+function fetchCategory() {
+    const radioButtons = document.getElementsByClassName("chooseCategory").item(0).childNodes;
+    for (let i = 0; i < radioButtons.length; i++) {
+        const radioButton = radioButtons.item(i).childNodes.item(1);
+        if (isChecked(radioButton)) {
+            return radioButton.value.toUpperCase();
+        }
+    }
+    return "TODO";
+}
+
+function isChecked(radioButton) {
+    return radioButton != null && radioButton.checked;
 }
