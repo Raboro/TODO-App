@@ -48,3 +48,5 @@ function fetchCategory() {
 const isChecked = (radioButton) => radioButton != null && radioButton.checked;
 
 const getValueOfInput = (id) => document.getElementById(id).value;
+
+const isTaskValid = (task) => Object.values(task).every(x => x !== '');
