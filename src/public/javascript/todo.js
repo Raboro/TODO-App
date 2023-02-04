@@ -30,18 +30,8 @@ function addTask() {
         return;
     }
     const taskHtml = constructTask(task);
-    let position;
-    switch (task.category) {
-        case "DONE":
-            position = 5;
-            break;
-        case "IN PROGRESS":
-            position = 3;
-            break;
-        default:
-            position = 1;
-    }
-    document.getElementsByClassName("kanbanContainer").item(0).childNodes.item(position).appendChild(taskHtml);
+    const categoryPosition = getPositionOfCategory(task.category);
+    document.getElementsByClassName("kanbanContainer").item(0).childNodes.item(categoryPosition).appendChild(taskHtml);
 }
 
 function fetchDataOfAddTaskForm() {
@@ -74,4 +64,13 @@ function constructTask(task) {
     taskHtml.querySelector(".taskDate").textContent = task.date;
     taskHtml.querySelector(".taskDescription").textContent = task.description;
     return taskHtml;
+}
+
+function getPositionOfCategory(category) {
+    if (category === "DONE") {
+        return 5;
+    } else if (category === "IN PROGRESS") {
+        return 3;
+    }
+    return 1;
 }
