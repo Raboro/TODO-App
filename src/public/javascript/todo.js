@@ -30,7 +30,18 @@ function addTask() {
         return;
     }
     const taskHtml = constructTask(task);
-    document.getElementsByClassName("kanbanContainer").item(0).childNodes.item(1).appendChild(taskHtml);
+    let position;
+    switch (task.category) {
+        case "DONE":
+            position = 5;
+            break;
+        case "IN PROGRESS":
+            position = 3;
+            break;
+        default:
+            position = 1;
+    }
+    document.getElementsByClassName("kanbanContainer").item(0).childNodes.item(position).appendChild(taskHtml);
 }
 
 function fetchDataOfAddTaskForm() {
