@@ -1,7 +1,3 @@
-function addTask() {
-    //TODO add Task logic
-}
-
 function openAddTaskContainer(id) {
     document.getElementById("addTaskContainer").style.display = "block";
     checkSelectedCategory(id);
@@ -23,4 +19,8 @@ function getRadioBox(id) {
 
 function closeAddTaskContainer() {
     document.getElementById("addTaskContainer").style.display = "none";
+}
+
+function addTask() {
+    //TODO add Task logic
 }
