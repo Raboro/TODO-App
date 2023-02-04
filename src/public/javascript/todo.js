@@ -24,15 +24,16 @@ function closeAddTaskContainer() {
 }
 
 function addTask() {
-    fetchDataOfAddTaskForm();
+    const task = fetchDataOfAddTaskForm();
 }
 
 function fetchDataOfAddTaskForm() {
-    const category = fetchCategory();
-    const taskTitle = getValueOfInput("taskTitle");
-    const taskDescription = getValueOfInput("taskDescription");
-    const taskDate = getValueOfInput("taskDate");
-    return {category, taskTitle, taskDescription, taskDate};
+    return {
+      category: fetchCategory(),
+      taskTitle: getValueOfInput("taskTitle"),
+      taskDescription: getValueOfInput("taskDescription"),
+      taskDate: getValueOfInput("taskDate")
+    };
 }
 
 function fetchCategory() {
