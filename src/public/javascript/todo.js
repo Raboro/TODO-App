@@ -8,7 +8,7 @@ function checkSelectedCategory(id) {
 }
 
 function getRadioBox(id) {
-    const radioButtons = document.getElementsByClassName("chooseCategory").item(0).childNodes;
+    const radioButtons = getRadioButtons();
     if (id === "todoAddButton") {
         return radioButtons.item(1);
     } else if (id === "inProgressAddButton") {
@@ -16,6 +16,8 @@ function getRadioBox(id) {
     }
     return radioButtons.item(5);
 }
+
+const getRadioButtons = () => document.getElementsByClassName("chooseCategory").item(0).childNodes;
 
 function closeAddTaskContainer() {
     document.getElementById("addTaskContainer").style.display = "none";
@@ -30,8 +32,7 @@ function fetchDataOfAddTaskForm() {
 }
 
 function fetchCategory() {
-    const radioButtons = document.getElementsByClassName("chooseCategory").item(0).childNodes;
-    return fetchCategoryOfButtons(radioButtons);
+    return fetchCategoryOfButtons(getRadioButtons());
 }
 
 function fetchCategoryOfButtons(radioButtons) {
