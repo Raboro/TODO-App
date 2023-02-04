@@ -1,3 +1,5 @@
+const DEFAULT_CATEGORY = "TODO";
+
 function openAddTaskContainer(id) {
     document.getElementById("addTaskContainer").style.display = "block";
     checkSelectedCategory(id);
@@ -37,7 +39,7 @@ function fetchCategory() {
             return radioButton.value.toUpperCase();
         }
     }
-    return "TODO";
+    return DEFAULT_CATEGORY;
 }
 
 const isChecked = (radioButton) => radioButton != null && radioButton.checked;
