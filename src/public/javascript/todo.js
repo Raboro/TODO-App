@@ -29,10 +29,7 @@ function addTask() {
         alert("Your Task is not valid");
         return;
     }
-    const taskHtml = document.getElementById("taskTemplate").content.cloneNode(true).childNodes.item(1);
-    taskHtml.querySelector(".taskTitle").textContent = task.title;
-    taskHtml.querySelector(".taskDate").textContent = task.date;
-    taskHtml.querySelector(".taskDescription").textContent = task.description;
+    const taskHtml = constructTask(task);
     document.getElementsByClassName("kanbanContainer").item(0).childNodes.item(1).appendChild(taskHtml);
 }
 
@@ -59,3 +56,11 @@ const isChecked = (radioButton) => radioButton != null && radioButton.checked;
 const getValueOfInput = (id) => document.getElementById(id).value;
 
 const isTaskValid = (task) => Object.values(task).every(x => x !== '');
+
+function constructTask(task) {
+    const taskHtml = document.getElementById("taskTemplate").content.cloneNode(true).childNodes.item(1);
+    taskHtml.querySelector(".taskTitle").textContent = task.title;
+    taskHtml.querySelector(".taskDate").textContent = task.date;
+    taskHtml.querySelector(".taskDescription").textContent = task.description;
+    return taskHtml;
+}
