@@ -32,10 +32,7 @@ function fetchDataOfAddTaskForm() {
 }
 
 function fetchCategory() {
-    return fetchCategoryOfButtons(getRadioButtons());
-}
-
-function fetchCategoryOfButtons(radioButtons) {
+    const radioButtons = getRadioButtons()
     for (let i = 0; i < radioButtons.length; i++) {
         const radioButton = radioButtons.item(i).childNodes.item(1);
         if (isChecked(radioButton))
