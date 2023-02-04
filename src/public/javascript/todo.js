@@ -40,6 +40,4 @@ function fetchCategory() {
     return "TODO";
 }
 
-function isChecked(radioButton) {
-    return radioButton != null && radioButton.checked;
-}
+const isChecked = (radioButton) => radioButton != null && radioButton.checked;
