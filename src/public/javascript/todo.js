@@ -1,5 +1,3 @@
-const DEFAULT_CATEGORY = "TODO";
-
 function openAddTaskContainer(id) {
     document.getElementById("addTaskContainer").style.display = "block";
     checkSelectedCategory(id);
