@@ -4,10 +4,10 @@ function openAddTaskContainer(id) {
 }
 
 function checkSelectedCategory(id) {
-    getRadioBox(id).childNodes.item(1).checked = true;
+    getRadioBoxById(id).childNodes.item(1).checked = true;
 }
 
-function getRadioBox(id) {
+function getRadioBoxById(id) {
     const radioButtons = getRadioButtons();
     if (id === "todoAddButton") {
         return radioButtons.item(1);
