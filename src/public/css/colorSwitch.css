@@ -1,0 +1,53 @@
+.colorSwitch {
+    position: absolute;
+    top: 2.35%;
+    left: 95%;
+    width: 2.4vw;
+    height: 1vh;
+}
+
+.colorSwitch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.colorSlider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.colorSlider:before {
+    position: absolute;
+    content: "";
+    height: 2.6vh;
+    width: 1.3vw;
+    left: 0.2vw;
+    bottom: 0.4vh;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.colorSwitch input:checked + .colorSlider {
+    background-color: rgba(46, 43, 43, 0.8);
+}
+
+.colorSwitch input:checked + .colorSlider:before {
+    transform: translateX(1.3vw);
+}
+
+.colorSlider {
+    border-radius: 34px;
+}
+
+.colorSlider:before {
+    border-radius: 50%;
+}
