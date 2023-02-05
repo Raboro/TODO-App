@@ -26,7 +26,7 @@
     </label>
 </header>
 
-<div class="kanbanContainer">
+<section class="kanbanContainer">
     <div class="category">
         <h3 class="heading headingTodo">TODO</h3>
         <button id="todoAddButton" class="addButton" onclick="openAddTaskContainer(this.id)">+</button>
@@ -41,9 +41,9 @@
         <h3 class="heading headingDone">DONE</h3>
         <button id="doneAddButton" class="addButton" onclick="openAddTaskContainer(this.id)">+</button>
     </div>
-</div>
+</section>
 
-<div id="addTaskContainer">
+<section id="addTaskContainer">
     <form onsubmit="return false">
         <div class="addTaskRow">
             <div class="addTaskColumnLeft">
@@ -99,7 +99,7 @@
             <input type="button" value="Close" onclick="closeAddTaskContainer()" name="closeAddTask">
         </div>
     </form>
-</div>
+</section>
 
 <template id="taskTemplate">
     <div class="task">
