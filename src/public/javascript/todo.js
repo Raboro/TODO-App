@@ -4,7 +4,7 @@ function openAddTaskContainer(id) {
 }
 
 function checkSelectedCategory(id) {
-    getRadioBoxById(id).childNodes.item(1).checked = true;
+    getRadioBoxById(id).childNodes.item(1)["checked"] = true;
 }
 
 function getRadioBoxById(id) {
