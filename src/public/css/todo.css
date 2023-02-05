@@ -3,11 +3,12 @@
 }
 
 body {
-    background-color: white;
+    background-color: var(--mainBackgroundColor);
 }
 
 header h1 {
     text-align: center;
+    color: var(--headingColor)
 }
 
 .kanbanContainer {
@@ -17,12 +18,12 @@ header h1 {
 }
 
 .category {
-    border: 3px solid rgba(255, 255, 255, 0.281);
+    border: 3px solid var(--categoryBorderColor);
     border-radius: 20px;
-    box-shadow: 1px 10px 10px 1px rgba(131, 131, 131, 0.295);
+    box-shadow: 1px 10px 10px 1px var(--categoryBoxShadowColor);
     margin: 1.5vw;
     width: 100%;
-    background-color: rgba(206, 205, 205, 0.24);
+    background-color: var(--categoryBackgroundColor);
     display: flex;
     padding-bottom: 2vh;
     flex-direction: column;
@@ -36,34 +37,35 @@ header h1 {
     margin: 1vh auto 2vh;
     text-align: center;
     border-radius: 5px;
-    box-shadow: 1px 3px 3px 1px rgba(146, 126, 126, 0.178);
+    box-shadow: 1px 3px 3px 1px var(--categoryHeadingBoxShadowColor);
 }
 
 .headingTodo {
-    background-color: rgba(128, 128, 128, 0.199);
-    color: gray;
+    background-color: var(--headingTodoBackgroundColor);
+    color: var(--headingTodoColor);
 }
 
 .headingInProgress {
-    background-color: rgba(121, 177, 230, 0.329);
-    color: rgb(121, 177, 230);
+    background-color: var(--headingInProgressBackgroundColor);
+    color: var(--headingInProgressColor);
 }
 
 .headingDone {
-    background-color: rgba(126, 228, 126, 0.274);
-    color: rgba(63, 150, 63, 0.699);
+    background-color: var(--headingDoneBackgroundColor);
+    color: var(--headingDoneColor);
 }
 
 .addButton {
     width: 90%;
     border-radius: 5px;
     border: none;
-    background-color: rgba(128, 128, 128, 0.144);
+    background-color: var(--addButtonBackgroundColor);
+    color: var(--addButtonColor);
 }
 
 .addButton:hover {
-    background-color: rgba(128, 128, 128, 0.212);
-    box-shadow: 1px 3px 3px 1px rgba(146, 126, 126, 0.089);
+    background-color: var(--addButtonHoverBackgroundColor);
+    box-shadow: 1px 3px 3px 1px var(--addButtonHoverBoxShadowColor);
 }
 
 .addButton:active {
