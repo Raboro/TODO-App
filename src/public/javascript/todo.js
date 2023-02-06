@@ -27,6 +27,7 @@ function addTask() {
     const task = fetchDataOfAddTaskForm();
     if (isTaskValid(task)) {
         addTaskToCategory(task);
+        document.getElementById("closeAddTaskButton").disabled = false;
         return;
     }
     alert("Your Task is not valid");
@@ -77,6 +78,11 @@ function constructTask(task) {
     taskHtml.querySelector(".taskDate").textContent = task.date;
     taskHtml.querySelector(".taskDescription").textContent = task.description;
     taskHtml.querySelector(".delete").onclick = function () {
+        this.parentNode.parentNode.remove();
+    }
+    taskHtml.querySelector(".edit").onclick = function () {
+        document.getElementById("addTaskContainer").style.display = "block";
+        document.getElementById("closeAddTaskButton").disabled = true;
         this.parentNode.parentNode.remove();
     }
     return taskHtml;
