@@ -77,15 +77,27 @@ function constructTask(task) {
     taskHtml.querySelector(".taskTitle").textContent = task.title;
     taskHtml.querySelector(".taskDate").textContent = task.date;
     taskHtml.querySelector(".taskDescription").textContent = task.description;
+    setOnClickActions(taskHtml)
+    return taskHtml;
+}
+
+const getTaskTemplate = () => document.getElementById("taskTemplate").content.cloneNode(true);
+
+function setOnClickActions(taskHtml) {
+    setOnClickActionOfDeleteTask(taskHtml);
+    setOnClickActionOfEditTask(taskHtml);
+}
+
+function setOnClickActionOfDeleteTask(taskHtml) {
     taskHtml.querySelector(".delete").onclick = function () {
         this.parentNode.parentNode.remove();
     }
+}
+
+function setOnClickActionOfEditTask(taskHtml) {
     taskHtml.querySelector(".edit").onclick = function () {
         document.getElementById("addTaskContainer").style.display = "block";
         document.getElementById("closeAddTaskButton").disabled = true;
         this.parentNode.parentNode.remove();
     }
-    return taskHtml;
 }
-
-const getTaskTemplate = () => document.getElementById("taskTemplate").content.cloneNode(true);
