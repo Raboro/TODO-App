@@ -1,27 +1,42 @@
-CREATE TABLE User(
-    FirstName          VARCHAR(32)          NOT NULL,
-    LastName           VARCHAR(32)          NOT NULL,
-    Email              VARCHAR(64)          NOT NULL,
-    Password           VARCHAR(128)         NOT NULL,
+CREATE TABLE users(
+    firstName   VARCHAR(32)          NOT NULL,
+    lastName    VARCHAR(32)          NOT NULL,
+    email       VARCHAR(64)          NOT NULL,
+    pwd         VARCHAR(128)         NOT NULL,
 
-    PRIMARY KEY (EMail)
+    PRIMARY KEY (eMail)
 );
 
-CREATE TABLE Task(
-    TaskID              Integer             NOT NULL,
-    Category            Char(16)            NOT NULL,
-    Title               VARCHAR(64)         NULL,
-    Description         VARCHAR(1024)       NULL,
-    DueDate             DATE                NULL,
-    User                VARCHAR(64)         NOT NULL,
+CREATE TABLE categories(
+    id          INTEGER             NOT NULL,
+    category    VARCHAR(32)         NOT NULL,
 
-    PRIMARY KEY (TaskID, User),
+    PRIMARY KEY (id)
+);
 
-    FOREIGN KEY (User)
-    REFERENCES User (EMail)
+CREATE TABLE tasks(
+    id          INTEGER             PRIMARY KEY AUTO_INCREMENT,
+    category    INTEGER             NOT NULL,
+    title       VARCHAR(64)         NULL,
+    content     VARCHAR(1024)       NULL,
+    dueDate     DATE                NULL,
+    user        VARCHAR(64)         NOT NULL,
+    position    INTEGER             NULL,
+    created     TIMESTAMP           NOT NULL DEFAULT NOW(),
+
+
+    FOREIGN KEY (user)
+    REFERENCES users (eMail)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE,
+
+    FOREIGN KEY (category)
+    REFERENCES categories (id)
     ON UPDATE CASCADE
     ON DELETE CASCADE
 );
+
+
 
 
 
