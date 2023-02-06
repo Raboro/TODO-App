@@ -72,9 +72,11 @@ const getPositionOfCategory = {
 }
 
 function constructTask(task) {
-    const taskHtml = document.getElementById("taskTemplate").content.cloneNode(true).childNodes.item(1);
+    const taskHtml = getTaskTemplate().childNodes.item(1);
     taskHtml.querySelector(".taskTitle").textContent = task.title;
     taskHtml.querySelector(".taskDate").textContent = task.date;
     taskHtml.querySelector(".taskDescription").textContent = task.description;
     return taskHtml;
 }
+
+const getTaskTemplate = () => document.getElementById("taskTemplate").content.cloneNode(true);
