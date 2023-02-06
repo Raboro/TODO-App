@@ -57,10 +57,18 @@ const getValueOfInput = (id) => document.getElementById(id).value;
 const isTaskValid = (task) => Object.values(task).every(x => x !== '');
 
 function addTaskToCategory(task) {
-    const taskHtml = constructTask(task);
-    const categoryPosition = getPositionOfCategory[task.category];
-    document.getElementsByClassName("kanbanContainer").item(0).childNodes.item(categoryPosition).appendChild(taskHtml);
+    getCategoryToAppendTask(getPositionOfCategory[task.category]).appendChild(constructTask(task));
     closeAddTaskContainer();
+}
+
+function getCategoryToAppendTask(categoryPosition) {
+    return document.getElementsByClassName("kanbanContainer").item(0).childNodes.item(categoryPosition);
+}
+
+const getPositionOfCategory = {
+    "TODO": 1,
+    "IN PROGRESS": 3,
+    "DONE": 5
 }
 
 function constructTask(task) {
@@ -69,10 +77,4 @@ function constructTask(task) {
     taskHtml.querySelector(".taskDate").textContent = task.date;
     taskHtml.querySelector(".taskDescription").textContent = task.description;
     return taskHtml;
-}
-
-const getPositionOfCategory = {
-    "TODO": 1,
-    "IN PROGRESS": 3,
-    "DONE": 5
 }
