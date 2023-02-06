@@ -2,11 +2,13 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    background-color: #505050;
+    background-color: var(--addButtonBackgroundColor);
     width: 90%;
     border-radius: 7px;
     margin-top: 1vh;
-    color: #ffffffcc;
+    color: var(--addButtonColor);
+    box-shadow: 1px 2px 2px 2px var(--categoryBoxShadowColor);
+    border: 1px solid var(--categoryBorderColor);
 }
 
 .taskTitle {
@@ -27,7 +29,7 @@
 
 .buttonTask {
     float: right;
-    background-color: #505050;
+    background-color: rgba(80, 80, 80, 0);
     margin: 0.25vh;
     border: none;
     border-radius: 15px;
