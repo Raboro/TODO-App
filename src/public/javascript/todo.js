@@ -76,6 +76,9 @@ function constructTask(task) {
     taskHtml.querySelector(".taskTitle").textContent = task.title;
     taskHtml.querySelector(".taskDate").textContent = task.date;
     taskHtml.querySelector(".taskDescription").textContent = task.description;
+    taskHtml.querySelector(".delete").onclick = function () {
+        this.parentNode.parentNode.remove();
+    }
     return taskHtml;
 }
 
