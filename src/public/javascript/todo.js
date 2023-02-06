@@ -58,7 +58,7 @@ const isTaskValid = (task) => Object.values(task).every(x => x !== '');
 
 function addTaskToCategory(task) {
     const taskHtml = constructTask(task);
-    const categoryPosition = getPositionOfCategory(task.category);
+    const categoryPosition = getPositionOfCategory[task.category];
     document.getElementsByClassName("kanbanContainer").item(0).childNodes.item(categoryPosition).appendChild(taskHtml);
 }
 
@@ -70,11 +70,8 @@ function constructTask(task) {
     return taskHtml;
 }
 
-function getPositionOfCategory(category) {
-    if (category === "DONE") {
-        return 5;
-    } else if (category === "IN PROGRESS") {
-        return 3;
-    }
-    return 1;
+const getPositionOfCategory = {
+    "TODO": 1,
+    "IN PROGRESS": 3,
+    "DONE": 5
 }
