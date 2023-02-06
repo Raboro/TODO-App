@@ -32,7 +32,7 @@ header h1 {
 }
 
 .heading {
-    width: 45%;
+    width: 20%;
     padding-top: 1%;
     margin: 1vh auto 2vh;
     text-align: center;
@@ -46,6 +46,7 @@ header h1 {
 }
 
 .headingInProgress {
+    width: 42%;
     background-color: var(--headingInProgressBackgroundColor);
     color: var(--headingInProgressColor);
 }
@@ -82,5 +83,15 @@ header h1 {
 @media only screen and (max-width: 1100px) {
     .kanbanContainer {
         flex-wrap: wrap;
+    }
+
+    .headingInProgress {
+        width: 20%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .headingInProgress {
+        width: 50%;
     }
 }
