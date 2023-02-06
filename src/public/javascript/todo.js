@@ -60,6 +60,7 @@ function addTaskToCategory(task) {
     const taskHtml = constructTask(task);
     const categoryPosition = getPositionOfCategory[task.category];
     document.getElementsByClassName("kanbanContainer").item(0).childNodes.item(categoryPosition).appendChild(taskHtml);
+    closeAddTaskContainer();
 }
 
 function constructTask(task) {
