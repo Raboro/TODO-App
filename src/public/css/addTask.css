@@ -1,5 +1,5 @@
 #addTaskContainer {
-    box-shadow: 1px 10px 10px 1px rgba(131, 131, 131, 0.295);
+    box-shadow: 1px 10px 10px 1px var(--categoryBoxShadowColor);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -7,9 +7,9 @@
     font-family: sans-serif;
     display: none;
     width: 50%;
-    border: 3px solid #868686;
+    border: 3px solid var(--categoryBorderColor);
     border-radius: 15px;
-    background-color: #f2f2f2;
+    background-color: var(--categoryBackgroundColor);
     padding: 1%;
 }
 
@@ -34,7 +34,7 @@ input[type=text],
 textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--categoryBorderColor);
     border-radius: 4px;
     box-sizing: border-box;
     resize: none;
