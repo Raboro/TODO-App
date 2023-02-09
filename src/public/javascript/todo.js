@@ -63,7 +63,7 @@ function addTaskToCategory(task) {
 }
 
 function getCategoryToAppendTask(categoryPosition) {
-    return document.getElementsByClassName("kanbanContainer").item(0).childNodes.item(categoryPosition);
+    return document.getElementsByClassName("kanbanContainer").item(0).childNodes.item(categoryPosition).childNodes.item(5);
 }
 
 const getPositionOfCategory = {
