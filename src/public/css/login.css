@@ -75,6 +75,13 @@ a:hover {
     color: blue;
 }
 
+#error{
+    color: red;
+    margin: auto;
+    margin-top: 1vh;
+    margin-bottom: 0.25vw;
+}
+
 @media screen and (max-width: 400px) {
     .loginHeading {
         font-size: 1.5rem;
