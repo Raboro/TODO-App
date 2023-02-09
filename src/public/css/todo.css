@@ -92,7 +92,6 @@ header h1 {
     .tasks{   
         grid-auto-columns: 50%;
         grid-auto-flow: column;
-        gap: 0.5vw;
         overflow-x: auto;
         overscroll-behavior-inline: contain;
     }
@@ -106,5 +105,6 @@ header h1 {
 
 .tasks{
     display: grid;
-    width: 90%;
+    width: 100%;
+    margin-top: 1.5vh;    
 }
