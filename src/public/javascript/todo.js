@@ -101,3 +101,21 @@ function setOnClickActionOfEditTask(taskHtml) {
         this.parentNode.parentNode.remove();
     }
 }
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    console.log(ev.target)
+    ev.target.setAttribute("id", "testDrag")
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    let el = document.getElementById("testDrag");
+    ev.target.appendChild(el);
+    el.removeAttribute("id")
+}

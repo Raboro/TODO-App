@@ -11,7 +11,7 @@
 
 <body>
     <div class="overlay">
-        <form action="todo.html">
+        <form>
             <div class="inputContainerForLogin">
                 <h3 class="loginHeading">Sign in to Kanban</h3>
                 <label for="email">
@@ -20,11 +20,15 @@
                 <label for="password">
                     <input type="password" name="password" id="password" placeholder="Password" maxlength="128" required>
                 </label>
-                <button>Sign In</button>
+
+                <div id="error"></div>
+
+                <button id="buttonSignIn">Sign In</button>
                 <p class="openSignUp">New here? <a href="signUp.html">Sign up!</a></p>
             </div>
         </form>
     </div>
+    <script src = "../javascript/signIn.js"></script>
 </body>
 
 </html>

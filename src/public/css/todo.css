@@ -88,21 +88,23 @@ header h1 {
     .headingInProgress {
         width: 20%;
     }
+
+    .tasks{   
+        grid-auto-columns: 50%;
+        grid-auto-flow: column;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+    }
 }
 
 @media only screen and (max-width: 800px) {
     .headingInProgress {
         width: 50%;
     }
+}
 
-    .tasks{
-        width: 90%;
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: 50%;
-        gap: 3px;
-        
-        overflow-x: auto;
-        overscroll-behavior-inline: contain;
-    }
+.tasks{
+    display: grid;
+    width: 100%;
+    margin-top: 1.5vh;    
 }

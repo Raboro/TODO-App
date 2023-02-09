@@ -5,8 +5,11 @@
     background-color: #505050;
     width: 90%;
     border-radius: 7px;
-    margin-top: 1vh;
     color: #ffffffcc;
+    cursor:move;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5vh;
 }
 
 .taskTitle {
@@ -43,4 +46,8 @@
 
 .delete {
     padding: 0;
+}
+
+@media only screen and (max-width: 800px) {
+
 }
