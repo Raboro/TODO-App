@@ -11,7 +11,7 @@
 
 <body>
     <div class="overlay">
-        <form action="todo.html">
+        <form>
             <div class="inputContainerForLogin">
                 <h3 class="loginHeading">SignUp to Kanban</h3>
                 <label for="firstName">
@@ -29,9 +29,12 @@
                 <label for="passwordRepetition">
                     <input type="password" name="inputPasswordRepetition" id="passwordRepetition" placeholder="repeat password" maxlength="128" required>
                 </label>
-                <button>Sign up</button>
+                <div id="error"></div>
+                <button id = "buttonSignUp">Sign up</button>
             </div>
         </form>
     </div>
+    
+    <script src = "../javascript/signUp.js"></script>
 </body>
 </html>
