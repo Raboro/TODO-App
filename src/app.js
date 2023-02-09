@@ -1,5 +1,6 @@
 import express from 'express'
 import dotenv from 'dotenv'
+import printEndpointCall from "./middleware/endpointCall.js";
 
 dotenv.config();
 
@@ -8,10 +9,7 @@ const PORT = process.env.PORT;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use((req, res, next) => {
-    console.warn(`[SERVER] ${req.method} was called by ${req.path}`)
-    next();
-});
+app.use(printEndpointCall);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port: ${PORT}`);
