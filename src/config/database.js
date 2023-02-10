@@ -2,7 +2,7 @@ import mysql from "mysql2"
 import dotenv from "dotenv";
 import path from "path";
 
-dotenv.config({path : path.join(process.cwd().replace("src\\config", ".env"))});
+dotenv.config({path: path.join(process.cwd().replace("src\\config", ".env"))});
 
 const connections = mysql.createPool({
     host: process.env.MYSQL_HOST,
@@ -10,7 +10,6 @@ const connections = mysql.createPool({
     password: process.env.MYSQL_PASSWORD,
     database: process.env.MYSQL_USER
 }).promise();
-
 
 
 async function getTasksFromSelectedCategory(id) {
@@ -41,7 +40,6 @@ async function updateTask(id, idCategory, title, content, dueDate, position) {
     const temp = await connections.query("UPDATE tasks SET category = ?, title = ?, content = ?, dueDate = ?, position = ? WHERE id = ?", [idCategory, title, content, dueDate, position, id]);
     return temp
 }
-
 
 
 async function signIn(email, pwd) {
