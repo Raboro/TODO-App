@@ -1,8 +1,9 @@
 import express from 'express'
 import dotenv from 'dotenv'
+import path from "path";
 import printEndpointCall from "./middleware/endpointCall.js";
 
-dotenv.config();
+dotenv.config({path : path.join(process.cwd().replace("src", ".env"))});
 
 const app = express();
 const PORT = process.env.PORT;
