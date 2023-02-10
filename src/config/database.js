@@ -13,48 +13,48 @@ const connections = mysql.createPool({
 
 
 async function getAllTasksByCategory(id) {
-    const temp = await connections.query("SELECT * FROM tasks WHERE category = ? ORDER BY position ASC", id);
-    return temp[0]
+    const data = await connections.query("SELECT * FROM tasks WHERE category = ? ORDER BY position ASC", id);
+    return data[0]
 }
 
 async function addTask(idCategory, title, content, dueDate, user, position) {
-    const temp = await connections.query("INSERT INTO tasks VALUES(NULL,?,?,?,?,?,?,NULL)", [idCategory, title, content, dueDate, user, position]);
+    const data = await connections.query("INSERT INTO tasks VALUES(NULL,?,?,?,?,?,?,NULL)", [idCategory, title, content, dueDate, user, position]);
 }
 
 async function deleteTask(id) {
-    const temp = await connections.query("DELETE FROM tasks WHERE tasks.id = ?", id);
-    return temp[0]
+    const data = await connections.query("DELETE FROM tasks WHERE tasks.id = ?", id);
+    return data[0]
 }
 
 async function changePositionOfTask(id, position) {
-    const temp = await connections.query("UPDATE tasks SET position = ? WHERE tasks.id = ?", [position, id])
-    return temp[0]
+    const data = await connections.query("UPDATE tasks SET position = ? WHERE tasks.id = ?", [position, id])
+    return data[0]
 }
 
 async function changeCategoryAndPosition(id, position, category) {
-    const temp = await connections.query("UPDATE tasks SET category = ?, position = ? WHERE task.id = ?", [category, position, id]);
-    return temp[0]
+    const data = await connections.query("UPDATE tasks SET category = ?, position = ? WHERE task.id = ?", [category, position, id]);
+    return data[0]
 }
 
 async function updateTask(id, idCategory, title, content, dueDate, position) {
-    const temp = await connections.query("UPDATE tasks SET category = ?, title = ?, content = ?, dueDate = ?, position = ? WHERE id = ?", [idCategory, title, content, dueDate, position, id]);
-    return temp[0]
+    const data = await connections.query("UPDATE tasks SET category = ?, title = ?, content = ?, dueDate = ?, position = ? WHERE id = ?", [idCategory, title, content, dueDate, position, id]);
+    return data[0]
 }
 
 
 async function signIn(email, pwd) {
-    const temp = connections.query("SELECT email FROM users WHERE email = ? AND pwd = ?", [email, pwd]);
-    return temp[0]
+    const data = connections.query("SELECT email FROM users WHERE email = ? AND pwd = ?", [email, pwd]);
+    return data[0]
 }
 
 async function signUpCheckUniqueEmail(email) {
-    const temp = connections.query("SELECT email FROM users WHERE email = ?", email);
-    return temp[0]
+    const data = connections.query("SELECT email FROM users WHERE email = ?", email);
+    return data[0]
 }
 
 async function signUpInsertNewUser(firstName, lastName, email, pwd) {
-    const temp = connections.query("INSERT INTO users VALUES(?,?,?,?)", [firstName, lastName, email, pwd]);
-    return temp[0]
+    const data = connections.query("INSERT INTO users VALUES(?,?,?,?)", [firstName, lastName, email, pwd]);
+    return data[0]
 }
 
 console.log(await getAllTasksByCategory(3));
