@@ -1,10 +1,14 @@
 import mysql from "mysql2"
+import dotenv from "dotenv";
+import path from "path";
+
+dotenv.config({path : path.join(process.cwd().replace("src\\config", ".env"))});
 
 const connections = mysql.createPool({
-    host: "sql7.freemysqlhosting.net",
-    user: "sql7593995",
-    password: "ial4mljDpf",
-    database: "sql7593995"
+    host: process.env.MYSQL_HOST,
+    user: process.env.MYSQL_USER,
+    password: process.env.MYSQL_PASSWORD,
+    database: process.env.MYSQL_USER
 }).promise();
 
 
