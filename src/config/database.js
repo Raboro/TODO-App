@@ -12,12 +12,12 @@ const connections = mysql.createPool({
 }).promise();
 
 
-async function getTasksFromSelectedCategory(id) {
+async function getAllTasksByCategory(id) {
     const temp = await connections.query("SELECT * FROM tasks WHERE category = ? ORDER BY position ASC", id);
     return temp[0]
 }
 
-async function newTask(idCategory, title, content, dueDate, user, position) {
+async function addTask(idCategory, title, content, dueDate, user, position) {
     const temp = await connections.query("INSERT INTO tasks VALUES(NULL,?,?,?,?,?,?,NULL)", [idCategory, title, content, dueDate, user, position]);
 }
 
@@ -57,7 +57,7 @@ async function signUpInsertNewUser(firstName, lastName, email, pwd) {
     return temp[0]
 }
 
-console.log(await getTasksFromSelectedCategory(3));
+console.log(await getAllTasksByCategory(3));
 
 connections.end();
 
