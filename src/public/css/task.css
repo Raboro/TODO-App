@@ -23,6 +23,7 @@
 }
 
 .taskTitle {
+    word-break: break-word;
     margin-top: 1vh;
     margin-bottom: -1vh;
 }
@@ -39,6 +40,7 @@
 }
 
 .taskDescription {
+    word-break: break-word;
     padding: 0 1vw;
 }
 
