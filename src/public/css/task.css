@@ -14,7 +14,7 @@
 
 .taskTitle {
     margin-top: 1vh;
-    margin-bottom: -2vh;
+    margin-bottom: -1vh;
 }
 
 .inputTask {
@@ -26,6 +26,10 @@
 .buttonContainer {
     margin-top: -1vh;
     width: 100%;
+}
+
+.taskDescription {
+    padding: 0 1vw;
 }
 
 .buttonTask {
