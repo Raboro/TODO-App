@@ -12,6 +12,16 @@
     margin-bottom: 1.5vh;
 }
 
+.task > .buttonContainer {
+    opacity: 0;
+    transition-duration: 0.2s;
+}
+
+.task:hover > .buttonContainer {
+    opacity: 1;
+    transition-duration: 0.2s;
+}
+
 .taskTitle {
     margin-top: 1vh;
     margin-bottom: -1vh;
@@ -33,6 +43,8 @@
 }
 
 .buttonTask {
+    opacity: 0.7;
+    transition-duration: 0.2s;
     float: right;
     background-color: #505050;
     margin: 0.25vh;
@@ -41,6 +53,8 @@
 }
 
 .buttonTask:hover {
+    opacity: 1;
+    transition-duration: 0.2s;
     transform: translateY(-2px);
 }
 
