@@ -1,31 +1,25 @@
-import connections from '../config/database.js';
+import {executeQuery} from './database.js';
 
-console.log(connections);
-
-async function getTasksFromSelectedCategory(id){
-    return await connections.query("SELECT * FROM tasks WHERE category = ? ORDER BY position ASC",id);
+async function getAllTasksByCategory(id) {
+    return await executeQuery(`SELECT * FROM tasks WHERE category = ${id} ORDER BY position ASC`);
 }
 
-async function newTask(idCategory,title,content,dueDate,user,position){
-    return await connections.query("INSERT INTO tasks VALUES(NULL,?,?,?,?,?,?,NULL)",idCategory,title,content,dueDate,user,position);
+async function addTask(category, title, content, dueDate, user, position) {
+    return await executeQuery(`INSERT INTO tasks VALUES(NULL, ${category}, ${title}, ${content}, ${dueDate}, ${user}, ${position}, NULL)`);
 }
 
-async function deleteTask(id){
-    return await connections.query("DELETE FROM tasks WHERE tasks.id = ?", id);
+async function deleteTask(id) {
+    return await executeQuery(`DELETE FROM tasks WHERE tasks.id = ${id}`);
 }
 
-async function changePositionOfTask(id, position){
-    return await connections.query("UPDATE tasks SET position = ? WHERE tasks.id = ?", position, id)
+async function changePositionOfTask(id, position) {
+    return await executeQuery(`UPDATE tasks SET position = ${position} WHERE tasks.id = ${id}`)
 }
 
-async function changeCategoryAndPosition(id, position, category){
-    return await connections.query("UPDATE tasks SET category = ?, position = ? WHERE task.id = ?", category, position, id);
+async function changeCategoryAndPosition(id, position, category) {
+    return await executeQuery(`UPDATE tasks SET category = ${category}, position = ${position} WHERE task.id = ${id}`);
 }
 
-async function updateTask(id,idCategory,title,content,dueDate,position){
-    return await connections.query("UPDATE tasks SET category = ?, title = ?, content = ?, dueDate = ?, position = ? WHERE id = ?", idCategory, title, content, dueDate, position, id);
+async function updateTask(id, category, title, content, dueDate, position) {
+    return await executeQuery(`UPDATE tasks SET category = ${category}, title = ${title}, content = ${content}, dueDate = ${dueDate}, position = ${position} WHERE id = ${id}`);
 }
-
-console.log(await getTasksFromSelectedCategory(1)[0])
-
-connections.end();
