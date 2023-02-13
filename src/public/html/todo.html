@@ -13,7 +13,6 @@
     <script src="https://kit.fontawesome.com/38c2b2b50e.js" crossorigin="anonymous"></script>
     <script src="../javascript/todo.js"></script>
     <script src="../javascript/themeSwitcher.js"></script>
-    <script src="../javascript/addTask.js"></script>
     <title>Kanban-Main-Page</title>
 </head>
 
@@ -53,7 +52,7 @@
     </div>
 </div>
 
-<div id="addTaskContainer" ondblclick="move()" onmouseup="stop()" >
+<div id="addTaskContainer">
     <form onsubmit="return false">
         <div class="addTaskRow">
             <div class="addTaskColumnLeft">
@@ -127,6 +126,7 @@
     </div>
 </template>
 
+<script src="../javascript/addTask.js"></script>
 </body>
 
 </html>
