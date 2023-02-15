@@ -118,6 +118,14 @@ function drag(ev) {
 function drop(ev) {
     ev.preventDefault();
     let el = document.getElementById("testDrag");
-    ev.target.appendChild(el);
+    if(ev.target.className == "category"){
+        ev.target.childNodes.item(5).appendChild(el);
+    }else{
+        if(ev.target.className == "task"){
+            console.log("invalid drop");
+        }else{
+            ev.target.parentNode.childNodes.item(5).appendChild(el);
+        }
+    }
     el.removeAttribute("id")
 }
