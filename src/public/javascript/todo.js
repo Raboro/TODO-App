@@ -120,12 +120,10 @@ function drop(ev) {
     let el = document.getElementById("testDrag");
     if(ev.target.className == "category"){
         ev.target.childNodes.item(5).appendChild(el);
+    }else if(ev.target.classList.item(1) === "dropTask"){
+        console.log("invalid drop");
     }else{
-        if(ev.target.className == "task"){
-            console.log("invalid drop");
-        }else{
-            ev.target.parentNode.childNodes.item(5).appendChild(el);
-        }
+        ev.target.parentNode.childNodes.item(5).appendChild(el);
     }
     el.removeAttribute("id")
 }

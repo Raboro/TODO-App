@@ -27,7 +27,7 @@
 </header>
 
 <div class="kanbanContainer">
-    <div class="category"  ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div class="category" ondrop="drop(event)" ondragover="allowDrop(event)">
         <h3 class="heading headingTodo">TODO</h3>
         <button id="todoAddButton" class="addButton" onclick="openAddTaskContainer(this.id)">+</button>
         <div class="tasks">
@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    <div class="category"  ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div class="category" ondrop="drop(event)" ondragover="allowDrop(event)">
         <h3 class="heading headingInProgress">IN PROGRESS</h3>
         <button id="inProgressAddButton" class="addButton" onclick="openAddTaskContainer(this.id)">+</button>
         <div class="tasks">
@@ -43,7 +43,7 @@
         </div>
     </div>
 
-    <div class="category"  ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div class="category" ondrop="drop(event)" ondragover="allowDrop(event)">
         <h3 class="heading headingDone">DONE</h3>
         <button id="doneAddButton" class="addButton" onclick="openAddTaskContainer(this.id)">+</button>
         <div class="tasks">
@@ -111,16 +111,16 @@
 </div>
 
 <template id="taskTemplate">
-    <div class="task" draggable="true" ondragstart="drag(event)">
-        <h3 class="taskTitle"></h3>
-        <p class="taskDate"></p>
-        <p class="taskDescription"></p>
-        <div class="buttonContainer">
-            <button class="buttonTask delete">
-                <i class="fa-solid fa-circle-xmark" style="font-size:20px;color:red;"></i>
+    <div class="task dropTask" draggable="true" ondragstart="drag(event)">
+        <h3 class="taskTitle dropTask"></h3>
+        <p class="taskDate dropTask"></p>
+        <p class="taskDescription dropTask"></p>
+        <div class="buttonContainer dropTask">
+            <button class="buttonTask dropTask delete">
+                <i class="fa-solid dropTask fa-circle-xmark" style="font-size:20px;color:red;"></i>
             </button>
-            <button class="buttonTask edit">
-                <i class="fa-solid fa-pen" style="color:rgb(7, 179, 7);"></i>
+            <button class="buttonTask dropTask edit">
+                <i class="fa-solid dropTask fa-pen" style="color:rgb(7, 179, 7);"></i>
             </button>
         </div>
     </div>
