@@ -5,7 +5,8 @@
   "type": "module",
   "main": "src/app.js",
   "scripts": {
-    "dev": "npx nodemon src/app.js"
+    "dev": "npx nodemon src/app.js",
+    "lint": "npx eslint src"
   },
   "keywords": [],
   "author": "Manuel Franz, Janik Piehler, Lukas Schulz, Marius Wörfel",
