@@ -11,5 +11,9 @@
         "sourceType": "module"
     },
     "rules": {
+        "indent": ["error", 4],
+        "semi": ["error", "always"],
+        "no-var": "error",
+        "space-before-function-paren" : ["error", "never"]
     }
 }
