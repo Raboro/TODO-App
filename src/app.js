@@ -9,7 +9,7 @@ dotenv.config({ path: path.join(process.cwd(), ".env") });
 const app = express();
 const PORT = process.env.PORT;
 
-app.use('/api/user', userRouter);
+app.use('/user', userRouter);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(printEndpointCall);
