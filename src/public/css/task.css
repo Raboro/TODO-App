@@ -11,7 +11,9 @@
     margin-right: auto;
     margin-bottom: 1.5vh;
 }
-
+.category:nth-last-child(1) .task{
+    background-color: #43CD80;
+}
 .task > .buttonContainer {
     opacity: 0;
     transition-duration: 0.2s;
