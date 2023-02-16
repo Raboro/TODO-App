@@ -2,7 +2,7 @@ import express from 'express';
 import {addUser, signInUser, logoutUser} from "../controllers/user.js";
 const router = express.Router();
 
-router.get("/signin", (req, res) => {
+router.post("/signin", (req, res) => {
     return signInUser(req, res);
 })
 

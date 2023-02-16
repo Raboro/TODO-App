@@ -1,16 +1,22 @@
 import {signIn, signUpCheckUniqueEmail, signUpInsertNewUser } from '../services/user.js'
 
-const users = [];
+const users = [
+    {
+        email: "test@test.com",
+        password: "test"
+    }
+];
 
 export async function signInUser(req, res) {
     for (let i = 0; i < users.length; i++) {
         if (users[i].email == req.headers["email"] && users[i].password == req.headers["password"]) {
             res.send("yes sir")
-            return;
+            return res;
         }
 
     }
     res.send("no sir")
+    return res
 }
 
 export function addUser(req, res) {
