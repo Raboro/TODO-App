@@ -70,9 +70,9 @@ function getCategoryToAppendTask(categoryPosition) {
 }
 
 const getPositionOfCategory = {
-    TODO: 1,
+    'TODO': 1,
     'IN PROGRESS': 3,
-    DONE: 5
+    'DONE': 5
 };
 
 function constructTask(task) {
