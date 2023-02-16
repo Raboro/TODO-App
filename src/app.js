@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import path from 'path';
 import printEndpointCall from './middleware/endpointCall.js';
 
-dotenv.config({ path: path.join(process.cwd().replace('src', '.env')) });
+dotenv.config({ path: path.join(process.cwd(), ".env") });
 
 const app = express();
 const PORT = process.env.PORT;
