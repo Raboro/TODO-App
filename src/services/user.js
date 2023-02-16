@@ -1,4 +1,4 @@
-import {executeQuery} from './database.js';
+import { executeQuery } from './database.js';
 
 async function signIn(email, password) {
     return executeQuery(`SELECT email FROM users WHERE email = ${email} AND pwd = ${password}`);

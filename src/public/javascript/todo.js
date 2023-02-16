@@ -1,29 +1,29 @@
 function openAddTaskContainer(id) {
-    document.getElementById("addTaskContainer").style.display = "block";
+    document.getElementById('addTaskContainer').style.display = 'block';
     checkSelectedCategory(id);
 }
 
 function checkSelectedCategory(id) {
-    getRadioBoxById(id).childNodes.item(1)["checked"] = true;
+    getRadioBoxById(id).childNodes.item(1).checked = true;
 }
 
 function getRadioBoxById(id) {
-    return getRadioButtons().item(getRadioButtonById[id])
+    return getRadioButtons().item(getRadioButtonById[id]);
 }
 
-const getRadioButtons = () => document.getElementsByClassName("chooseCategory").item(0).childNodes;
+const getRadioButtons = () => document.getElementsByClassName('chooseCategory').item(0).childNodes;
 
-const getRadioButtonById =  {
-    "todoAddButton": 1,
-    "inProgressAddButton": 3,
-    "doneAddButton": 5
-}
+const getRadioButtonById = {
+    todoAddButton: 1,
+    inProgressAddButton: 3,
+    doneAddButton: 5
+};
 
 function closeAddTaskContainer() {
-    document.getElementById("addTaskContainer").style.display = "none";
-    //document.getElementById("taskTitle").value = "";
-    //document.getElementById("taskDescription").value = "";
-    //document.getElementById("taskDate").value = "";
+    document.getElementById('addTaskContainer').style.display = 'none';
+    // document.getElementById("taskTitle").value = "";
+    // document.getElementById("taskDescription").value = "";
+    // document.getElementById("taskDate").value = "";
     // later for clear data form new Tasks
 }
 
@@ -31,27 +31,26 @@ function addTask() {
     const task = fetchDataOfAddTaskForm();
     if (isTaskValid(task)) {
         addTaskToCategory(task);
-        document.getElementById("closeAddTaskButton").disabled = false;
+        document.getElementById('closeAddTaskButton').disabled = false;
         return;
     }
-    alert("Your Task is not valid");
+    alert('Your Task is not valid');
 }
 
 function fetchDataOfAddTaskForm() {
     return {
         category: fetchCategory(),
-        title: getValueOfInput("taskTitle"),
-        description: getValueOfInput("taskDescription"),
-        date: getValueOfInput("taskDate")
+        title: getValueOfInput('taskTitle'),
+        description: getValueOfInput('taskDescription'),
+        date: getValueOfInput('taskDate')
     };
 }
 
 function fetchCategory() {
-    const radioButtons = getRadioButtons()
+    const radioButtons = getRadioButtons();
     for (let i = 0; i < radioButtons.length; i++) {
         const radioButton = radioButtons.item(i).childNodes.item(1);
-        if (isChecked(radioButton))
-            return radioButton.value.toUpperCase();
+        if (isChecked(radioButton)) { return radioButton.value.toUpperCase(); }
     }
 }
 
@@ -67,25 +66,25 @@ function addTaskToCategory(task) {
 }
 
 function getCategoryToAppendTask(categoryPosition) {
-    return document.getElementsByClassName("kanbanContainer").item(0).childNodes.item(categoryPosition).childNodes.item(5);
+    return document.getElementsByClassName('kanbanContainer').item(0).childNodes.item(categoryPosition).childNodes.item(5);
 }
 
 const getPositionOfCategory = {
-    "TODO": 1,
-    "IN PROGRESS": 3,
-    "DONE": 5
-}
+    TODO: 1,
+    'IN PROGRESS': 3,
+    DONE: 5
+};
 
 function constructTask(task) {
     const taskHtml = getTaskTemplate().childNodes.item(1);
-    taskHtml.querySelector(".taskTitle").textContent = task.title;
-    taskHtml.querySelector(".taskDate").textContent = task.date;
-    taskHtml.querySelector(".taskDescription").textContent = task.description;
-    setOnClickActions(taskHtml)
+    taskHtml.querySelector('.taskTitle').textContent = task.title;
+    taskHtml.querySelector('.taskDate').textContent = task.date;
+    taskHtml.querySelector('.taskDescription').textContent = task.description;
+    setOnClickActions(taskHtml);
     return taskHtml;
 }
 
-const getTaskTemplate = () => document.getElementById("taskTemplate").content.cloneNode(true);
+const getTaskTemplate = () => document.getElementById('taskTemplate').content.cloneNode(true);
 
 function setOnClickActions(taskHtml) {
     setOnClickActionOfDeleteTask(taskHtml);
@@ -93,17 +92,17 @@ function setOnClickActions(taskHtml) {
 }
 
 function setOnClickActionOfDeleteTask(taskHtml) {
-    taskHtml.querySelector(".delete").onclick = function () {
+    taskHtml.querySelector('.delete').onclick = function() {
         this.parentNode.parentNode.remove();
-    }
+    };
 }
 
 function setOnClickActionOfEditTask(taskHtml) {
-    taskHtml.querySelector(".edit").onclick = function () {
-        document.getElementById("addTaskContainer").style.display = "block";
-        document.getElementById("closeAddTaskButton").disabled = true;
+    taskHtml.querySelector('.edit').onclick = function() {
+        document.getElementById('addTaskContainer').style.display = 'block';
+        document.getElementById('closeAddTaskButton').disabled = true;
         this.parentNode.parentNode.remove();
-    }
+    };
 }
 
 function allowDrop(ev) {
@@ -111,19 +110,19 @@ function allowDrop(ev) {
 }
 
 function drag(ev) {
-    ev.target.setAttribute("id", "testDrag")
-    ev.dataTransfer.setData("text", ev.target.id);
+    ev.target.setAttribute('id', 'testDrag');
+    ev.dataTransfer.setData('text', ev.target.id);
 }
 
 function drop(ev) {
     ev.preventDefault();
-    let el = document.getElementById("testDrag");
-    if(ev.target.className == "category"){
+    const el = document.getElementById('testDrag');
+    if (ev.target.className == 'category') {
         ev.target.childNodes.item(5).appendChild(el);
-    }else if(ev.target.classList.item(1) === "dropTask"){
-        console.log("invalid drop");
-    }else{
+    } else if (ev.target.classList.item(1) === 'dropTask') {
+        console.log('invalid drop');
+    } else {
         ev.target.parentNode.childNodes.item(5).appendChild(el);
     }
-    el.removeAttribute("id")
+    el.removeAttribute('id');
 }

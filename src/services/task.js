@@ -1,4 +1,4 @@
-import {executeQuery} from './database.js';
+import { executeQuery } from './database.js';
 
 async function getAllTasksByCategory(id) {
     return await executeQuery(`SELECT * FROM tasks WHERE category = ${id} ORDER BY position ASC`);
@@ -13,7 +13,7 @@ async function deleteTask(id) {
 }
 
 async function changePositionOfTask(id, position) {
-    return await executeQuery(`UPDATE tasks SET position = ${position} WHERE tasks.id = ${id}`)
+    return await executeQuery(`UPDATE tasks SET position = ${position} WHERE tasks.id = ${id}`);
 }
 
 async function changeCategoryAndPosition(id, position, category) {
