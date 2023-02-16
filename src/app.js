@@ -15,7 +15,3 @@ app.use(printEndpointCall);
 app.listen(PORT, () => {
     console.log(`Server is running on port: ${PORT}`);
 });
-
-app.post('/api/:name', (req, res) => {
-    res.redirect('http://127.0.0.1:5500/Frontend/html/todo.html');
-});
