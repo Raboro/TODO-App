@@ -1,0 +1,41 @@
+.openSidebar{
+    position: fixed;
+    top: 4px;
+    left: 5px;
+    border: none;
+    background: none;
+}
+
+#sidebar{
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    opacity: 70%;
+}
+
+#closeSidebar{
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    width: 67px;
+}
+
+.settingsSide{
+    position: absolute;
+    bottom: 30px;
+    left: 5px;
+    width: 67px;
+}
+
+.logout{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 67px;
+}
