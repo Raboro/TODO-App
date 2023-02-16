@@ -110,19 +110,17 @@ function allowDrop(ev) {
 }
 
 function drag(ev) {
-    ev.target.setAttribute('id', 'testDrag');
+    ev.target.setAttribute('id', 'dragElement');
     ev.dataTransfer.setData('text', ev.target.id);
 }
 
 function drop(ev) {
     ev.preventDefault();
-    const el = document.getElementById('testDrag');
+    const dragElement = document.getElementById('dragElement');
     if (ev.target.className === 'category') {
-        ev.target.childNodes.item(5).appendChild(el);
-    } else if (ev.target.classList.item(1) === 'dropTask') {
-        console.log('invalid drop');
+        ev.target.childNodes[5].appendChild(dragElement);
     } else {
-        ev.target.parentNode.childNodes.item(5).appendChild(el);
+        ev.target.parentNode.childNodes[5].appendChild(dragElement);
     }
-    el.removeAttribute('id');
+    dragElement.removeAttribute('id');
 }
