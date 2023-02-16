@@ -13,17 +13,19 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #0000006f;
     overflow-x: hidden;
     transition: 0.5s;
-    opacity: 70%;
 }
 
 #closeSidebar{
     position: absolute;
     top: 4px;
-    left: 5px;
-    width: 67px;
+    right: 4px;
+    width: 30px;
+    background: none;
+    border: 1px;
+    padding: 0;
 }
 
 .settingsSide{
