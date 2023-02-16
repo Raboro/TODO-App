@@ -1,18 +1,28 @@
 import {signIn, signUpCheckUniqueEmail, signUpInsertNewUser } from '../services/user.js'
 
+const users = [];
+
 export async function signInUser(req, res) {
-    await signIn(req.body.get("email"), req.body.get("pwd"));
+    for (let i = 0; i < users.length; i++) {
+        if (users[i].email == req.headers["email"] && users[i].password == req.headers["password"]) {
+            res.send("yes sir")
+            return;
+        }
+
+    }
+    res.send("no sir")
 }
 
-export async function addUser(req, res) {
-    const response = await signUpCheckUniqueEmail(req.body.get("email"));
-    if(!response[0]){
-        await signUpInsertNewUser(req.body.get("firstName"), req.body.get("lastName"), req.body.get("email"), req.body.get("pwd"))
-        res.body = req.body
-        res.send("perfect")
-    }else{
-        res.send("Error: e-mail adress allready exists!!!")
+export function addUser(req, res) {
+    const user = {
+        "firstName": req.headers["firstname"],
+        "lastName": req.headers["lastname"],
+        "email": req.headers["email"],
+        "password": req.headers["password"]
     }
+    users.push(user);
+    console.log(users)
+    res.send("ok");
 }
 
 export async function logoutUser(req, res) {

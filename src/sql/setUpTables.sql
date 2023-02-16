@@ -4,7 +4,7 @@ CREATE TABLE users(
     email       VARCHAR(64)          NOT NULL,
     pwd         VARCHAR(128)         NOT NULL,
 
-    PRIMARY KEY (eMail)
+    PRIMARY KEY (email)
 );
 
 CREATE TABLE categories(
