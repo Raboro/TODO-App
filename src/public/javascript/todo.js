@@ -117,7 +117,7 @@ function drag(ev) {
 function drop(ev) {
     ev.preventDefault();
     const el = document.getElementById('testDrag');
-    if (ev.target.className == 'category') {
+    if (ev.target.className === 'category') {
         ev.target.childNodes.item(5).appendChild(el);
     } else if (ev.target.classList.item(1) === 'dropTask') {
         console.log('invalid drop');
