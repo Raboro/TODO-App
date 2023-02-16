@@ -1,5 +1,5 @@
 .openSidebar{
-    position: fixed;
+    position: absolute;
     top: 4px;
     left: 5px;
     border: none;
