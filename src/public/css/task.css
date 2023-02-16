@@ -12,7 +12,16 @@
     margin-bottom: 1.5vh;
 }
 .category:nth-last-child(1) .task{
-    background-color: #43CD80;
+    background-color: var(--headingDoneColor);
+    opacity: 0.85;
+}
+.category:nth-last-child(2) .task{
+    background-color:var(--headingInProgressColor);
+    opacity: 0.85;
+}
+.category:nth-last-child(3) .task{
+    background-color:var(--headingTodoColor);
+    opacity: 0.85;
 }
 .task > .buttonContainer {
     opacity: 0;
@@ -68,6 +77,7 @@
 
 .delete {
     padding: 0;
+    background:none;
 }
 
 @media only screen and (max-width: 800px) {
