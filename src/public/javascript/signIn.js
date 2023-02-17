@@ -7,19 +7,15 @@ const cError = function error() {
 
 document.getElementById('buttonSignIn').addEventListener('click', cError);
 
-function sendData() {
-    fetch(`http://localhost:8080/user/signin`, {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-        },
+async function sendData() {
+    const rawData = await fetch('http://localhost:8080/user/signin', {
+        method: 'POST',
+        mode: 'cors',
+        headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
-            email: document.getElementById("email").value, 
-            password: document.getElementById("password").value
+            email: document.getElementById('email').value,
+            password: document.getElementById('password').value
         })
-        }).then(res => {return res.json()})
-        .then(data => console.log(data))
-        .catch(error => console.log('ERROR'))
+    })
+    console.log(await rawData.json())
 }
