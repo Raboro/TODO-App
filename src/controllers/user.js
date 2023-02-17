@@ -9,14 +9,13 @@ const users = [
 
 export async function signInUser(req, res) {
     for (let i = 0; i < users.length; i++) {
-        if (users[i].email == req.headers["email"] && users[i].password == req.headers["password"]) {
-            res.send("yes sir")
-            return res;
+        if (users[i].email === req.body.email && users[i].password === req.body.password) {
+            res.send(JSON.stringify("response: yes sir"));
+            return;
         }
 
     }
-    res.send("no sir")
-    return res
+    res.send(JSON.stringify("response : no sir"))
 }
 
 export function addUser(req, res) {
