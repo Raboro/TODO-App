@@ -1,6 +1,6 @@
 'use strict';
 const cError = function error() {
-    document.getElementById('error').innerHTML = 'Your E-Mail Adress already exist.';
+    document.getElementById('error').innerHTML = 'Your E-Mail Address already exist.';
 };
 
 const cSendData = function sendData() {
