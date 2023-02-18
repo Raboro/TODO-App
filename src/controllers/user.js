@@ -6,11 +6,12 @@ export async function signInUser(req, res) {
 }
 
 export async function addUser(req, res) {
-    const data = await signUpCheckUniqueEmail(req.body.email);
-    if (data.length === 0) {
+    if (isNotAlreadyInUse(await signUpCheckUniqueEmail(req.body.email))) {
         console.log(await signUpInsertNewUser(req.body.firstName, req.body.lastName, req.body.email, req.body.password))
     }
 }
+
+const isNotAlreadyInUse = (email) => email.length === 0;
 
 export async function logoutUser(req, res) {
     req.session.destroy();
