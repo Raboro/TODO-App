@@ -11,7 +11,7 @@
 
 <body>
     <div class="overlay">
-        <form>
+        <form onsubmit="return false">
             <div class="inputContainerForLogin">
                 <h3 class="loginHeading">SignUp to Kanban</h3>
                 <label for="firstName">
@@ -26,11 +26,11 @@
                 <label for="password">
                     <input type="password" name="password" id="password" placeholder="password" maxlength="128" required>
                 </label>
-                <label for="passwordRepetition">
-                    <input type="password" name="inputPasswordRepetition" id="passwordRepetition" placeholder="repeat password" maxlength="128" required>
+                <label for="passwordRepeated">
+                    <input type="password" name="passwordRepeated" id="passwordRepeated" placeholder="repeat password" maxlength="128" required>
                 </label>
                 <div id="error"></div>
-                <button id = "buttonSignUp">Sign up</button>
+                <button id = "buttonSignUp" onclick="signUp()">Sign up</button>
             </div>
         </form>
     </div>
