@@ -10,7 +10,7 @@ const cSendData = function sendData() {
 async function signUp() {
     const formData = fetchForm();
     if (isFormValid(formData)) {
-        delete formData.passwordRepeated
+        delete formData.passwordRepeated;
         await addUser(formData);
     }
 }
@@ -21,7 +21,7 @@ function fetchForm() {
         lastName: document.getElementById('lastName').value,
         email: document.getElementById('email').value,
         password: document.getElementById('password').value,
-        passwordRepeated: document.getElementById('passwordRepeated').value,
+        passwordRepeated: document.getElementById('passwordRepeated').value
     };
 }
 
@@ -30,9 +30,8 @@ function isFormValid(formData) {
 }
 
 const areValuesValid = (formData) => {
-    for (let key in formData) {
-        if (isInvalidValue(formData[key]))
-            return false;
+    for (const key in formData) {
+        if (isInvalidValue(formData[key])) { return false; }
     }
     return true;
 };
@@ -49,7 +48,6 @@ async function addUser(userData) {
         body: JSON.stringify(userData)
     });
     console.log(await rawData.json());
-
 }
 
 document.getElementById('buttonSignUp').addEventListener('click', cSendData);
