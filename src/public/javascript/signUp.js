@@ -1,4 +1,5 @@
 'use strict';
+// eslint-disable-next-line no-unused-vars
 const cError = function error() {
     document.getElementById('error').innerHTML = 'Your E-Mail Address already exist.';
 };
@@ -7,6 +8,7 @@ const cSendData = function sendData() {
 
 };
 
+// eslint-disable-next-line no-unused-vars
 async function signUp() {
     const formData = fetchForm();
     if (isFormValid(formData)) {

@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 function openAddTaskContainer(id) {
     document.getElementById('addTaskContainer').style.display = 'block';
     checkSelectedCategory(id);
@@ -27,6 +28,7 @@ function closeAddTaskContainer() {
     // later for clear data form new Tasks
 }
 
+// eslint-disable-next-line no-unused-vars
 function addTask() {
     const task = fetchDataOfAddTaskForm();
     if (isTaskValid(task)) {
@@ -34,7 +36,7 @@ function addTask() {
         document.getElementById('closeAddTaskButton').disabled = false;
         return;
     }
-    alert('Your Task is not valid');
+    alert('Your Task is not valid'); // eslint-disable-line no-undef
 }
 
 function fetchDataOfAddTaskForm() {
@@ -105,15 +107,18 @@ function setOnClickActionOfEditTask(taskHtml) {
     };
 }
 
+// eslint-disable-next-line no-unused-vars
 function allowDrop(ev) {
     ev.preventDefault();
 }
 
+// eslint-disable-next-line no-unused-vars
 function drag(ev) {
     ev.target.setAttribute('id', 'dragElement');
     ev.dataTransfer.setData('text', ev.target.id);
 }
 
+// eslint-disable-next-line no-unused-vars
 function drop(ev) {
     ev.preventDefault();
     const dragElement = document.getElementById('dragElement');

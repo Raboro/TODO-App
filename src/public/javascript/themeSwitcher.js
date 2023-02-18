@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 function switchTheme() {
     if (isChecked(document.getElementsByClassName('colorSwitch').item(0).childNodes.item(1))) {
         switchToDarkTheme(getStylesheetWithRules());

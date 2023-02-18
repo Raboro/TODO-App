@@ -6,6 +6,7 @@ const cError = function error() {
 
 document.getElementById('buttonSignIn').addEventListener('click', cError);
 
+// eslint-disable-next-line no-unused-vars
 async function sendData() {
     const rawData = await fetch('http://localhost:8080/user/signin', {
         method: 'POST',
