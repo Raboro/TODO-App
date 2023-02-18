@@ -7,6 +7,8 @@ function switchTheme() {
     switchToWhiteTheme(getStylesheetWithRules());
 }
 
+const isChecked = (radioButton) => radioButton != null && radioButton.checked;
+
 function getStylesheetWithRules() {
     for (let i = 0; i < document.styleSheets.length; i++) {
         if (document.styleSheets.item(i).href.endsWith('variables.css')) {
