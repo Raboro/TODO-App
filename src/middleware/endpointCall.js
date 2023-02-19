@@ -1,4 +1,6 @@
+import chalk from "chalk";
+
 export const printEndpointCall = (req, res, next) => {
-    console.log(`[SERVER] ${req.method} was called by ${req.path}`);
+    console.log(chalk.green(`[SERVER]`) +  ` ${req.method} was called by` + chalk.green(` ${req.path}`));
     next();
 };

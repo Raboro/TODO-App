@@ -6,6 +6,7 @@ import { allowCrossOrigin } from './middleware/crossOrigin.js';
 import userRouter from './routes/user.js';
 import signInRouter from './routes/signIn.js';
 import signUpRouter from './routes/signUp.js';
+import chalk from "chalk";
 
 dotenv.config({ path: path.join(process.cwd(), '.env') });
 
@@ -26,5 +27,5 @@ app.use('/signUp', signUpRouter);
 app.listen(PORT, (err) => {
     if (err)
         console.log(`There is a error: ${err}`);
-    console.log(`Server is running on port: ${PORT}`);
+    console.log(chalk.green(`[SERVER]`) + ` running on port:` + chalk.green(` ${PORT}`));
 });
