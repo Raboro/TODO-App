@@ -23,6 +23,8 @@ app.use('/user', userRouter);
 app.use('/signIn', signInRouter);
 app.use('/signUp', signUpRouter);
 
-app.listen(PORT, () => {
+app.listen(PORT, (err) => {
+    if (err)
+        console.log(`There is a error: ${err}`);
     console.log(`Server is running on port: ${PORT}`);
 });
