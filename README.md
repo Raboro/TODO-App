@@ -8,13 +8,21 @@
 2. Clone code 
 3. Add a ```.env``` file, which contains all "secret data" about the server connection etc.
 4. After collecting the sourcecode load all dependencies with:
+
 ```bash 
 $ npm install
+```
+5. To run the code / Server:
+
+```bash
+$ npm run dev
 ```
 
 ## Project structure
 
->├── node_modules/ <br>
+>├── .github/ <br>
+│   ├── workflows/ <br>
+├── node_modules/ <br>
 ├── src/ <br>
 │   ├── config/ <br>
 │   ├── controllers/ <br>
@@ -30,6 +38,7 @@ $ npm install
 │   ├── validators/ <br>
 │   └── app.js <br>
 ├── .env <br>
+├── .eslintrc.json <br>
 ├── .gitignore <br>
 ├── package.json <br> 
 ├── package-lock.json <br>
