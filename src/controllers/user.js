@@ -9,13 +9,16 @@ dotenv.config({ path: path.join(process.cwd().replace('src\\controllers', '.env'
 export async function signInUser(req, res) {
     const email = await signIn(req.body.email, req.body.password);
     if (email[0] !== undefined) {
-        console.log(chalk.green('[SERVER]') + ' user:' + chalk.green(` ${req.body.email}`), 'is logging in');
-        const token = jwt.sign(JSON.stringify(email), process.env.JWT_SECRET);
-        res.cookie('token', token);
-        res.status(200).send();
-    } else {
-        res.status(403).send();
+        sign(req, res, email);
+        return;
     }
+    res.status(403).send();
+}
+
+function sign(req, res, email) {
+    console.log(chalk.green('[SERVER]') + ' user:' + chalk.green(` ${req.body.email}`), 'is logging in');
+    const token = jwt.sign(JSON.stringify(email), process.env.JWT_SECRET);
+    res.cookie('token', token).status(200).send();
 }
 
 export async function addUser(req, res) {
