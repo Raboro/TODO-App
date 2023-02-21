@@ -17,5 +17,7 @@ async function sendData() {
             password: document.getElementById('password').value
         })
     });
-    console.log(await rawData.json());
+    if (rawData.status === 200) {
+        window.location.href = 'http://localhost:8080/mainPage';
+    }
 }

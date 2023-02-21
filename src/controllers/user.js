@@ -12,9 +12,9 @@ export async function signInUser(req, res) {
         console.log(chalk.green('[SERVER]') + ' user:' + chalk.green(` ${req.body.email}`), 'is logging in');
         const token = jwt.sign(JSON.stringify(email), process.env.JWT_SECRET);
         res.cookie('token', token);
-        res.send();
+        res.status(200).send();
     } else {
-        res.send(JSON.stringify('Wrong user data'));
+        res.status(403).send();
     }
 }
 
