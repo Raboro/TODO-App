@@ -7,6 +7,7 @@ import userRouter from './routes/user.js';
 import signInRouter from './routes/signIn.js';
 import signUpRouter from './routes/signUp.js';
 import taskRouter from './routes/task.js';
+import mainPageRouter from './routes/mainPage.js';
 import chalk from 'chalk';
 import cookieParser from 'cookie-parser';
 
@@ -27,6 +28,7 @@ app.use('/user', userRouter);
 app.use('/signIn', signInRouter);
 app.use('/signUp', signUpRouter);
 app.use('/task', taskRouter);
+app.use('/mainPage', mainPageRouter);
 
 app.listen(PORT, (err) => {
     if (err) { console.log(`There is a error: ${err}`); }
