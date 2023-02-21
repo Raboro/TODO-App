@@ -7,6 +7,7 @@ import userRouter from './routes/user.js';
 import signInRouter from './routes/signIn.js';
 import signUpRouter from './routes/signUp.js';
 import chalk from 'chalk';
+import cookieParser from "cookie-parser";
 
 dotenv.config({ path: path.join(process.cwd(), '.env') });
 
@@ -16,6 +17,7 @@ const PORT = process.env.PORT;
 app.use(printEndpointCall);
 app.use(allowCrossOrigin);
 app.use(express.json());
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(process.cwd(), '/src/public')));
