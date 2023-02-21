@@ -24,6 +24,8 @@ app.use('/user', userRouter);
 app.use('/signIn', signInRouter);
 app.use('/signUp', signUpRouter);
 
+
+
 app.listen(PORT, (err) => {
     if (err) { console.log(`There is a error: ${err}`); }
     console.log(chalk.green('[SERVER]') + ' running on port:' + chalk.green(` ${PORT}`));
