@@ -6,6 +6,7 @@ import { allowCrossOrigin } from './middleware/crossOrigin.js';
 import userRouter from './routes/user.js';
 import signInRouter from './routes/signIn.js';
 import signUpRouter from './routes/signUp.js';
+import taskRouter from './routes/task.js';
 import chalk from 'chalk';
 import cookieParser from "cookie-parser";
 
@@ -25,6 +26,7 @@ app.use(express.static(path.join(process.cwd(), '/src/public')));
 app.use('/user', userRouter);
 app.use('/signIn', signInRouter);
 app.use('/signUp', signUpRouter);
+app.use('/task', taskRouter);
 
 
 
