@@ -1,4 +1,4 @@
-import { getAllTasksByCategory, addTask, deleteTask, changePositionOfTask, changeCategoryAndPosition, updateTask, } from '../services/task.js';
+import { getAllTasksByCategory, addTask, deleteTaskById, changePosition, changeCategoryAndPosition, update, } from '../services/task.js';
 
 
 export async function loadAllTasks(req, res) {
@@ -10,11 +10,11 @@ export async function addNewTask(req, res) {
 }
 
 export async function deleteTask(req, res) {
-    await deleteTask()
+    await deleteTaskById()
 }
 
 export async function changePositionOfTask(req, res) {
-    await changePositionOfTask()
+    await changePosition()
 }
 
 export async function changeCategoryAndPositionOfTask(req, res) {
@@ -22,7 +22,7 @@ export async function changeCategoryAndPositionOfTask(req, res) {
 }
 
 export async function updateTask(req, res) {
-    await updateTask()
+    await update()
 }
 
 
