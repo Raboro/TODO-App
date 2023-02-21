@@ -5,7 +5,7 @@ export async function loadAllTasks(req, res) {
     await getAllTasksByCategory()
 }
 
-export async function addTask(req, res) {
+export async function addNewTask(req, res) {
     await addTask()
 }
 

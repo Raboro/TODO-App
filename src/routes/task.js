@@ -1,5 +1,5 @@
 import express from 'express';
-import { loadAllTasks, addTask, deleteTask, changePositionOfTask, changeCategoryAndPositionOfTask, updateTask } from '../controllers/task.js';
+import { loadAllTasks, addNewTask, deleteTask, changePositionOfTask, changeCategoryAndPositionOfTask, updateTask } from '../controllers/task.js';
 const router = express.Router();
 
 router.post('/loadAllTasks', async(req, res) => {
@@ -7,7 +7,7 @@ router.post('/loadAllTasks', async(req, res) => {
 });
 
 router.post('/addTask', async(req, res) => {
-    await addTask(req, res);
+    await addNewTask(req, res);
 });
 
 router.post('/deleteTask', async(req, res) => {
