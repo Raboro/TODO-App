@@ -1,6 +1,6 @@
-import jwt from "jsonwebtoken";
-import dotenv from "dotenv";
-import path from "path";
+import jwt from 'jsonwebtoken';
+import dotenv from 'dotenv';
+import path from 'path';
 
 dotenv.config({ path: path.join(process.cwd().replace('src\\middleware', '.env')) });
 
@@ -13,4 +13,4 @@ export const authenticateToken = (req, res, next) => {
         res.clearCookie('token');
         return res.redirect('/signIn');
     }
-}
+};

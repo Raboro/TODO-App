@@ -8,7 +8,7 @@ import signInRouter from './routes/signIn.js';
 import signUpRouter from './routes/signUp.js';
 import taskRouter from './routes/task.js';
 import chalk from 'chalk';
-import cookieParser from "cookie-parser";
+import cookieParser from 'cookie-parser';
 
 dotenv.config({ path: path.join(process.cwd(), '.env') });
 
@@ -27,8 +27,6 @@ app.use('/user', userRouter);
 app.use('/signIn', signInRouter);
 app.use('/signUp', signUpRouter);
 app.use('/task', taskRouter);
-
-
 
 app.listen(PORT, (err) => {
     if (err) { console.log(`There is a error: ${err}`); }

@@ -1,5 +1,5 @@
 import express from 'express';
-import {loadAllTasks, addTask, deleteTask, changePositionOfTask, changeCategoryAndPositionOfTask, updateTask} from '../controllers/task.js';
+import { loadAllTasks, addTask, deleteTask, changePositionOfTask, changeCategoryAndPositionOfTask, updateTask } from '../controllers/task.js';
 const router = express.Router();
 
 router.post('/loadAllTasks', async(req, res) => {
@@ -25,6 +25,5 @@ router.post('/changeCategoryAndPositionOfTask', async(req, res) => {
 router.post('/updateTask', async(req, res) => {
     await updateTask(req, res);
 });
-
 
 export default router;
