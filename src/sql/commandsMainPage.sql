@@ -1,4 +1,4 @@
-SELECT * FROM tasks WHERE category = ? ORDER BY position ASC; --get tasks from a selected category
+SELECT * FROM tasks WHERE category = ? AND user = ? ORDER BY position ASC; --get tasks from a selected category
 
 INSERT INTO tasks VALUES(NULL,?,?,?,?,?,?,NULL); --create a new task
 

@@ -1,7 +1,7 @@
 import { executeQuery } from './database.js';
 
-async function getAllTasksByCategory(id) {
-    return await executeQuery(`SELECT * FROM tasks WHERE category = '${id}' ORDER BY position ASC`);
+async function getAllTasksByCategory(idCategory, user) {
+    return await executeQuery(`SELECT * FROM tasks WHERE category = '${idCategory}' AND user = '${user}' ORDER BY position ASC`);
 }
 
 async function addTask(category, title, content, dueDate, user, position) {
