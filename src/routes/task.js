@@ -1,6 +1,6 @@
 import express from 'express';
 import { loadAllTasks, addNewTask, deleteTask, changePositionOfTask, changeCategoryAndPositionOfTask, updateTask } from '../controllers/task.js';
-import {authenticateToken} from "../middleware/jwtAuthentification.js";
+import { authenticateToken } from '../middleware/jwtAuthentification.js';
 const router = express.Router();
 
 router.get('/loadAllTasks', authenticateToken, async(req, res) => {
