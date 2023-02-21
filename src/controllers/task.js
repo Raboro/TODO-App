@@ -1,28 +1,25 @@
-import { getAllTasksByCategory, addTask, deleteTaskById, changePosition, changeCategoryAndPosition, update, } from '../services/task.js';
-
+import { getAllTasksByCategory, addTask, deleteTaskById, changePosition, changeCategoryAndPosition, update } from '../services/task.js';
 
 export async function loadAllTasks(req, res) {
-    await getAllTasksByCategory()
+    await getAllTasksByCategory();
 }
 
 export async function addNewTask(req, res) {
-    await addTask()
+    await addTask();
 }
 
 export async function deleteTask(req, res) {
-    await deleteTaskById()
+    await deleteTaskById();
 }
 
 export async function changePositionOfTask(req, res) {
-    await changePosition()
+    await changePosition();
 }
 
 export async function changeCategoryAndPositionOfTask(req, res) {
-    await changeCategoryAndPosition()
+    await changeCategoryAndPosition();
 }
 
 export async function updateTask(req, res) {
-    await update()
+    await update();
 }
-
-
