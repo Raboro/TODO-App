@@ -1,6 +1,6 @@
 import path from 'path';
 import express from 'express';
-import {authenticateToken} from "../middleware/jwtAuthentification.js";
+import { authenticateToken } from '../middleware/jwtAuthentification.js';
 const router = express.Router();
 
 router.get('/', authenticateToken, (req, res) => {
