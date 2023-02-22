@@ -34,9 +34,7 @@ function addTask() {
     if (isTaskValid(task)) {
         addTaskToCategory(task);
         document.getElementById('closeAddTaskButton').disabled = false;
-        return;
     }
-    alert('Your Task is not valid'); // eslint-disable-line no-undef
 }
 
 function fetchDataOfAddTaskForm() {
