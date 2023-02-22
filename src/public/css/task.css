@@ -12,15 +12,15 @@
     margin-bottom: 1.5vh;
 }
 .category:nth-last-child(1) .task{
-    background-color: var(--headingDoneColor);
+    background-color: rgba(63, 150, 63, 0.699);
     opacity: 0.85;
 }
 .category:nth-last-child(2) .task{
-    background-color:var(--headingInProgressColor);
+    background-color: rgb(121, 177, 230);
     opacity: 0.85;
 }
 .category:nth-last-child(3) .task{
-    background-color:var(--headingTodoColor);
+    background-color: grey;
     opacity: 0.85;
 }
 .task > .buttonContainer {
