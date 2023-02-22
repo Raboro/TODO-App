@@ -19,7 +19,3 @@ export async function changePosition(id, position) {
 export async function changeCategoryAndPosition(id, position, category) {
     return await executeQuery(`UPDATE tasks SET category = '${category}', position = '${position}' WHERE task.id = '${id}'`);
 }
-
-export async function update(id, category, title, content, dueDate, position) {
-    return await executeQuery(`UPDATE tasks SET category = '${category}', title = '${title}', content = '${content}', dueDate = '${dueDate}', position = '${position}' WHERE id = '${id}'`);
-}
