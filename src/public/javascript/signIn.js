@@ -1,13 +1,7 @@
 'use strict';
-
-const cError = function error() {
-    document.getElementById('error').innerHTML = 'Please check your login data!';
-};
-
-document.getElementById('buttonSignIn').addEventListener('click', cError);
-
 // eslint-disable-next-line no-unused-vars
 async function sendData() {
+    document.getElementById('error').innerHTML = '';
     const rawData = await fetch('http://localhost:8080/user/signin', {
         method: 'POST',
         mode: 'cors',
@@ -19,5 +13,7 @@ async function sendData() {
     });
     if (rawData.status === 200) {
         window.location.href = 'http://localhost:8080/mainPage';
+    } else {
+        document.getElementById('error').innerHTML = 'Please check your login data!';
     }
 }
