@@ -3,7 +3,7 @@ import { loadAllTasks, addNewTask, deleteTask, changeCategoryOfTask } from '../c
 import { authenticateToken } from '../middleware/jwtAuthentification.js';
 const router = express.Router();
 
-router.get('/getAllTasksByCategory', authenticateToken, async(req, res) => {
+router.get('/getAllTasks', authenticateToken, async(req, res) => {
     await loadAllTasks(req, res);
 });
 
