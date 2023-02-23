@@ -12,8 +12,8 @@ export async function loadAllTasks(req, res) {
 
 const getEmail = (req) => {
     const rowData = JSON.stringify(req.email);
-    return rowData.substring(11, rowData.length -3);
-}
+    return rowData.substring(11, rowData.length - 3);
+};
 
 export async function addNewTask(req, res) {
     const email = getEmail(req);
