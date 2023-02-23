@@ -6,7 +6,7 @@ export async function loadAllTasks(req, res) {
 
 export async function addNewTask(req, res) {
     const emailRawData = JSON.stringify(req.email);
-    const email = emailRawData.substring(11, emailRawData.length - 3)
+    const email = emailRawData.substring(11, emailRawData.length - 3);
     await addTask(categorySwitch[req.body.category], req.body.title, req.body.content, req.body.dueDate, email);
     res.send(JSON.stringify(await getLastTaskIdFromUser(email)));
 }

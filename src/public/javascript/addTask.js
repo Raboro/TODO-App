@@ -26,10 +26,10 @@ addTsk.addEventListener('mouseup', (e) => {
     moveElement = false;
 });
 
+// eslint-disable-next-line no-unused-vars
 async function sendData() {
     console.log(document.getElementById('taskDate').value);
     const rawData = await fetch('http://localhost:8080/task/addTask', {
-
         method: 'POST',
         mode: 'cors',
         headers: { 'Content-Type': 'application/json' },
