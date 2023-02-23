@@ -1,8 +1,7 @@
 import { getAllTasksByCategory, addTask, deleteTaskById, getLastTaskIdFromUser, changeCategory } from '../services/task.js';
 
 export async function loadAllTasks(req, res) {
-    const emailRawData = JSON.stringify(req.email);
-    const email = emailRawData.substring(11, emailRawData.length - 3);
+    const email = getEmail(req);
     const tasks = {
         todo: await getAllTasksByCategory(1, email),
         inProgress: await getAllTasksByCategory(1, email),
@@ -11,9 +10,13 @@ export async function loadAllTasks(req, res) {
     res.send(JSON.stringify(tasks));
 }
 
+const getEmail = (req) => {
+    const rowData = JSON.stringify(req.email);
+    return rowData.substring(11, rowData.length -3);
+}
+
 export async function addNewTask(req, res) {
-    const emailRawData = JSON.stringify(req.email);
-    const email = emailRawData.substring(11, emailRawData.length - 3);
+    const email = getEmail(req);
     await addTask(categorySwitch[req.body.category], req.body.title, req.body.content, req.body.dueDate, email);
     res.send(JSON.stringify(await getLastTaskIdFromUser(email)));
 }
