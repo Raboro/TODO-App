@@ -15,9 +15,10 @@ body {
 }
 
 form {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     background-color: #ffffff;
     width: fit-content;
-    border-radius: 7px;
+    border-radius: 20px;
     border: none;
     font-family: sans-serif;
     text-align: center;
@@ -49,7 +50,7 @@ input {
 }
 
 input:focus {
-    background-color: #373737;
+    background-color: rgba(55, 55, 55, 0.88);
     color: white;
 }
 
@@ -62,7 +63,8 @@ button {
 }
 
 button:hover {
-    background-color: #373737;
+    background-color: rgba(55, 55, 55, 0.88);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     color: white;
 }
 
