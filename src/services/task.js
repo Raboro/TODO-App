@@ -5,7 +5,8 @@ export async function getAllTasksByCategory(idCategory, user) {
 }
 
 export async function addTask(category, title, content, dueDate, user) {
-    return await executeQuery(`INSERT INTO tasks VALUES('NULL', '${category}', '${title}', '${content}', '${dueDate}', '${user}', 'NULL')`);
+    const timestamp = new Date().toISOString().slice(0, 19).replace('T', ' ');
+    return await executeQuery(`INSERT INTO tasks VALUES('NULL', '${category}', '${title}', '${content}', '${dueDate}', '${user}', '${timestamp}')`);
 }
 
 export async function deleteTaskById(id) {
