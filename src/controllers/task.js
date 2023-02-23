@@ -5,8 +5,9 @@ export async function loadAllTasks(req, res) {
 }
 
 export async function addNewTask(req, res) {
-    await addTask();
+    await addTask(req.body.category, req.body.title, req.body.content, req.body.dueDate, req.email);
 }
+
 
 export async function deleteTask(req, res) {
     await deleteTaskById();

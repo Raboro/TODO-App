@@ -25,3 +25,20 @@ addTsk.addEventListener('mousemove', (e) => {
 addTsk.addEventListener('mouseup', (e) => {
     moveElement = false;
 });
+
+async function sendData() {
+    console.log(document.getElementById("taskDate").value)
+    const rawData = await fetch('http://localhost:8080/task/addTask', {
+
+        method: 'POST',
+        mode: 'cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            title: document.getElementById('taskTitle').value,
+            category:fetchCategory(),
+            content: document.getElementById('taskDescription').value,
+            dueDate: document.getElementById('taskDate').value
+        })
+    });
+    console.log("fetchtest")
+}
