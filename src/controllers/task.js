@@ -4,8 +4,8 @@ export async function loadAllTasks(req, res) {
     const email = getEmail(req);
     const tasks = {
         todo: await getAllTasksByCategory(1, email),
-        inProgress: await getAllTasksByCategory(1, email),
-        done: await getAllTasksByCategory(1, email)
+        inProgress: await getAllTasksByCategory(2, email),
+        done: await getAllTasksByCategory(3, email)
     };
     res.send(JSON.stringify(tasks));
 }
