@@ -27,7 +27,7 @@ addTsk.addEventListener('mouseup', (e) => {
 });
 
 async function sendData() {
-    console.log(document.getElementById("taskDate").value)
+    console.log(document.getElementById('taskDate').value);
     const rawData = await fetch('http://localhost:8080/task/addTask', {
 
         method: 'POST',
@@ -35,10 +35,10 @@ async function sendData() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
             title: document.getElementById('taskTitle').value,
-            category:fetchCategory(),
+            category: fetchCategory(),
             content: document.getElementById('taskDescription').value,
             dueDate: document.getElementById('taskDate').value
         })
     });
-    console.log("fetchtest")
+    console.log('fetchtest');
 }
