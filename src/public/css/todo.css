@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Tilt+Neon&display=swap');
 * {
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -33,7 +34,6 @@ header h1 {
 
 .heading {
     width: 20%;
-    padding-top: 1%;
     margin: 1vh auto 2vh;
     text-align: center;
     border-radius: 5px;
