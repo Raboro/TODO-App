@@ -21,7 +21,6 @@ CREATE TABLE tasks(
     content     VARCHAR(1024)       NULL,
     dueDate     DATE                NULL,
     user        VARCHAR(64)         NOT NULL,
-    position    INTEGER             NULL,
     created     TIMESTAMP           NOT NULL DEFAULT NOW(),
 
 

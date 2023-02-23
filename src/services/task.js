@@ -1,13 +1,8 @@
 import { executeQuery } from './database.js';
 
-/*
-export async function getAllTasksByCategory(idCategory, user) {
-    return await executeQuery(`SELECT * FROM tasks WHERE category = '${idCategory}' AND user = '${user}' ORDER BY position ASC`);
-}
-*/
 
 export async function getAllTasksByCategory(idCategory, user) {
-    return await executeQuery(`SELECT * FROM tasks WHERE category = '${idCategory}' AND user = '${user}' ORDER BY tasks.created ASC`);
+    return await executeQuery(`SELECT * FROM tasks WHERE category = '${idCategory}' AND user = '${user}' ORDER BY tasks.dueDate ASC;`);
 }
 
 export async function addTask(category, title, content, dueDate, user) {
@@ -25,15 +20,5 @@ export async function getLastTaskIdFromUser(user) {
 export async function changeCategory(id,category) {
     return await executeQuery(`UPDATE tasks SET category = '${category}' WHERE task.id = '${id}'`);
 }
-
-/*
-export async function changePosition(id, position) {
-    return await executeQuery(`UPDATE tasks SET position = '${position}' WHERE tasks.id = '${id}'`);
-}
-
-export async function changeCategoryAndPosition(id, position, category) {
-    return await executeQuery(`UPDATE tasks SET category = '${category}', position = '${position}' WHERE task.id = '${id}'`);
-}
-*/
 
 
