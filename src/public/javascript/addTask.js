@@ -40,5 +40,5 @@ async function sendData() {
             dueDate: document.getElementById('taskDate').value
         })
     });
-    console.log('fetchtest');
+    console.log((await rawData.json())[0].id);
 }

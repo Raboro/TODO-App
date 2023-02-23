@@ -5,11 +5,10 @@ export async function loadAllTasks(req, res) {
 }
 
 export async function addNewTask(req, res) {
-    const email = JSON.stringify(req.email).substring(11);
-    console.log(email.substring(0, email.length - 3));
-    const category = categorySwitch[req.body.category];
-    await addTask(category, req.body.title, req.body.content, req.body.dueDate, email.substring(0, email.length - 3));
-    console.log(await getLastTaskIdFromUser());
+    const emailRawData = JSON.stringify(req.email);
+    const email = emailRawData.substring(11, emailRawData.length - 3)
+    await addTask(categorySwitch[req.body.category], req.body.title, req.body.content, req.body.dueDate, email);
+    res.send(JSON.stringify(await getLastTaskIdFromUser(email)));
 }
 
 const categorySwitch = {
