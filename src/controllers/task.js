@@ -1,4 +1,4 @@
-import { getAllTasksByCategory, addTask, deleteTaskById, changePosition, changeCategoryAndPosition } from '../services/task.js';
+import { getAllTasksByCategory, addTask, deleteTaskById, changePosition, changeCategoryAndPosition, getLastTaskIdFromUser } from '../services/task.js';
 
 export async function loadAllTasks(req, res) {
     await getAllTasksByCategory();
@@ -6,6 +6,7 @@ export async function loadAllTasks(req, res) {
 
 export async function addNewTask(req, res) {
     await addTask();
+    await getLastTaskIdFromUser();
 }
 
 export async function deleteTask(req, res) {

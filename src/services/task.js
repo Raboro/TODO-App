@@ -19,3 +19,7 @@ export async function changePosition(id, position) {
 export async function changeCategoryAndPosition(id, position, category) {
     return await executeQuery(`UPDATE tasks SET category = '${category}', position = '${position}' WHERE task.id = '${id}'`);
 }
+
+export async function getLastTaskIdFromUser(user) {
+    return await executeQuery(`SELECT id FROM tasks WHERE user = '${user} ORDER BY created DESC LIMIT 1`);
+}
