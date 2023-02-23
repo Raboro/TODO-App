@@ -1,5 +1,5 @@
-INSERT INTO users VALUES("Max","Mueller","max.mueller@email.de","$2a$12$qzN0Vs5LtQ0qKioqKRg47.KHtmjK7xsSU.Ui2unrxVxqxJbKOw0li"); --5678
-INSERT INTO users VALUES("Achim","Achim","achim@achim.com","$2a$12$NbZlJTxqqNDDYpL1OaKqVeURotC2zVhPqxaVjY.aZ/mrw4ppf/.IS"); --123456
+INSERT INTO users VALUES("Max","Mueller","max.mueller@email.de","12345");
+INSERT INTO users VALUES("Achim","Achim","achim@achim.com","1234");
 
 INSERT INTO categories VALUES(1,"TODO");
 INSERT INTO categories VALUES(2,"IN PROGRESS");
