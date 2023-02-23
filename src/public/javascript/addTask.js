@@ -35,7 +35,7 @@ async function sendData() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
             title: document.getElementById('taskTitle').value,
-            category: fetchCategory(),
+            category: fetchCategory(), // eslint-disable-line no-undef
             content: document.getElementById('taskDescription').value,
             dueDate: document.getElementById('taskDate').value
         })

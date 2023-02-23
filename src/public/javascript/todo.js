@@ -30,7 +30,7 @@ function closeAddTaskContainer() {
 
 // eslint-disable-next-line no-unused-vars
 function addTask() {
-    sendData();
+    sendData(); // eslint-disable-line no-undef
     const task = fetchDataOfAddTaskForm();
     if (isTaskValid(task)) {
         addTaskToCategory(task);
