@@ -6,23 +6,27 @@
     width: 90%;
     border-radius: 7px;
     color: #ffffffcc;
-    cursor:move;
+    cursor: move;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1.5vh;
 }
-.category:nth-last-child(1) .task{
+
+.category:nth-last-child(1) .task {
     background-color: rgba(63, 150, 63, 0.699);
     opacity: 0.85;
 }
-.category:nth-last-child(2) .task{
+
+.category:nth-last-child(2) .task {
     background-color: rgb(121, 177, 230);
     opacity: 0.85;
 }
-.category:nth-last-child(3) .task{
+
+.category:nth-last-child(3) .task {
     background-color: grey;
     opacity: 0.85;
 }
+
 .task > .buttonContainer {
     opacity: 0;
     transition-duration: 0.2s;
@@ -77,5 +81,5 @@
 
 .delete {
     padding: 0;
-    background:none;
+    background: none;
 }

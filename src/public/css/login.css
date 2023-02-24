@@ -26,7 +26,7 @@
 }
 
 form {
-    box-shadow: 0 60px 80px rgba(0,0,0,0.40), 0 45px 26px rgba(0,0,0,0.14);
+    box-shadow: 0 60px 80px rgba(0, 0, 0, 0.40), 0 45px 26px rgba(0, 0, 0, 0.14);
     width: fit-content;
     border-radius: 10px;
     text-align: center;

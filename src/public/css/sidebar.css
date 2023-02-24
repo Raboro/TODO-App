@@ -1,4 +1,4 @@
-.openSidebar{
+.openSidebar {
     position: absolute;
     top: 4px;
     left: 5px;
@@ -6,7 +6,7 @@
     background: none;
 }
 
-#sidebar{
+#sidebar {
     height: 100%;
     width: 0;
     position: fixed;
@@ -18,7 +18,7 @@
     transition: 0.5s;
 }
 
-#closeSidebar{
+#closeSidebar {
     background: none;
     top: 4px;
     margin-left: 30%;
@@ -26,14 +26,14 @@
     border: none;
 }
 
-.settingsSide{
+.settingsSide {
     position: absolute;
     bottom: 30px;
     left: 5px;
     width: 67px;
 }
 
-.logout{
+.logout {
     position: absolute;
     bottom: 5px;
     left: 5px;

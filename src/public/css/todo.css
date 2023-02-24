@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Tilt+Neon&display=swap');
+
 * {
     font-family: 'Poppins', sans-serif;
 }
@@ -73,7 +74,7 @@ header h1 {
     transform: translateY(1px);
 }
 
-@media only screen and (max-width : 1500px) {
+@media only screen and (max-width: 1500px) {
     .headingInProgress {
         margin-left: 15%;
         margin-right: 15%;
@@ -89,7 +90,7 @@ header h1 {
         width: 20%;
     }
 
-    .tasks{   
+    .tasks {
         grid-auto-columns: 50%;
         grid-auto-flow: column;
         overflow-x: auto;
@@ -103,8 +104,8 @@ header h1 {
     }
 }
 
-.tasks{
+.tasks {
     display: grid;
     width: 100%;
-    margin-top: 1.5vh;    
+    margin-top: 1.5vh;
 }
