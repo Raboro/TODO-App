@@ -47,3 +47,8 @@ async function changeCategory(newCategory, taskId) {
         })
     });
 }
+
+function logout(){
+    fetch('http://localhost:8080/user/logout')
+    window.location.href = 'http://localhost:8080/signIn';
+}
