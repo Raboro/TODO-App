@@ -115,8 +115,6 @@ let dragID
 // eslint-disable-next-line no-unused-vars
 function drag(ev) {
     dragID = ev.target.id;
-    console.log(dragID)
-    //ev.target.setAttribute('id', 'dragElement');
     ev.dataTransfer.setData('text', dragID);
 }
 
