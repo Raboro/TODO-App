@@ -129,7 +129,7 @@ function drop(ev) {
     if (ev.target.className === 'category todo' || ev.target.className === 'category inProgress' || ev.target.className === 'category done' ) {
         ev.target.childNodes[5].appendChild(dragElement);
         getCategoryDrop(ev.target.className, dragElement.id)
-    } else {
+    } else if (!ev.target.parentNode.className.startsWith('task')) {
         ev.target.parentNode.childNodes[5].appendChild(dragElement);
         getCategoryDrop( ev.target.parentNode.className, dragElement.id)
     }
