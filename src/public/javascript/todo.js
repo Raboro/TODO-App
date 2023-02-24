@@ -62,7 +62,6 @@ const getValueOfInput = (id) => document.getElementById(id).value;
 const isTaskValid = (task) => Object.values(task).every(x => x !== '');
 
 function addTaskToCategory(task,taskID) {
-    console.log(taskID);
     getCategoryToAppendTask(getPositionOfCategory[task.category]).appendChild(constructTask(task,taskID));
     closeAddTaskContainer();
 }
