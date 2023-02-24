@@ -20,7 +20,7 @@ function addTasks(data){
         const task = data.at(counter);
         const taskHtml = getTaskTemplate().childNodes.item(1); //create new task
         taskHtml.querySelector('.taskTitle').textContent = task.title;
-        taskHtml.querySelector('.taskDate').textContent = task.dueDate;
+        taskHtml.querySelector('.taskDate').textContent = task.dueDate.substring(0,10);
         taskHtml.querySelector('.taskDescription').textContent = task.content;
         taskHtml.id = task.id;
         setOnClickActions(taskHtml);
