@@ -34,3 +34,16 @@ const getCategory = {
     2: 3,
     3: 5
 };
+
+
+async function changeCategory(newCategory, taskId) {
+    const rawData = await fetch('http://localhost:8080/task/changeCategoryOfTask', {
+        method: 'POST',
+        mode: 'cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            id: taskId,
+            category: newCategory, // eslint-disable-line no-undef
+        })
+    });
+}

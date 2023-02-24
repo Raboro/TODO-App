@@ -111,20 +111,36 @@ function allowDrop(ev) {
     ev.preventDefault();
 }
 
+let dragID
 // eslint-disable-next-line no-unused-vars
 function drag(ev) {
-    ev.target.setAttribute('id', 'dragElement');
-    ev.dataTransfer.setData('text', ev.target.id);
+    dragID = ev.target.id;
+    console.log(dragID)
+    //ev.target.setAttribute('id', 'dragElement');
+    ev.dataTransfer.setData('text', dragID);
 }
 
 // eslint-disable-next-line no-unused-vars
 function drop(ev) {
     ev.preventDefault();
-    const dragElement = document.getElementById('dragElement');
-    if (ev.target.className === 'category') {
+    const dragElement = document.getElementById(dragID);
+    if (ev.target.className === 'category todo' || ev.target.className === 'category inProgess' || ev.target.className === 'category done' ) {
         ev.target.childNodes[5].appendChild(dragElement);
+        getCategoryDrop(ev.target.className, dragElement.id)
     } else {
         ev.target.parentNode.childNodes[5].appendChild(dragElement);
+        getCategoryDrop( ev.target.parentNode.className, dragElement.id)
     }
-    dragElement.removeAttribute('id');
+}
+
+function getCategoryDrop(name, id){
+    if(name === 'category todo'){
+        changeCategory(1, id)
+    }
+    if(name === 'category inProgress'){
+        changeCategory(2, id)
+    }
+    if(name === 'category done'){
+        changeCategory(3, id)
+    }
 }
