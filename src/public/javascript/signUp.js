@@ -46,5 +46,3 @@ async function addUser(userData) {
         document.getElementById('error').innerHTML = 'Please check your login data!';
     }
 }
-
-document.getElementById('buttonSignUp').addEventListener('click', cSendData);
