@@ -1,4 +1,3 @@
-'use strict';
 // eslint-disable-next-line no-unused-vars
 const cError = function error() {
     document.getElementById('error').innerHTML = 'Your E-Mail Address already exist.';

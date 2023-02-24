@@ -1,4 +1,3 @@
-'use strict';
 // eslint-disable-next-line no-unused-vars
 async function sendData() {
     document.getElementById('error').innerHTML = '';
