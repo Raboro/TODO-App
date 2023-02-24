@@ -4,8 +4,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    background-color: #373737;
+.backgroundImage {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    height: 95vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .overlay {
@@ -21,11 +26,9 @@ body {
 }
 
 form {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-    background-color: #ffffff;
+    box-shadow: 0 60px 80px rgba(0,0,0,0.40), 0 45px 26px rgba(0,0,0,0.14);
     width: fit-content;
     border-radius: 10px;
-    border: none;
     text-align: center;
 }
 
@@ -98,5 +101,17 @@ a:hover {
 
     .buttonLogin {
         font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .backgroundImage {
+        background-image: url("../images/login-full-size-backhground.png");
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .backgroundImage {
+        background-image: url("../images/login-smaller-size-backhground.png.png");
     }
 }
