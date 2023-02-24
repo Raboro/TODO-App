@@ -28,7 +28,6 @@ addTsk.addEventListener('mouseup', (e) => {
 
 // eslint-disable-next-line no-unused-vars
 async function sendData() {
-    console.log(document.getElementById('taskDate').value);
     const rawData = await fetch('http://localhost:8080/task/addTask', {
         method: 'POST',
         mode: 'cors',
@@ -40,5 +39,5 @@ async function sendData() {
             dueDate: document.getElementById('taskDate').value
         })
     });
-    console.log((await rawData.json())[0].id);
+    return (await rawData.json())[0].id;
 }

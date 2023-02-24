@@ -29,11 +29,11 @@ function closeAddTaskContainer() {
 }
 
 // eslint-disable-next-line no-unused-vars
-function addTask() {
-    sendData(); // eslint-disable-line no-undef
+async function addTask() {
+    const taskID = await sendData(); // eslint-disable-line no-undef
     const task = fetchDataOfAddTaskForm();
     if (isTaskValid(task)) {
-        addTaskToCategory(task);
+        addTaskToCategory(task, taskID);
         document.getElementById('closeAddTaskButton').disabled = false;
     }
 }
@@ -61,8 +61,9 @@ const getValueOfInput = (id) => document.getElementById(id).value;
 
 const isTaskValid = (task) => Object.values(task).every(x => x !== '');
 
-function addTaskToCategory(task) {
-    getCategoryToAppendTask(getPositionOfCategory[task.category]).appendChild(constructTask(task));
+function addTaskToCategory(task,taskID) {
+    console.log(taskID);
+    getCategoryToAppendTask(getPositionOfCategory[task.category]).appendChild(constructTask(task,taskID));
     closeAddTaskContainer();
 }
 
@@ -76,11 +77,12 @@ const getPositionOfCategory = {
     DONE: 5
 };
 
-function constructTask(task) {
+function constructTask(task,taskID) {
     const taskHtml = getTaskTemplate().childNodes.item(1);
     taskHtml.querySelector('.taskTitle').textContent = task.title;
     taskHtml.querySelector('.taskDate').textContent = task.date;
     taskHtml.querySelector('.taskDescription').textContent = task.description;
+    taskHtml.id = taskID;
     setOnClickActions(taskHtml);
     return taskHtml;
 }
@@ -94,6 +96,7 @@ function setOnClickActions(taskHtml) {
 
 function setOnClickActionOfDeleteTask(taskHtml) {
     taskHtml.querySelector('.delete').onclick = function() {
+        deleteTask(this.parentNode.parentNode.id);
         this.parentNode.parentNode.remove();
     };
 }
@@ -102,6 +105,7 @@ function setOnClickActionOfEditTask(taskHtml) {
     taskHtml.querySelector('.edit').onclick = function() {
         document.getElementById('addTaskContainer').style.display = 'block';
         document.getElementById('closeAddTaskButton').disabled = true;
+        deleteTask(this.parentNode.parentNode.id);
         this.parentNode.parentNode.remove();
     };
 }
@@ -127,4 +131,14 @@ function drop(ev) {
         ev.target.parentNode.childNodes[5].appendChild(dragElement);
     }
     dragElement.removeAttribute('id');
+}
+async function deleteTask(id) {
+    await fetch('http://localhost:8080/task/deleteTask', {
+        method: 'POST',
+        mode: 'cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+           id
+        })
+    });
 }

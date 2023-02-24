@@ -28,7 +28,8 @@ const categorySwitch = {
 };
 
 export async function deleteTask(req, res) {
-    await deleteTaskById();
+    await deleteTaskById(req.body.id);
+    res.send();
 }
 
 export async function changeCategoryOfTask(req, res) {
