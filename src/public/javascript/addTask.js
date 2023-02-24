@@ -10,7 +10,7 @@ addTsk.addEventListener('mousedown', (e) => {
 });
 
 addTsk.addEventListener('mousemove', (e) => {
-    if (moveElement === true) {
+    if (moveElement) {
         e.preventDefault();
         const newX = e.clientX;
         const newY = e.clientY;
