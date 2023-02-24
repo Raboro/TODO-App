@@ -72,12 +72,17 @@ button {
 button:hover {
     background-color: rgba(55, 55, 55, 0.88);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-    color: white;
+    color: rgba(255, 255, 255, 0.70);
 }
 
 
 .openSignUp {
     font-size: 0.75rem;
+}
+
+.openSignUp > a {
+    text-decoration: none;
+    color: grey;
 }
 
 a:hover {
