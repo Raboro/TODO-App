@@ -8,7 +8,7 @@
 
 #sidebar{
     height: 100%;
-    width: 0px;
+    width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -19,13 +19,11 @@
 }
 
 #closeSidebar{
-    position: absolute;
-    top: 4px;
-    right: 4px;
-    width: 30px;
     background: none;
-    border: 1px;
-    padding: 0;
+    top: 4px;
+    margin-left: 30%;
+    width: 30px;
+    border: none;
 }
 
 .settingsSide{
