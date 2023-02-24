@@ -10,17 +10,17 @@ fetch('http://localhost:8080/task/getAllTasks')
 
 function addTasksByCategory(data) {
     addTasks(data.todo);
-    addTasks(data.inProgress)
-    addTasks(data.done);    
+    addTasks(data.inProgress);
+    addTasks(data.done);
 }
 
-function addTasks(data){
+function addTasks(data) {
     let counter = 0;
-    while(data.length > counter){
+    while (data.length > counter) {
         const task = data.at(counter);
-        const taskHtml = getTaskTemplate().childNodes.item(1); //create new task
+        const taskHtml = getTaskTemplate().childNodes.item(1); // create new task
         taskHtml.querySelector('.taskTitle').textContent = task.title;
-        taskHtml.querySelector('.taskDate').textContent = task.dueDate.substring(0,10);
+        taskHtml.querySelector('.taskDate').textContent = task.dueDate.substring(0, 10);
         taskHtml.querySelector('.taskDescription').textContent = task.content;
         taskHtml.id = task.id;
         setOnClickActions(taskHtml);
@@ -35,7 +35,6 @@ const getCategory = {
     3: 5
 };
 
-
 async function changeCategory(newCategory, taskId) {
     const rawData = await fetch('http://localhost:8080/task/changeCategoryOfTask', {
         method: 'POST',
@@ -43,12 +42,12 @@ async function changeCategory(newCategory, taskId) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
             id: taskId,
-            category: newCategory, // eslint-disable-line no-undef
+            category: newCategory // eslint-disable-line no-undef
         })
     });
 }
 
-function logout(){
-    fetch('http://localhost:8080/user/logout')
+function logout() {
+    fetch('http://localhost:8080/user/logout');
     window.location.href = 'http://localhost:8080/signIn';
 }

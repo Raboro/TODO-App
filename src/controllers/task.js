@@ -34,5 +34,5 @@ export async function deleteTask(req, res) {
 
 export async function changeCategoryOfTask(req, res) {
     await changeCategory(req.body.id, req.body.category);
-    res.send()
+    res.send();
 }
