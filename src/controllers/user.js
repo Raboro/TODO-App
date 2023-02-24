@@ -23,9 +23,10 @@ function sign(req, res, email) {
 
 export async function addUser(req, res) {
     if (isNotAlreadyInUse(await signUpCheckUniqueEmail(req.body.email))) {
-        console.log(await signUpInsertNewUser(req.body.firstName, req.body.lastName, req.body.email, req.body.password));
+        await signUpInsertNewUser(req.body.firstName, req.body.lastName, req.body.email, req.body.password);
+        sign(req, res, [{ email: req.body.email}]);
     } else {
-        res.send(JSON.stringify('response: User could not be added'));
+        res.status(403).send();
     }
 }
 

@@ -50,8 +50,11 @@ async function addUser(userData) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(userData)
     });
-    console.log(await rawData.json());
-    document.getElementById('error').innerHTML = 'Please check your login data!';
+    if (rawData.status === 200) {
+        window.location.href = 'http://localhost:8080/mainPage';
+    } else {
+        document.getElementById('error').innerHTML = 'Please check your login data!';
+    }
 }
 
 document.getElementById('buttonSignUp').addEventListener('click', cSendData);
