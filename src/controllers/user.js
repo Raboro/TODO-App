@@ -32,6 +32,5 @@ export async function addUser(req, res) {
 const isNotAlreadyInUse = (email) => email.length === 0;
 
 export async function logoutUser(req, res) {
-    req.session.destroy();
-    res.redirect('/login');
+    res.clearCookie('token');
 }

@@ -18,5 +18,5 @@ export async function getLastTaskIdFromUser(user) {
 }
 
 export async function changeCategory(id, category) {
-    return await executeQuery(`UPDATE tasks SET category = '${category}' WHERE task.id = '${id}'`);
+    return await executeQuery(`UPDATE tasks SET category = '${category}' WHERE tasks.id = '${id}'`);
 }

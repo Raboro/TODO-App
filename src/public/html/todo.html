@@ -26,7 +26,7 @@
         <button class = "settingsSide">
             <i class="fa-solid fa-gear"></i>
         </button>
-        <button class = "logout">
+        <button class = "logout" onclick = "logout()">
             <i class="fa-solid fa-arrow-right-from-bracket"></i>
         </button>
     </div>
@@ -35,7 +35,7 @@
 
 
 <div class="kanbanContainer">
-    <div class="category" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div class="category todo" ondrop="drop(event)" ondragover="allowDrop(event)">
         <h3 class="heading headingTodo">TODO</h3>
         <button id="todoAddButton" class="addButton" onclick="openAddTaskContainer(this.id)">+</button>
         <div class="tasks">
@@ -43,7 +43,7 @@
         </div>
     </div>
 
-    <div class="category" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div class="category inProgress" ondrop="drop(event)" ondragover="allowDrop(event)">
         <h3 class="heading headingInProgress">IN PROGRESS</h3>
         <button id="inProgressAddButton" class="addButton" onclick="openAddTaskContainer(this.id)">+</button>
         <div class="tasks">
@@ -51,7 +51,7 @@
         </div>
     </div>
 
-    <div class="category" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div class="category done" ondrop="drop(event)" ondragover="allowDrop(event)">
         <h3 class="heading headingDone">DONE</h3>
         <button id="doneAddButton" class="addButton" onclick="openAddTaskContainer(this.id)">+</button>
         <div class="tasks">
