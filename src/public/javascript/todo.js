@@ -146,12 +146,12 @@ async function deleteTask(id) {
 
 function getCategoryDrop(name, id) {
     if (name === 'category todo') {
-        changeCategory(1, id);
+        changeCategory(1, id); // eslint-disable-line no-undef
     }
     if (name === 'category inProgress') {
-        changeCategory(2, id);
+        changeCategory(2, id); // eslint-disable-line no-undef
     }
     if (name === 'category done') {
-        changeCategory(3, id);
+        changeCategory(3, id); // eslint-disable-line no-undef
     }
 }

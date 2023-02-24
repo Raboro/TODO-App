@@ -18,12 +18,12 @@ function addTasks(data) {
     let counter = 0;
     while (data.length > counter) {
         const task = data.at(counter);
-        const taskHtml = getTaskTemplate().childNodes.item(1); // create new task
+        const taskHtml = getTaskTemplate().childNodes.item(1); // eslint-disable-line no-undef
         taskHtml.querySelector('.taskTitle').textContent = task.title;
         taskHtml.querySelector('.taskDate').textContent = task.dueDate.substring(0, 10);
         taskHtml.querySelector('.taskDescription').textContent = task.content;
         taskHtml.id = task.id;
-        setOnClickActions(taskHtml);
+        setOnClickActions(taskHtml); // eslint-disable-line no-undef
         document.getElementsByClassName('kanbanContainer').item(0).childNodes.item(getCategory[task.category]).childNodes.item(5).appendChild(taskHtml);
         counter++;
     }
@@ -35,8 +35,8 @@ const getCategory = {
     3: 5
 };
 
-async function changeCategory(newCategory, taskId) {
-    const rawData = await fetch('http://localhost:8080/task/changeCategoryOfTask', {
+async function changeCategory(newCategory, taskId) { // eslint-disable-line no-unused-vars
+    await fetch('http://localhost:8080/task/changeCategoryOfTask', {
         method: 'POST',
         mode: 'cors',
         headers: { 'Content-Type': 'application/json' },
@@ -47,7 +47,7 @@ async function changeCategory(newCategory, taskId) {
     });
 }
 
-function logout() {
+function logout() { // eslint-disable-line no-unused-vars
     fetch('http://localhost:8080/user/logout');
     window.location.href = 'http://localhost:8080/signIn';
 }
