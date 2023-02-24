@@ -122,7 +122,7 @@ function drag(ev) {
 function drop(ev) {
     ev.preventDefault();
     const dragElement = document.getElementById(dragID);
-    if (ev.target.className === 'category todo' || ev.target.className === 'category inProgess' || ev.target.className === 'category done' ) {
+    if (ev.target.className === 'category todo' || ev.target.className === 'category inProgress' || ev.target.className === 'category done' ) {
         ev.target.childNodes[5].appendChild(dragElement);
         getCategoryDrop(ev.target.className, dragElement.id)
     } else {
