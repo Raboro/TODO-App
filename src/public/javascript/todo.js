@@ -22,9 +22,9 @@ const getRadioButtonById = {
 
 function closeAddTaskContainer() {
     document.getElementById('addTaskContainer').style.display = 'none';
-    document.getElementById("taskTitle").value = "";
-    document.getElementById("taskDescription").value = "";
-    document.getElementById("taskDate").value = "";
+    document.getElementById('taskTitle').value = '';
+    document.getElementById('taskDescription').value = '';
+    document.getElementById('taskDate').value = '';
 }
 
 // eslint-disable-next-line no-unused-vars
