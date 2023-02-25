@@ -27,11 +27,10 @@ addTsk.addEventListener('mouseup', (e) => {
 });
 
 // eslint-disable-next-line no-unused-vars
-async function sendData() {
-    const rawData = await fetch('http://localhost:8080/task/addTask', {
+async function addTaskToDB() {
+    const rawData = await callApi({ // eslint-disable-line no-undef
+        url: 'http://localhost:8080/task/addTask',
         method: 'POST',
-        mode: 'cors',
-        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
             title: document.getElementById('taskTitle').value,
             category: fetchCategory(), // eslint-disable-line no-undef
