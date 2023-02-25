@@ -31,6 +31,12 @@ header h1 {
     flex-direction: column;
     height: fit-content;
     align-items: center;
+    transition-duration: .5s;
+}
+
+.category:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    transition-duration: .5s;
 }
 
 .heading {
@@ -63,11 +69,13 @@ header h1 {
     border: none;
     background-color: rgba(128, 128, 128, 0.144);
     color: black;
+    transition-duration: .5s;
 }
 
 .addButton:hover {
     background-color: rgba(128, 128, 128, 0.212);
-    box-shadow: 1px 3px 3px 1px rgba(146, 126, 126, 0.089);
+    box-shadow: rgba(0, 0, 0, 0.35) 0 1px 3px;
+    transition-duration: .5s;
 }
 
 .addButton:active {
