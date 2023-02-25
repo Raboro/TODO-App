@@ -37,6 +37,7 @@ header h1 {
 .category:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
     transition-duration: .5s;
+    scale: 1.02;
 }
 
 .heading {
