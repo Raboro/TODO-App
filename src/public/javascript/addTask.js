@@ -34,7 +34,7 @@ async function addTaskToDB(task) {
         body: JSON.stringify({
             title: task.title,
             category: task.category,
-            content: task.description,
+            content: task.content,
             dueDate: task.dueDate
         })
     });
