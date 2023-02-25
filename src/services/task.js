@@ -10,7 +10,7 @@ export async function addTask(category, title, content, dueDate, user) {
 }
 
 export async function deleteTaskById(id) {
-    return await executeQuery(`DELETE FROM tasks WHERE tasks.id = '${id}'`);
+    await executeQuery(`DELETE FROM tasks WHERE tasks.id = '${id}'`);
 }
 
 export async function getLastTaskIdFromUser(user) {
@@ -18,5 +18,5 @@ export async function getLastTaskIdFromUser(user) {
 }
 
 export async function changeCategory(id, category) {
-    return await executeQuery(`UPDATE tasks SET category = '${category}' WHERE tasks.id = '${id}'`);
+    await executeQuery(`UPDATE tasks SET category = '${category}' WHERE tasks.id = '${id}'`);
 }
