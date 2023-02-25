@@ -50,6 +50,7 @@ label {
 }
 
 input[type=submit] {
+    transition-duration: .5s;
     background-color: #0066ff;
     color: white;
     padding: 12px 20px;
@@ -60,6 +61,7 @@ input[type=submit] {
 }
 
 input[type=button] {
+    transition-duration: .5s;
     margin-right: 0.3vw;
     background-color: #9e9c9c5b;
     padding: 12px 20px;
@@ -67,6 +69,25 @@ input[type=button] {
     border-radius: 4px;
     cursor: pointer;
     float: right;
+}
+
+input[type] {
+    transition-duration: .6s;
+}
+
+input[type=date] {
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+input[type=button]:hover, textarea:hover, input[type=text]:hover, input[type=date]:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0 1px 5px;
+    transition-duration: .5s;
+}
+
+input[type=submit]:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0 3px 5px;
+    transition-duration: .5s;
 }
 
 .addTaskColumnLeft {
