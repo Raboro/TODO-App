@@ -2,11 +2,11 @@ import express from 'express';
 import { addUser, signInUser, logoutUser } from '../controllers/user.js';
 const router = express.Router();
 
-router.post('/signin', async(req, res) => {
+router.post('/signIn', async(req, res) => {
     await signInUser(req, res);
 });
 
-router.post('/signup', async(req, res) => {
+router.post('/signUp', async(req, res) => {
     await addUser(req, res);
 });
 
