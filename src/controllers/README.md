@@ -1,1 +1,0 @@
-Contains handlers for the routes. In the controllers we use the services’ logic to handle responses of the client.

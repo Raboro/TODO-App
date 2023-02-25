@@ -1,1 +1,0 @@
-Contains the business logic of the application (backend logic).

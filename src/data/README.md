@@ -1,1 +1,0 @@
-Contains constants/enums like statuses, which can be reused easily.

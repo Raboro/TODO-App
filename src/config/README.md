@@ -1,1 +1,0 @@
-Contains configuration files. Export .env variables to other parts of the projects.
