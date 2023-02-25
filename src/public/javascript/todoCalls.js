@@ -1,6 +1,6 @@
 fetch('http://localhost:8080/task/getAllTasks')
     .then(res => res.json())
-    .then(data => addTasksByCategory(data))
+    .then(data => addTasksByCategory(data));
 
 function addTasksByCategory(data) {
     addTasks(data.todo);
@@ -35,7 +35,7 @@ async function changeCategory(category, taskId) { // eslint-disable-line no-unus
         method: 'POST',
         body: JSON.stringify({
             id: taskId,
-            category: category
+            category
         })
     });
 }
