@@ -27,15 +27,15 @@ addTsk.addEventListener('mouseup', (e) => {
 });
 
 // eslint-disable-next-line no-unused-vars
-async function addTaskToDB() {
+async function addTaskToDB(task) {
     const rawData = await callApi({ // eslint-disable-line no-undef
         url: 'http://localhost:8080/task/addTask',
         method: 'POST',
         body: JSON.stringify({
-            title: document.getElementById('taskTitle').value,
-            category: fetchCategory(), // eslint-disable-line no-undef
-            content: document.getElementById('taskDescription').value,
-            dueDate: document.getElementById('taskDate').value
+            title: task.title,
+            category: task.category,
+            content: task.description,
+            dueDate: task.dueDate
         })
     });
     return (await rawData.json())[0].id;
