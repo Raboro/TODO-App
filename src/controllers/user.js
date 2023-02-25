@@ -26,15 +26,15 @@ export async function addUser(req, res) {
         res.status(403).send();
         return;
     }
-    await signUp(req, res)
+    await signUp(req, res);
 }
 
 const isAlreadyInUse = (email) => email.length !== 0;
 
 async function signUp(req, res) {
-    console.log(chalk.green('[SERVER]') + ' new user added: ' + chalk.green(`${req.body.firstName} ${req.body.lastName} ${req.body.email}`))
+    console.log(chalk.green('[SERVER]') + ' new user added: ' + chalk.green(`${req.body.firstName} ${req.body.lastName} ${req.body.email}`));
     await signUpInsertNewUser(req.body.firstName, req.body.lastName, req.body.email, req.body.password);
-    sign(req, res, [{email: req.body.email}]);
+    sign(req, res, [{ email: req.body.email }]);
 }
 
 export async function logoutUser(req, res) {
