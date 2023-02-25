@@ -1,4 +1,3 @@
-
 fetch('http://localhost:8080/task/getAllTasks')
     .then(res => {
         if (res.ok) { console.log('GET request successful'); } else { console.log('GET failed'); }
@@ -35,14 +34,13 @@ const getCategory = {
     3: 5
 };
 
-async function changeCategory(newCategory, taskId) { // eslint-disable-line no-unused-vars
-    await fetch('http://localhost:8080/task/changeCategoryOfTask', {
+async function changeCategory(category, taskId) { // eslint-disable-line no-unused-vars
+    await callApi({ // eslint-disable-line no-undef
+        url: 'http://localhost:8080/task/changeCategoryOfTask',
         method: 'POST',
-        mode: 'cors',
-        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
             id: taskId,
-            category: newCategory // eslint-disable-line no-undef
+            category: category
         })
     });
 }
