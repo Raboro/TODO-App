@@ -1,4 +1,4 @@
-import { getAllTasksByCategory, addTask, deleteTaskById, getLastTaskIdFromUser, changeCategory } from '../services/task.js';
+import { getAllTasksByCategory, addTask, deleteTaskById, getIdOfLastAddedTask, changeCategory } from '../services/task.js';
 
 export async function loadAllTasks(req, res) {
     const email = getEmail(req);
@@ -18,7 +18,7 @@ const getEmail = (req) => {
 export async function addNewTask(req, res) {
     const email = getEmail(req);
     await addTask(categorySwitch[req.body.category], req.body.title, req.body.content, req.body.dueDate, email);
-    res.send(JSON.stringify(await getLastTaskIdFromUser(email)));
+    res.send(JSON.stringify(await getIdOfLastAddedTask(email)));
 }
 
 const categorySwitch = {

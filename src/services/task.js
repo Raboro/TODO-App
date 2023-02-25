@@ -1,7 +1,7 @@
 import { executeQuery } from './database.js';
 
-export async function getAllTasksByCategory(idCategory, user) {
-    return await executeQuery(`SELECT * FROM tasks WHERE category = '${idCategory}' AND user = '${user}' ORDER BY tasks.dueDate ASC;`);
+export async function getAllTasksByCategory(category, user) {
+    return await executeQuery(`SELECT * FROM tasks WHERE category = '${category}' AND user = '${user}' ORDER BY tasks.dueDate ASC;`);
 }
 
 export async function addTask(category, title, content, dueDate, user) {
@@ -13,7 +13,7 @@ export async function deleteTaskById(id) {
     await executeQuery(`DELETE FROM tasks WHERE tasks.id = '${id}'`);
 }
 
-export async function getLastTaskIdFromUser(user) {
+export async function getIdOfLastAddedTask(user) {
     return await executeQuery(`SELECT id FROM tasks WHERE user = '${user}' ORDER BY created DESC LIMIT 1`);
 }
 
