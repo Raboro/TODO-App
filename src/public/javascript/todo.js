@@ -133,13 +133,10 @@ function drop(ev) {
     }
 }
 async function deleteTask(id) {
-    await fetch('http://localhost:8080/task/deleteTask', {
+    await callApi({ // eslint-disable-line no-undef
+        url: 'http://localhost:8080/task/deleteTask',
         method: 'POST',
-        mode: 'cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            id
-        })
+        body: JSON.stringify({ id })
     });
 }
 
