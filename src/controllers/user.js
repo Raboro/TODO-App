@@ -22,15 +22,20 @@ function sign(req, res, email) {
 }
 
 export async function addUser(req, res) {
-    if (isNotAlreadyInUse(await signUpCheckUniqueEmail(req.body.email))) {
-        await signUpInsertNewUser(req.body.firstName, req.body.lastName, req.body.email, req.body.password);
-        sign(req, res, [{ email: req.body.email }]);
-    } else {
+    if (isAlreadyInUse(await signUpCheckUniqueEmail(req.body.email))) {
         res.status(403).send();
+        return;
     }
+    await signUp(req, res)
 }
 
-const isNotAlreadyInUse = (email) => email.length === 0;
+const isAlreadyInUse = (email) => email.length !== 0;
+
+async function signUp(req, res) {
+    console.log(chalk.green('[SERVER]') + ' new user added: ' + chalk.green(`${req.body.firstName} ${req.body.lastName} ${req.body.email}`))
+    await signUpInsertNewUser(req.body.firstName, req.body.lastName, req.body.email, req.body.password);
+    sign(req, res, [{email: req.body.email}]);
+}
 
 export async function logoutUser(req, res) {
     res.clearCookie('token');
