@@ -23,7 +23,7 @@ const getRadioButtonById = {
 function closeAddTaskContainer() {
     document.getElementById('addTaskContainer').style.display = 'none';
     document.getElementById('taskTitle').value = '';
-    document.getElementById('taskDescription').value = '';
+    document.getElementById('taskContent').value = '';
     document.getElementById('taskDate').value = '';
 }
 
@@ -41,7 +41,7 @@ function fetchDataOfAddTaskForm() {
     return {
         category: fetchCategory(),
         title: getValueOfInput('taskTitle'),
-        description: getValueOfInput('taskDescription'),
+        content: getValueOfInput('taskContent'),
         date: getValueOfInput('taskDate')
     };
 }
@@ -79,7 +79,7 @@ function constructTask(task, taskID) {
     const taskHtml = getTaskTemplate().childNodes.item(1);
     taskHtml.querySelector('.taskTitle').textContent = task.title;
     taskHtml.querySelector('.taskDate').textContent = task.date;
-    taskHtml.querySelector('.taskDescription').textContent = task.description;
+    taskHtml.querySelector('.taskContent').textContent = task.content;
     taskHtml.id = taskID;
     setOnClickActions(taskHtml);
     return taskHtml;

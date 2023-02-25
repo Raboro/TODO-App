@@ -54,7 +54,7 @@
     width: 100%;
 }
 
-.taskDescription {
+.taskContent {
     word-break: break-word;
     padding: 0 1vw;
 }

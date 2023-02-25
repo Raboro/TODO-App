@@ -15,7 +15,7 @@ function addTasks(data) {
         const taskHtml = getTaskTemplate().childNodes.item(1); // eslint-disable-line no-undef
         taskHtml.querySelector('.taskTitle').textContent = task.title;
         taskHtml.querySelector('.taskDate').textContent = task.dueDate.substring(0, 10);
-        taskHtml.querySelector('.taskDescription').textContent = task.content;
+        taskHtml.querySelector('.taskContent').textContent = task.content;
         taskHtml.id = task.id;
         setOnClickActions(taskHtml); // eslint-disable-line no-undef
         document.getElementsByClassName('kanbanContainer').item(0).childNodes.item(getCategory[task.category]).childNodes.item(5).appendChild(taskHtml);
