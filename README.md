@@ -24,18 +24,12 @@ $ npm run dev
 │   ├── workflows/ <br>
 ├── node_modules/ <br>
 ├── src/ <br>
-│   ├── config/ <br>
 │   ├── controllers/ <br>
-│   ├── data/ <br>
 │   ├── middleware/ <br>
-│   ├── models/ <br>
-│   ├── models/ <br>
 │   ├── public/ <br>
 │   ├── routes/ <br>
 │   ├── services/ <br>
 │   ├── sql/ <br>
-│   ├── utils/ <br>
-│   ├── validators/ <br>
 │   └── app.js <br>
 ├── .env <br>
 ├── .eslintrc.json <br>
