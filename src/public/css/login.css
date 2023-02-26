@@ -31,7 +31,7 @@ form:hover {
 }
 
 form {
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.40), 0 15px 10px rgba(0, 0, 0, 0.14);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.40), 0 10px 26px rgba(0, 0, 0, 0.14);
     transition-duration: .5s;
     width: fit-content;
     border-radius: 10px;
