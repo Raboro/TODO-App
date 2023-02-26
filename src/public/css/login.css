@@ -70,22 +70,25 @@ input:hover {
 
 input:focus {
     box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
-    background-color: rgba(55, 55, 55, 0.88);
-    color: white;
+    background-color: rgba(85, 83, 114, 0.48);
 }
 
 button {
+    padding: 6px 20px;
     display: block;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     margin: 1.5vh auto;
     border-radius: 10px;
     border: 2px solid black;
+    transition-duration: 0.5s;
+    color: white;
+    background-color: rgb(85, 83, 114);
 }
 
 button:hover {
-    background-color: rgba(55, 55, 55, 0.88);
+    scale: 1.02;
+    transition-duration: 0.5s;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-    color: rgba(255, 255, 255, 0.70);
 }
 
 
@@ -95,11 +98,11 @@ button:hover {
 
 .openSignUp > a {
     text-decoration: none;
-    color: grey;
+    color: rgba(128, 128, 128, 0.65);
 }
 
 a:hover {
-    color: blue;
+    color: rgb(85, 83, 114);
 }
 
 #error {
