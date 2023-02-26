@@ -4,6 +4,8 @@ async function signUp() {
     if (isFormValid(formData)) {
         delete formData.passwordRepeated;
         await addUser(formData);
+    } else {
+        document.getElementById('error').innerHTML = 'Your data is invalid';
     }
 }
 
@@ -43,6 +45,6 @@ async function addUser(userData) {
     if (rawData.status === 200) {
         window.location.href = 'http://localhost:8080/mainPage';
     } else {
-        document.getElementById('error').innerHTML = 'Please check your login data!';
+        document.getElementById('error').innerHTML = 'User data already in use';
     }
 }
