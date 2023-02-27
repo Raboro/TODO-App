@@ -42,7 +42,7 @@ function fetchDataOfAddTaskForm() {
         category: fetchCategory(),
         title: getValueOfInput('taskTitle'),
         content: getValueOfInput('taskContent'),
-        date: getValueOfInput('taskDate')
+        dueDate: getValueOfInput('taskDate')
     };
 }
 
@@ -78,7 +78,7 @@ const getPositionOfCategory = {
 function constructTask(task, taskID) {
     const taskHtml = getTaskTemplate().childNodes.item(1);
     taskHtml.querySelector('.taskTitle').textContent = task.title;
-    taskHtml.querySelector('.taskDate').textContent = task.date;
+    taskHtml.querySelector('.taskDate').textContent = task.dueDate;
     taskHtml.querySelector('.taskContent').textContent = task.content;
     taskHtml.id = taskID;
     setOnClickActions(taskHtml);
