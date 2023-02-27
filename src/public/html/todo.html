@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../css/todo.css">
     <link rel="stylesheet" href="../css/task.css">
     <link rel="stylesheet" href="../css/addTask.css">
-    <link rel="stylesheet" href="../css/sidebar.css">
     <link rel="icon" type="image/x-icon" href="/images/Kanban-App-icon.ico">
     <title>Kanban-Main-Page</title>
 </head>
@@ -16,21 +15,10 @@
 <body>
 
 <header>
-    <h1>KANBAN</h1>
-    <button class = "openSidebar" id = "openBar" onclick = "openSidebar()">
-        <i class="fa-solid fa-bars fa-2x"></i>
+    <button class = "logout" onclick = "logout()">
+        <i class="fa-solid fa-arrow-right-from-bracket" title="logout"></i>
     </button>
-    <div id = "sidebar">
-        <button id = "closeSidebar" onclick="closeSidebar()">
-            <i class="fa-solid fa-xmark fa-2x"></i>
-        </button>
-        <button class = "settingsSide">
-            <i class="fa-solid fa-gear"></i>
-        </button>
-        <button class = "logout" onclick = "logout()">
-            <i class="fa-solid fa-arrow-right-from-bracket"></i>
-        </button>
-    </div>
+    <h1>KANBAN</h1>
 </header>
 
 

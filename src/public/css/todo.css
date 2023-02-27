@@ -8,7 +8,24 @@ body {
     background-color: white;
 }
 
+
+.logout {
+    float: left;
+    margin-top: 1.3vh;
+    margin-left: 2vw;
+    border: none;
+    background: none;
+    scale: 2;
+    transition-duration: .5s;
+}
+
+.logout:hover {
+    scale: 2.5;
+    transition-duration: .5s;
+}
+
 header h1 {
+    margin-right: 3.3vw;
     text-align: center;
     color: black;
 }
