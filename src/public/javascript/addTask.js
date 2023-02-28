@@ -3,13 +3,13 @@ let moveElement = false;
 let initialX = 0;
 let initialY = 0;
 
-//For drag addTask
+// For drag addTask
 addTsk.addEventListener('mousedown', (e) => {
     initialX = e.clientX;
     initialY = e.clientY;
     moveElement = true;
 });
-//For drag addTask
+// For drag addTask
 addTsk.addEventListener('mousemove', (e) => {
     if (moveElement) {
         e.preventDefault();
@@ -21,7 +21,7 @@ addTsk.addEventListener('mousemove', (e) => {
         initialY = newY;
     }
 });
-//For drag addTask
+// For drag addTask
 addTsk.addEventListener('mouseup', (e) => {
     moveElement = false;
 });
@@ -41,6 +41,7 @@ async function addTaskToDB(task) {
     return (await rawData.json())[0].id;
 }
 
+// eslint-disable-next-line no-unused-vars
 function checkSelectedCategory(id) {
     getRadioBoxById(id).childNodes.item(1).checked = true;
 }
@@ -62,11 +63,11 @@ async function addTask() {
     const task = fetchDataOfAddTaskForm();
     if (isTaskValid(task)) {
         if (document.getElementById('submitTask').value === 'Edit') {
-            closeAddTaskContainer();
+            closeAddTaskContainer(); // eslint-disable-line no-undef
             document.getElementById('submitTask').value = 'Add';
             document.getElementById('closeAddTaskButton').style.display = 'block';
             const editedTask = document.getElementsByName('editedTask')[0];
-            await deleteTask(editedTask.id);
+            await deleteTask(editedTask.id); // eslint-disable-line no-undef
             editedTask.remove();
         }
         const taskID = await addTaskToDB(task); // eslint-disable-line no-undef
@@ -99,7 +100,7 @@ const isTaskValid = (task) => Object.values(task).every(x => x !== '');
 
 function addTaskToCategory(task, taskID) {
     getCategoryToAppendTask(getPositionOfCategory[task.category]).appendChild(constructTask(task, taskID));
-    closeAddTaskContainer();
+    closeAddTaskContainer(); // eslint-disable-line no-undef
 }
 
 function getCategoryToAppendTask(categoryPosition) {
@@ -113,11 +114,11 @@ const getPositionOfCategory = {
 };
 
 function constructTask(task, taskID) {
-    const taskHtml = getTaskTemplate().childNodes.item(1);
+    const taskHtml = getTaskTemplate().childNodes.item(1); // eslint-disable-line no-undef
     taskHtml.querySelector('.taskTitle').textContent = task.title;
     taskHtml.querySelector('.taskDate').textContent = task.dueDate;
     taskHtml.querySelector('.taskContent').textContent = task.content;
     taskHtml.id = taskID;
-    setOnClickActions(taskHtml);
+    setOnClickActions(taskHtml); // eslint-disable-line no-undef
     return taskHtml;
 }

@@ -1,9 +1,10 @@
 // eslint-disable-next-line no-unused-vars
 function openAddTaskContainer(id) {
     document.getElementById('addTaskContainer').style.display = 'block';
-    checkSelectedCategory(id);
+    checkSelectedCategory(id); // eslint-disable-line no-undef
 }
 
+// eslint-disable-next-line no-unused-vars
 function closeAddTaskContainer() {
     document.getElementById('addTaskContainer').style.display = 'none';
     document.getElementById('taskTitle').value = '';
@@ -11,8 +12,10 @@ function closeAddTaskContainer() {
     document.getElementById('taskDate').value = '';
 }
 
+// eslint-disable-next-line no-unused-vars
 const getTaskTemplate = () => document.getElementById('taskTemplate').content.cloneNode(true);
 
+// eslint-disable-next-line no-unused-vars
 function setOnClickActions(taskHtml) {
     setOnClickActionOfDeleteTask(taskHtml);
     setOnClickActionOfEditTask(taskHtml);
@@ -33,7 +36,7 @@ function setOnClickActionOfEditTask(taskHtml) {
         document.getElementById('taskContent').value = this.parentNode.parentNode.childNodes[5].textContent;
         document.getElementById('submitTask').value = 'Edit';
         document.getElementById('closeAddTaskButton').style.display = 'none';
-        getRadioButtons().item(this.parentNode.parentNode.parentNode.parentNode.getAttribute('about')).childNodes[1].checked = true;
+        getRadioButtons().item(this.parentNode.parentNode.parentNode.parentNode.getAttribute('about')).childNodes[1].checked = true; // eslint-disable-line no-undef
         this.parentNode.parentNode.setAttribute('name', 'editedTask');
     };
 }
