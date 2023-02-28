@@ -31,11 +31,11 @@ function closeAddTaskContainer() {
 async function addTask() {
     const task = fetchDataOfAddTaskForm();
     if (isTaskValid(task)) {
-        if (document.getElementById("submitTask").value == "Edit") {
+        if (document.getElementById('submitTask').value === 'Edit') {
             closeAddTaskContainer();
-            document.getElementById("submitTask").value = "Add";
-            document.getElementById("closeAddTaskButton").style.display = "block";
-            const editedTask = document.getElementsByName("editedTask")[0];
+            document.getElementById('submitTask').value = 'Add';
+            document.getElementById('closeAddTaskButton').style.display = 'block';
+            const editedTask = document.getElementsByName('editedTask')[0];
             await deleteTask(editedTask.id);
             editedTask.remove();
         }
@@ -112,10 +112,10 @@ function setOnClickActionOfEditTask(taskHtml) {
         document.getElementById('taskTitle').value = this.parentNode.parentNode.childNodes[1].textContent;
         document.getElementById('taskDate').value = this.parentNode.parentNode.childNodes[3].textContent;
         document.getElementById('taskContent').value = this.parentNode.parentNode.childNodes[5].textContent;
-        document.getElementById("submitTask").value = "Edit";
-        document.getElementById("closeAddTaskButton").style.display = 'none';
-        getRadioButtons().item(this.parentNode.parentNode.parentNode.parentNode.getAttribute("about")).childNodes[1].checked = true;
-        this.parentNode.parentNode.setAttribute("name", "editedTask");
+        document.getElementById('submitTask').value = 'Edit';
+        document.getElementById('closeAddTaskButton').style.display = 'none';
+        getRadioButtons().item(this.parentNode.parentNode.parentNode.parentNode.getAttribute('about')).childNodes[1].checked = true;
+        this.parentNode.parentNode.setAttribute('name', 'editedTask');
     };
 }
 
