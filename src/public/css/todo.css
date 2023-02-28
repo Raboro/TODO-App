@@ -121,6 +121,7 @@ header h1 {
         grid-auto-flow: column;
         overflow-x: auto;
         overscroll-behavior-inline: contain;
+        padding-top: 1vh;
     }
 }
 
