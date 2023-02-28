@@ -15,6 +15,10 @@ function addTasks(data) {
         const taskHtml = getTaskTemplate().childNodes.item(1); // eslint-disable-line no-undef
         taskHtml.querySelector('.taskTitle').textContent = task.title;
         taskHtml.querySelector('.taskDate').textContent = getUpdatedTaskDate(task.dueDate);
+        if (new Date(getUpdatedTaskDate(task.dueDate)).getTime() < new Date().getTime()) {
+            taskHtml.querySelector('.taskDate').style.color = 'red';
+            taskHtml.style.border = '2px solid red';
+        }
         taskHtml.querySelector('.taskContent').textContent = task.content;
         taskHtml.id = task.id;
         setOnClickActions(taskHtml); // eslint-disable-line no-undef
