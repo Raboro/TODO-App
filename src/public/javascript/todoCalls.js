@@ -14,13 +14,20 @@ function addTasks(data) {
         const task = data.at(counter);
         const taskHtml = getTaskTemplate().childNodes.item(1); // eslint-disable-line no-undef
         taskHtml.querySelector('.taskTitle').textContent = task.title;
-        taskHtml.querySelector('.taskDate').textContent = task.dueDate.substring(0, 10);
+        taskHtml.querySelector('.taskDate').textContent = getUpdatedTaskDate(task.dueDate);
         taskHtml.querySelector('.taskContent').textContent = task.content;
         taskHtml.id = task.id;
         setOnClickActions(taskHtml); // eslint-disable-line no-undef
         document.getElementsByClassName('kanbanContainer').item(0).childNodes.item(getCategory[task.category]).childNodes.item(5).appendChild(taskHtml);
         counter++;
     }
+}
+
+function getUpdatedTaskDate(date) {
+    // the date is one day before, and it needs to be moved back
+    const oneDay = 60 * 60 * 24 * 1000;
+    const updatedDay = new Date(date.substring(0, 10)).getTime() + oneDay;
+    return new Date(updatedDay).toISOString().substring(0, 10);
 }
 
 const getCategory = {
