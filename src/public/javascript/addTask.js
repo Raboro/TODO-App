@@ -118,7 +118,7 @@ function constructTask(task, taskID) {
     taskHtml.querySelector('.taskTitle').textContent = task.title;
     taskHtml.querySelector('.taskDate').textContent = task.dueDate;
     taskHtml.querySelector('.taskContent').textContent = task.content;
-    if (new Date(getUpdatedTaskDate(task.dueDate)).getTime() < new Date().getTime()) {
+    if (new Date(getUpdatedTaskDate(task.dueDate)).getTime() < new Date().getTime()) { // eslint-disable-line no-undef
         taskHtml.querySelector('.taskDate').style.color = 'red';
         taskHtml.style.border = '2px solid red';
     }
