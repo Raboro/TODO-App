@@ -48,6 +48,7 @@
     word-break: break-word;
     margin-top: 1vh;
     margin-bottom: -1vh;
+    padding: 0 15%;
 }
 
 .inputTask {
@@ -89,4 +90,15 @@
 .delete {
     padding: 0;
     background: none;
+}
+
+@media only screen and (max-width: 1100px) {
+
+    .task {
+        font-size: 13px;
+    }
+
+    .taskTitle, .taskContent {
+        padding: 0 15%;
+    }
 }
