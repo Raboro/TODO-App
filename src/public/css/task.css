@@ -48,7 +48,8 @@
     word-break: break-word;
     margin-top: 1vh;
     margin-bottom: -1vh;
-    padding: 0 15%;
+    padding: 0 1vw;
+    text-align: center;
 }
 
 .inputTask {
@@ -65,6 +66,12 @@
 .taskContent {
     word-break: break-word;
     padding: 0 1vw;
+    margin: 0;
+}
+
+.taskDate{
+    margin-top: 1vh;
+    margin-bottom: 1.5vh;
 }
 
 .buttonTask {
@@ -99,6 +106,6 @@
     }
 
     .taskTitle, .taskContent {
-        padding: 0 15%;
+        padding: 0 5%;
     }
 }
