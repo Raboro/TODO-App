@@ -57,13 +57,18 @@ function drag(ev) {
 function drop(ev) {
     ev.preventDefault();
     const dragElement = document.getElementById(dragID);
-    if (ev.target.className === 'category todo' || ev.target.className === 'category inProgress' || ev.target.className === 'category done') {
-        ev.target.childNodes[5].appendChild(dragElement);
-        getCategoryDrop(ev.target.className, dragElement.id);
-    } else if (!ev.target.parentNode.className.startsWith('task')) {
-        ev.target.parentNode.childNodes[5].appendChild(dragElement);
-        getCategoryDrop(ev.target.parentNode.className, dragElement.id);
+    let test = ev.target;
+    let done = false;
+    while(done == false){
+    if(test.className === 'category todo' || test.className === 'category inProgress' || test.className === 'category done'){
+        test.childNodes[5].appendChild(dragElement);
+        getCategoryDrop(test.className, dragElement.id);
+        done = true;
+    }else{
+        test = test.parentNode;
+        console.log(test.childNodes);
     }
+    }   
 }
 async function deleteTask(id) {
     await callApi({ // eslint-disable-line no-undef
