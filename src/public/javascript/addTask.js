@@ -99,7 +99,7 @@ const getValueOfInput = (id) => document.getElementById(id).value;
 const isTaskValid = (task) => Object.values(task).every(x => x !== '');
 
 function addTaskToCategory(task, taskID) {
-    getCategoryToAppendTask(getPositionOfCategory[task.category]).appendChild(constructTask(task, taskID));
+    getCategoryToAppendTask(getPositionOfCategory[task.category]).appendChild(constructTask(task, taskID, getPositionOfCategory[task.category]));
     closeAddTaskContainer(); // eslint-disable-line no-undef
 }
 
@@ -113,12 +113,12 @@ const getPositionOfCategory = {
     DONE: 5
 };
 
-function constructTask(task, taskID) {
+function constructTask(task, taskID, cat) {
     const taskHtml = getTaskTemplate().childNodes.item(1); // eslint-disable-line no-undef
     taskHtml.querySelector('.taskTitle').textContent = task.title;
     taskHtml.querySelector('.taskDate').textContent = task.dueDate;
     taskHtml.querySelector('.taskContent').textContent = task.content;
-    if (new Date(getUpdatedTaskDate(task.dueDate)).getTime() < new Date().getTime()) { // eslint-disable-line no-undef
+    if (new Date(getUpdatedTaskDate(task.dueDate)).getTime() < new Date().getTime() && cat != "5") { // eslint-disable-line no-undef
         taskHtml.querySelector('.taskDate').style.color = 'red';
         taskHtml.style.border = '2px solid red';
     }

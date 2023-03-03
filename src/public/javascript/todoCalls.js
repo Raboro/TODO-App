@@ -3,19 +3,19 @@ fetch('http://localhost:8080/task/getAllTasks')
     .then(data => addTasksByCategory(data));
 
 function addTasksByCategory(data) {
-    addTasks(data.todo);
-    addTasks(data.inProgress);
-    addTasks(data.done);
+    addTasks(data.todo, 0);
+    addTasks(data.inProgress, 0);
+    addTasks(data.done, 1);
 }
 
-function addTasks(data) {
+function addTasks(data, catDone) {
     let counter = 0;
     while (data.length > counter) {
         const task = data.at(counter);
         const taskHtml = getTaskTemplate().childNodes.item(1); // eslint-disable-line no-undef
         taskHtml.querySelector('.taskTitle').textContent = task.title;
         taskHtml.querySelector('.taskDate').textContent = getUpdatedTaskDate(task.dueDate);
-        if (new Date(getUpdatedTaskDate(task.dueDate)).getTime() < new Date().getTime()) {
+        if (new Date(getUpdatedTaskDate(task.dueDate)).getTime() < new Date().getTime() && catDone == 0) {
             taskHtml.querySelector('.taskDate').style.color = 'red';
             taskHtml.style.border = '2px solid red';
         }

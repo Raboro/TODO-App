@@ -63,6 +63,13 @@ function drop(ev) {
     if(test.className === 'category todo' || test.className === 'category inProgress' || test.className === 'category done'){
         test.childNodes[5].appendChild(dragElement);
         getCategoryDrop(test.className, dragElement.id);
+        if(test.className === 'category done'){
+            dragElement.querySelector('.taskDate').style.color = "white";
+            dragElement.style.border = "";
+        }else{
+            dragElement.querySelector('.taskDate').style.color = 'red';
+            dragElement.style.border = '2px solid red';
+        }
         done = true;
     }else{
         test = test.parentNode;
