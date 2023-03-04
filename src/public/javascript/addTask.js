@@ -1,28 +1,28 @@
-const addTsk = document.getElementById('addTaskContainer');
+const addTaskContainer = document.getElementById('addTaskContainer');
 let moveElement = false;
 let initialX = 0;
 let initialY = 0;
 
 // For drag addTask
-addTsk.addEventListener('mousedown', (e) => {
+addTaskContainer.addEventListener('mousedown', (e) => {
     initialX = e.clientX;
     initialY = e.clientY;
     moveElement = true;
 });
 // For drag addTask
-addTsk.addEventListener('mousemove', (e) => {
+addTaskContainer.addEventListener('mousemove', (e) => {
     if (moveElement) {
         e.preventDefault();
         const newX = e.clientX;
         const newY = e.clientY;
-        addTsk.style.top = addTsk.offsetTop - (initialY - newY) + 'px';
-        addTsk.style.left = addTsk.offsetLeft - (initialX - newX) + 'px';
+        addTaskContainer.style.top = addTaskContainer.offsetTop - (initialY - newY) + 'px';
+        addTaskContainer.style.left = addTaskContainer.offsetLeft - (initialX - newX) + 'px';
         initialX = newX;
         initialY = newY;
     }
 });
 // For drag addTask
-addTsk.addEventListener('mouseup', (e) => {
+addTaskContainer.addEventListener('mouseup', () => {
     moveElement = false;
 });
 
@@ -113,12 +113,12 @@ const getPositionOfCategory = {
     DONE: 5
 };
 
-function constructTask(task, taskID, cat) {
+function constructTask(task, taskID, categoryPosition) {
     const taskHtml = getTaskTemplate().childNodes.item(1); // eslint-disable-line no-undef
     taskHtml.querySelector('.taskTitle').textContent = task.title;
     taskHtml.querySelector('.taskDate').textContent = task.dueDate;
     taskHtml.querySelector('.taskContent').textContent = task.content;
-    if (new Date(getUpdatedTaskDate(task.dueDate)).getTime() < new Date().getTime() && cat != "5") { // eslint-disable-line no-undef
+    if (new Date(getUpdatedTaskDate(task.dueDate)).getTime() < new Date().getTime() && categoryPosition !== 5) { // eslint-disable-line no-undef
         taskHtml.querySelector('.taskDate').style.color = 'red';
         taskHtml.style.border = '2px solid red';
     }

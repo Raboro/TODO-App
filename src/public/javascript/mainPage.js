@@ -47,6 +47,7 @@ function allowDrop(ev) {
 }
 
 let dragID;
+
 // eslint-disable-next-line no-unused-vars
 function drag(ev) {
     dragID = ev.target.id;
@@ -57,26 +58,26 @@ function drag(ev) {
 function drop(ev) {
     ev.preventDefault();
     const dragElement = document.getElementById(dragID);
-    let test = ev.target;
+    let target = ev.target;
     let done = false;
-    while(done == false){
-    if(test.className === 'category todo' || test.className === 'category inProgress' || test.className === 'category done'){
-        test.childNodes[5].appendChild(dragElement);
-        getCategoryDrop(test.className, dragElement.id);
-        if(test.className === 'category done'){
-            dragElement.querySelector('.taskDate').style.color = "white";
-            dragElement.style.border = "";
-        }else{
-            dragElement.querySelector('.taskDate').style.color = 'red';
-            dragElement.style.border = '2px solid red';
+    while (!done) {
+        if (target.className === 'category todo' || target.className === 'category inProgress' || target.className === 'category done') {
+            target.childNodes[5].appendChild(dragElement);
+            getCategoryDrop(target.className, dragElement.id);
+            if (target.className === 'category done') {
+                dragElement.querySelector('.taskDate').style.color = 'white';
+                dragElement.style.border = '';
+            } else if (new Date(getUpdatedTaskDate(dragElement.querySelector('.taskDate').textContent)).getTime() < new Date().getTime()) { // eslint-disable-line no-undef
+                dragElement.querySelector('.taskDate').style.color = 'red';
+                dragElement.style.border = '2px solid red';
+            }
+            done = true;
+        } else {
+            target = target.parentNode;
         }
-        done = true;
-    }else{
-        test = test.parentNode;
-        console.log(test.childNodes);
     }
-    }   
 }
+
 async function deleteTask(id) {
     await callApi({ // eslint-disable-line no-undef
         url: 'http://localhost:8080/task/deleteTask',
