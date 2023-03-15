@@ -83,7 +83,7 @@ All the routes can be assigned to one of them:
 
 - /signIn, GET, gives access to the signIn.html page
 - /signUp, GET, gives access to the signUp.html page
-- /mainPage, GE,T gives access to the todo.html page
+- /mainPage, GET gives access to the todo.html page
 - /user/signIn, POST,  user sends his login data and if valid gets his JWT token for authentication
 - /user/signUp, POST, user sends his user data, which are after validation added to the database and also gets his JWT token for authentication
 - /user/logout, GET, token gets removed
