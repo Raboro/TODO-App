@@ -3,6 +3,11 @@
 > ## Authors:
 > [Manuel Franz](https://github.com/Manuel-F-04),  [Janik Piehler](https://github.com/janikpiehler), [Lukas Schulz](https://github.com/lukas-ms), [Marius Wörfel](https://github.com/Raboro)
 
+<br>
+
+![](assets/Overview%20Main%20Page.png)
+
+--- 
 ## Instruction guide
 1. Install [node.js](https://nodejs.org/en/download/)
 2. Clone code 
